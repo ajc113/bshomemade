@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root to: 'bees#index'
+
+
   resources :posts
   resources :flavors
   resources :bees

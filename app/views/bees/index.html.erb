@@ -1,25 +1,257 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Bees</h1>
+<!--   <div class="row">
+    <div class"h1">Hello Fine World</div>
+    <h1>Listing Bees</h1>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <tbody>
+        <% @bees.each do |bee| %>
+          <tr>
+            <td><%= link_to 'Show', bee %></td>
+            <td><%= link_to 'Edit', edit_bee_path(bee) %></td>
+            <td><%= link_to 'Destroy', bee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <br>
+    <%= link_to 'New Bee', new_bee_path %>
+  </div>  --> 
 
-  <tbody>
-    <% @bees.each do |bee| %>
-      <tr>
-        <td><%= link_to 'Show', bee %></td>
-        <td><%= link_to 'Edit', edit_bee_path(bee) %></td>
-        <td><%= link_to 'Destroy', bee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="container pt90 pb50">
+      <div class="row">
+          <div class="col-md-4 mb40">
+              <div class="icon-card-style1">
+                  <i class="icon-picture text-muted bg-faded icon-round-60"></i>
+                  <div class="overflow-hiden">
+                      <h4 class="h6 font600">Clean pixel perfect</h4>
+                      <p class="mb20">
+                          please consider donating a small sum to help pay for the hosting and bandwidth bill.
+                      </p>
+                      <a href="#" class="btn btn-underline">Learn More</a>
+                  </div>
+              </div>  
+          </div>
+          <div class="col-md-4 mb40">
+              <div class="icon-card-style1">
+                  <i class="icon-layers text-muted bg-faded icon-round-60"></i>
+                  <div class="overflow-hiden">
+                      <h4 class="h6 font600">Minimal & powerful</h4>
+                      <p class="mb20">
+                          please consider donating a small sum to help pay for the hosting and bandwidth bill.
+                      </p>
+                      <a href="#" class="btn btn-underline">Learn More</a>
+                  </div>
+              </div>  
+          </div>
+          <div class="col-md-4 mb40">
+              <div class="icon-card-style1">
+                  <i class="icon-chat text-muted bg-faded icon-round-60"></i>
+                  <div class="overflow-hiden">
+                      <h4 class="h6 font600">24/7 Support</h4>
+                      <p class="mb20">
+                          please consider donating a small sum to help pay for the hosting and bandwidth bill.
+                      </p>
+                      <a href="#" class="btn btn-underline">Learn More</a>
+                  </div>
+              </div>  
+          </div>
+      </div>
+  </div>
+  <div class="bg-faded pt90 pb90">
+    <div class="container">
+        <div class="center-title text-center mb60">
+            <h4>Recent Projects</h4>
+        </div>
+        <div id="js-grid-agency" class="cbp cbp-l-grid-agency">
+            <div class="cbp-item graphic">
+                <a href="#" target="_blank">
+                    <div class="cbp-caption">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="<%= image_path('box/img-1.jpg')%>"
+                             data-cbp-src="<%= image_path('box/img-1.jpg')%>" alt="" width="380" height="250">
+                        </div>
+                    </div>
+                    <div class="cbp-l-grid-agency-title">Dashboard</div>
+                    <div class="cbp-l-grid-agency-desc">Web Design / Graphic</div>
+                </a>
+            </div>
+            <div class="cbp-item web-design logos">
+                <a href="#" target="_blank">
+                    <div class="cbp-caption">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="<%= image_path('box/img-2.jpg')%>"
+                            data-cbp-src="<%= image_path('box/img-2.jpg')%>"alt="" width="380" height="250">
+                        </div>
+                    </div>
+                    <div class="cbp-l-grid-agency-title">World Clock</div>
+                    <div class="cbp-l-grid-agency-desc">Logo / Web Design</div>
+                </a>
+            </div>
+            <div class="cbp-item graphic logos">
+                <a href="#" target="_blank">
+                    <div class="cbp-caption">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="<%= image_path('box/img-3.jpg')%>"
+                             data-cbp-src="<%= image_path('box/img-.3jpg')%>" alt="" width="380" height="250">
+                        </div>
+                    </div>
+                    <div class="cbp-l-grid-agency-title">To-Do Dashboard</div>
+                    <div class="cbp-l-grid-agency-desc">Graphic / Logo</div>
+                </a>
+            </div>
+            <div class="cbp-item web-design graphic">
+                <a href="#" target="_blank">
+                    <div class="cbp-caption">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="<%= image_path('box/img-4.jpg')%>" data-cbp-src="<%= image_path('box/img-4.jpg')%>" alt="" width="380" height="250">
+                        </div>
+                    </div>
+                    <div class="cbp-l-grid-agency-title">Events and More</div>
+                    <div class="cbp-l-grid-agency-desc">Web Design / Graphic</div>
+                </a>
+            </div>
+            <div class="cbp-item identity web-design">
+                <a href="#" target="_blank">
+                    <div class="cbp-caption">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="<%= image_path('box/img-5.jpg')%>" data-cbp-src="<%= image_path('box/img-5.jpg')%>" alt="" width="380" height="250">
+                        </div>
+                    </div>
+                    <div class="cbp-l-grid-agency-title">WhereTO App</div>
+                    <div class="cbp-l-grid-agency-desc">Web Design / Identity</div>
+                </a>
+            </div>
+            <div class="cbp-item identity web-design">
+                <a href="#" target="_blank">
+                    <div class="cbp-caption">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="<%= image_path('box/img-6.jpg')%>" data-cbp-src="<%= image_path('box/img-6.jpg')%>" alt="" width="380" height="250">
+                        </div>
+                    </div>
+                    <div class="cbp-l-grid-agency-title">Ski * Buddy</div>
+                    <div class="cbp-l-grid-agency-desc">Identity / Web Design</div>
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container pt90 pb90">
+      <div class='feature-col'>
+          <div class='row align-items-center'>
 
-<br>
+              <div class='col-lg-5 mr-auto'>
+                  <h2 class="mb40">A great looking template will impress your visitors</h2>
+                  <div class="tabs-default tabs-icon">
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs tabs-default mb30 justify-content-start" role="tablist">
+                          <li class="nav-item" role="presentation"><a class="active nav-link" href="#tb9" aria-controls="tb9" role="tab" data-toggle="tab">Vision</a></li>
+                          <li class="nav-item" role="presentation"><a class="nav-link" href="#tb10" aria-controls="tb10" role="tab" data-toggle="tab">Mission</a></li>
+                          <li class="nav-item" role="presentation"><a class="nav-link" href="#tb11" aria-controls="tb11" role="tab" data-toggle="tab">Services</a></li>                       
+                      </ul>
+                      <!-- Tab panes -->
+                      <div class="tab-content text-left mb40">
+                          <div role="tabpanel" class="tab-pane active show fade" id="tb9">
+                              <p>
+                                  Publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
 
-<%= link_to 'New Bee', new_bee_path %>
+                              </p>
+                          </div>
+                          <div role="tabpanel" class="tab-pane fade" id="tb10">
+                              <p>
+                                  Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
+
+                              </p>
+                          </div>
+                          <div role="tabpanel" class="tab-pane fade" id="tb11">
+                              <p class='lead'>
+                                  Desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <a href='#' class='btn btn-light btn-xl'>Hire Us</a>
+              </div>
+              <div class='col-lg-6 pt50-md'>
+                  <img src="<%= image_path('feature1.jpg')%>" alt='' class='img-fluid'>
+              </div>
+          </div>
+      </div><!--feature col-->
+  </div>
+  <div class=" bg-faded pb80 pt80">
+  </div>  
+  <div class="container pt90 pb50">
+      <div class="center-title mb50 text-center">
+          <h4>Creative team</h4>
+      </div>
+      <div class="row">
+          <div class="col-md-6 col-lg-3 mb50 text-center">
+              <img src="<%= image_path('team-1.jpg')%>" alt="" class="img-fluid rounded-circle mb20 shadow20" width="150">
+              <h4>Angelina Doe</h4>
+              <span class="font600 text-muted">Marketing manager</span>
+              <ul class="list-inline social-list pt20 pb0 mb0">
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+          </div><!--/col-->
+          <div class="col-md-6 col-lg-3 mb50 text-center">
+              <img src="<%= image_path('team-2.jpg')%>" alt="" class="img-fluid rounded-circle mb20 shadow20" width="150">
+              <h4>Angelina Doe</h4>
+              <span class="font600 text-muted">Marketing manager</span>
+              <ul class="list-inline social-list pt20 pb0 mb0">
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+          </div><!--/col-->
+          <div class="col-md-6 col-lg-3 mb50 text-center">
+              <img src="<%= image_path('team-3.jpg')%>" alt="" class="img-fluid rounded-circle mb20 shadow20" width="150">
+              <h4>Angelina Doe</h4>
+              <span class="font600 text-muted">Marketing manager</span>
+              <ul class="list-inline social-list pt20 pb0 mb0">
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+          </div><!--/col-->
+          <div class="col-md-6 col-lg-3 mb50 text-center">
+              <img src="<%= image_path('team-4.jpg')%>" alt="" class="img-fluid rounded-circle mb20 shadow20" width="150">
+              <h4>Angelina Doe</h4>
+              <span class="font600 text-muted">Marketing manager</span>
+              <ul class="list-inline social-list pt20 pb0 mb0">
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+          </div><!--/col-->
+      </div>
+  </div>
+  <div class="bg-dark pt90 pb90">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 mr-auto ml-auto text-center">
+                  <h3 class="text-white h3 mb20">
+                      A template can change your website's look & feel
+                  </h3>
+                  <p class="lead text-white text-muted mb20">
+                     A clean & minimal style features rich template 
+                  </p>
+                  <a href="#" class="btn btn-light btn-lg btn-rounded">Buy now ($17)</a>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
