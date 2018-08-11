@@ -11,6 +11,8 @@
  * file per style scope.
  * 
 
+
+
  *= require style
  *= require plugins/plugins
  *= require dzsparallaxer
@@ -18,12 +20,17 @@
  *= require plugin
  *= require cubeportfolio.min
  *= require cubeportfolio
+ *= require animate
+ *= require style-restaurant
  *= require font-awesome
  *= require font-awesome.min
-  *= require animate
-    *= require style-restaurant
- *= require_tree .
+ *= require et-line
+ *= require pushy
+ *= require hover
+ *= require masterslider
  *= require_self
+ *= require_tree .
+
 
 
  */

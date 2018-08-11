@@ -20,8 +20,9 @@
 //= require plugin
 //= require jquery.cubeportfolio.min
 //= require cube-portfolio-home
+//= require data-tables/jquery.dataTables.min
+//= require jquery.cubeportfolio
 //= require bootstrap
 //= require masterslider
 //= require masterslider.min
-//= require masonry
 //= require_tree .
