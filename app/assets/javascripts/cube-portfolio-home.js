@@ -1,6 +1,8 @@
 (function($, window, document, undefined) {
     'use strict';
 
+
+
     // init cubeportfolio
     $('#js-grid-agency').cubeportfolio({
         filters: '#js-filters-agency',

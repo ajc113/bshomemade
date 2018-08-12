@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-<!--   <div class="row">
+<body>
+  <p id="notice"><%= notice %></p>
+  <div class="row">
     <div class"h1">Hello Fine World</div>
     <h1>Listing Bees</h1>
     <table>
@@ -11,19 +11,18 @@
       </thead>
 
       <tbody>
-        <%# @bees.each do |bee| %>
+        <% @bees.each do |bee| %>
           <tr>
-            <td><%#= link_to 'Show', bee %></td>
-            <td><%#= link_to 'Edit', edit_bee_path(bee) %></td>
-            <td><%#= link_to 'Destroy', bee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', bee %></td>
+            <td><%= link_to 'Edit', edit_bee_path(bee) %></td>
+            <td><%= link_to 'Destroy', bee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
-        <%# end %>
+        <% end %>
       </tbody>
     </table>
     <br>
     <%= link_to 'New Bee', new_bee_path %>
-  </div>  --> 
-<body>
+  </div> 
   <div class="container pt90 pb50">
       <div class="row">
           <div class="col-md-4 mb40">
@@ -252,4 +251,5 @@
           </div>
       </div>
   </div>
+
 </body>
