@@ -8,11 +8,11 @@ GOOGLE MAP
 
 			// Map Coordination
 
-			var latlng = new google.maps.LatLng(26.977530,75.692714);
+			var latlng = new google.maps.LatLng(42.091104, -70.707021);
 
 			// Map Options
 			var myOptions = {
-				zoom: 15,
+				zoom: 16,
 				center: latlng,
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
 				disableDefaultUI: true,
@@ -27,13 +27,13 @@ GOOGLE MAP
 			var map = new google.maps.Map(document.getElementById('google-map'), myOptions);
 
 			// Marker Image
-			var image = 'images/marker.png';
+			var image = "#{asset_path('marker.png')}";
 			
 		  	/* ========= First Marker ========= */
 
 		  	// First Marker Coordination
 			
-			var myLatlng = new google.maps.LatLng(26.977530,75.692714);
+			var myLatlng = new google.maps.LatLng(42.091104, -70.707021);
 
 			// Your Texts 
 
@@ -42,21 +42,21 @@ GOOGLE MAP
 			  '</div>'+
 			  '<h4>' +
 
-			  '124, Munna Wali'+
+			  'Bs Homemade Ice Cream'+
 
 			  '</h4>'+
 			  '<p>' +
 
-			  'Sharma House.' +
+			  '44 Snow Road, Marshfield, 02050' +
 
 			  '</p>'+
 			  '</div>';
-			
+				
 
 			var marker = new google.maps.Marker({
 				  position: myLatlng,
 				  map: map,
-				  title: 'Hello World!',
+				  title: 'Bs Homemade Ice Cream',
 				  icon: image
 			  });
 
