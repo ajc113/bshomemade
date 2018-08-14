@@ -10,14 +10,20 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
 //= require bundle/bundle
-//= require cube-portfolio-home
-//= require dzsparallaxer
-//= require jquery.cubeportfolio.min
-//= require plugin
-//= require scroller
 //= require versa.custom
-//= require bootstrap
+//= require dzsparallaxer
+//= require scroller
+//= require plugin
+//= require jquery.cubeportfolio.min
+//= require cube-portfolio-home
+//= require google-map
+
+
+
 
 
 

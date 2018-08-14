@@ -7,9 +7,16 @@ class BeesController < ApplicationController
     @bees = Bee.all
   end
 
+  def homepage
+    @bees = Bee.all
+  end
+
   # GET /bees/1
   # GET /bees/1.json
   def show
+  end
+
+  def about
   end
 
   # GET /bees/new
