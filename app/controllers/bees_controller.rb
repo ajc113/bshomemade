@@ -8,7 +8,6 @@ class BeesController < ApplicationController
   end
 
   def homepage
-    @bees = Bee.all
   end
 
   # GET /bees/1

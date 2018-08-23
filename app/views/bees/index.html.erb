@@ -1,13 +1,15 @@
+
+<!-- Here image panel -->
 <section class="dzsparallaxer auto-init dzsparallaxer---window-height use-loading" style="position: relative; height: 800px;" data-options='{  mode_scroll: "normal" }'>
-  <div class="divimage dzsparallaxer--target " data-src="<%= image_path('flavors.jpg')%>" style="width: 100%; height: 130%; background-image: url()">
+  <div class="divimage dzsparallaxer--target " data-src="<%= image_path('flavors.jpg')%>" style="width: 100%; height: 100%; background-image: url()">
     <div class="content-table">
         <div class="content-middle pt80 ">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
-                        <h2 class="font500 text-white h1">B's Homemade IceCream</h2>
+                        <h2 class="font300 text-white h1">We're an award winning web design studio based in Florida, USA</h2>
                         <p class="lead text-white">
-                            Marshfeild, MA
+                           Marshfeild, MA
                         </p>
                         <div class="circle-button">
                             <a href="#" class="btn btn-light btn-xl btn-rounded">
@@ -30,7 +32,8 @@
   </div>
 </section>
 
-<!-- homemade ice cream panel -->
+
+<!-- homemade ice cream panel start -->
 <div class="container pt90 pb90">
     <div class='feature-col'>
         <div class='row align-items-center'>
@@ -73,9 +76,9 @@
         </div>
     </div><!--feature col-->
 </div>
-<!-- end homemade ice cream panel -->
+<!-- end homemade ice cream panel end-->
 
-<!-- whats new panel -->
+<!-- whats new panel start -->
 <div class="container pt90 pb90">
     <div class='row'>
         <div class='col-md-12'>
@@ -101,10 +104,10 @@
             </div><!--feature col-->
         </div>
     </div>
-</div><hr>
-<!-- whats new panel -->
+</div>
+<!-- whats new panel end-->
 
-<!-- where we are located panel -->
+<!-- where we are located panel start -->
 <div class="bg-dark pt90 pb90">
     <div class="container">
         <div class="row">
@@ -112,52 +115,45 @@
                 <h3 class="text-white mb0 h1">
                     Come Visit Us Today
                 </h3>
-<!--                 <a href="#" class="btn btn-light btn-lg btn-rounded">Get Directions</a> -->
             </div>
         </div>
     </div>
-
-
-<!-- contact panel -->
-<div class="container pt90 pb50" id='contact'>
-  <div class="row">
-      <div class="col-md-4 mb40">
-          <div class="media mb20">
-              <i class="icon-round-40 mr-3 bg-light fa fa-home"></i>
-              <p class="media-body pt5 text-white">
-                  44 Snow Road, Marshfield MA 02050
-              </p>
-          </div>
-          <div class="media mb20">
-              <i class="icon-round-40 float-left mr-3 bg-light fa fa-clock-o"></i>
-              <p class="media-body pt5 text-white">
-                  Monday-Friday: 12pm to 8pm<br>
-                  Saturday: 11am to 10pm<br>
-                  Sunday: 11am to 10pm</p>
-          </div>
-          <div class="media mb20">
-              <i class="icon-round-40 bg-light float-left mr-3 fa fa-envelope"></i>
-              <p class="media-body pt5">
-                  <a href="#" class="btn btn-underline text-white">bshomemade@gmail.com</a></p>
-          </div>
-          <div class="media mb20">
-              <i class="icon-round-40 float-left mr-3 bg-light fa fa-phone"></i>
-              <p class="media-body pt5">
-                  <a href="#" class="btn btn-underline text-white">888-234-3949</a></p>
-          </div>
-      </div>
-      <div class="col-md-8">
-        <section id="map">  
-          <div id="google-map" style="width: 100%; height: 400px;"></div>
-        </section>
-
-
-      </div> 
+    <!-- contact panel -->
+  <div class="container pt90 pb50" id='contact'>
+    <div class="row">
+        <div class="col-md-4 mb40">
+            <div class="media mb20">
+                <i class="icon-round-40 mr-3 bg-light fa fa-home"></i>
+                <p class="media-body pt5 text-white">
+                    44 Snow Road, Marshfield MA 02050
+                </p>
+            </div>
+            <div class="media mb20">
+                <i class="icon-round-40 float-left mr-3 bg-light fa fa-clock-o"></i>
+                <p class="media-body pt5 text-white">
+                    Monday-Friday: 12pm to 8pm<br>
+                    Saturday: 11am to 10pm<br>
+                    Sunday: 11am to 10pm</p>
+            </div>
+            <div class="media mb20">
+                <i class="icon-round-40 bg-light float-left mr-3 fa fa-envelope"></i>
+                <p class="media-body pt5">
+                    <a href="#" class="btn btn-underline text-white">bshomemade@gmail.com</a></p>
+            </div>
+            <div class="media mb20">
+                <i class="icon-round-40 float-left mr-3 bg-light fa fa-phone"></i>
+                <p class="media-body pt5">
+                    <a href="#" class="btn btn-underline text-white">888-234-3949</a></p>
+            </div>
+        </div>
+        <!-- google maps -->
+        <div class="col-md-8">
+          <section id="map">  
+            <div id="google-map" style="width: 100%; height: 400px;"></div>
+          </section>
+        </div> 
+    </div>
   </div>
-</div>
-<!-- contact panel end-->
-
-
 </div>
 
 <!-- testimonials panel  -->
@@ -212,5 +208,5 @@
         </div>
     </div>
 </div>
-<!-- testimonials panel -->
+<!-- testimonials panel end-->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=<%= ENV["google_map_api_key"]%>"></script>

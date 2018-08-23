@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
 
   get 'about' => 'bees#about'
+    get 'homepage' => 'bees#homepage'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

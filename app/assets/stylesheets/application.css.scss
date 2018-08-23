@@ -10,12 +10,19 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  * 
-
- *= require plugins/plugins
- *= require dzsparallaxer
- *= require scroller
- *= require plugin
- *= require cubeportfolio.min
- *= require cubeportfolio
- *= require style
  */
+
+ @import "bootstrap.min";
+  @import "font-awesome.min";
+ @import "plugins/plugins";
+ @import "plugins/dzsparallaxer/dzsparallaxer";
+ @import "plugins/dzsparallaxer/scroller";
+ @import "plugins/dzsparallaxer/advancedscroller/plugin";
+ @import "plugins/cubeportfolio/css/cubeportfolio.min";
+ @import "style";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+
+	
+

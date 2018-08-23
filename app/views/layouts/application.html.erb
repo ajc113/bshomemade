@@ -1,15 +1,76 @@
+<!doctype html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= csrf_meta_tags %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <link href="//use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-  <title>Bs Homemade Ice Cream</title>  		  
+  <title>Bs Homemade Ice Cream</title>       
+   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>	  
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+	>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 </head>
 <body>
+	<!-- nabar -->
 	<nav class="navbar navbar-expand-lg navbar-light navbar-transparent navbar-sticky">
+
+	      
+	      <!-- logo icon header -->
+	      <a class="navbar-brand" href="index.html">
+	       <img src="<%= image_path('logo-light.png')%>" alt="" class="logo-visible-desktop logo-default">
+	       <img src="<%= image_path('logo.png')%>" alt="" class="logo-hidden-desktop logo-scroll">
+	      </a>
+
+	      <!-- navbar toggle -->
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+	      	<span class="navbar-toggler-icon"></span>
+	      </button>
+
+
+	      <!-- navbar menu -->
+	      <div class="collapse navbar-collapse" id="navbarCollapse">
+	          <ul class="navbar-nav  ml-auto">
+	                  <!-- homepage link -->
+	                  <li class="nav-item">
+		                  <a>
+		                  	<%= link_to "Home", bees_path, class: 'nav-link', 'data-turbolinks' => false %>
+		                  </a>
+		                </li>
+	                 	<li class="nav-item">
+		                  <a>
+		                  	<%= link_to "Info", bees_path,class: 'nav-link','data-turbolinks' => false %> 
+		                  </a>
+		                </li>
+		                <li class="nav-item">
+		                  <a>
+		                  	<%= link_to "Flavors", flavors_path, class: 'nav-link', 'data-turbolinks' => false %> 
+		                  </a>
+		                </li>
+		                <li class="nav-item">
+		                  <a>
+		                  	<%= link_to "Whats New", flavors_path, class: 'nav-link', 'data-turbolinks' => false %> 
+		                  </a>
+		                </li>
+		                <li class="nav-item">
+		                	<a>
+		                  	<%= link_to "Blog", posts_path, class: 'nav-link', 'data-turbolinks' => false %> 
+		                  </a>
+		                </li>
+										<li class="nav-item">
+		                	<a>
+		                  	<%= link_to "About Us", about_path, class: 'nav-link', 'data-turbolinks' => false %> 
+		                  </a>
+		                </li>		
+
+	              <li class="nav-item">
+	              	<a target="_blank" href="https://wrapbootstrap.com/theme/versa-minimal-startups-bootstrap4-WB0M13NT7/?ref=wb_rakesh" class=" btn btn-primary btn-lg">Buy Now</a>
+	              </li>
+	          </ul>
+	      </div>
+	      
+
+
+	      	      <!-- right nav bar includes menu-->
 	      <div class="navbar-right-col">
 	          <ul class="list-inline">
 
@@ -27,155 +88,10 @@
 	              </li>
 	          </ul>
 	      </div>
-	      <a class="navbar-brand" href="index.html">
-	       <img src="<%= image_path('logo-light.png')%>" alt="" class="logo-visible-desktop logo-default">
-	       <img src="<%= image_path('logo.png')%>" alt="" class="logo-hidden-desktop logo-scroll">
-	      </a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-	      	<span class="navbar-toggler-icon"></span>
-	      </button>
-	      <div class="collapse navbar-collapse" id="navbarCollapse">
-	          <ul class="navbar-nav  ml-auto">
-	              <li class="nav-item active dropdown">
-	                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Home </a>
-	                  <div class="dropdown-menu dropdown-menu-left">
-	                      <a href="index.html" class="dropdown-item">Business & Corporate</a>
-	                      <a href="index-saas-webapp.html" class="dropdown-item">Saas / WebApp</a>
-	                      <a href="index-landing.html" class="dropdown-item">Landing page</a>
-	                      <a href="index-landing-alt.html" class="dropdown-item">Landing alt </a>
-	                      <a href="index-restaurants.html" class="dropdown-item">Restaurants </a>                           
-	                      <a href="index-oneage.html" class="dropdown-item">One page</a>
-	                      <a href="index-parallax-hero.html" class="dropdown-item">Parallax hero</a>
-	                      <a href="index-youtube.html" class="dropdown-item">Youtube hero</a>
-	                      <a href="index-text-rotate.html" class="dropdown-item">Text rotate hero</a>
-	                  </div>
-	              </li>
-	              <li class="nav-item dropdown">
-	                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Pages</a>
-	                  <ul class="dropdown-menu">
-	                      <li class="dropdown-submenu">
-	                          <a tabindex="-1" href="#" class="dropdown-item">About us</a>
-	                          <ul class="dropdown-menu">
-	                              <li><a tabindex="-1" href="page-about-company.html" class="dropdown-item">About Company</a></li>
-	                              <li><a tabindex="-1" href="page-about-me.html" class="dropdown-item">About Me</a></li>
-	                              <li><a tabindex="-1" href="page-team.html" class="dropdown-item">Our Team</a></li>                                   
-	                          </ul>
-	                      </li>
-	                      <li class="dropdown-submenu">
-	                          <a tabindex="-1" href="#" class="dropdown-item">Services</a>
-	                          <ul class="dropdown-menu">
-	                              <li><a tabindex="-1" href="page-service-icon.html" class="dropdown-item">Service Icon</a></li>
-	                              <li><a tabindex="-1" href="page-service-image.html" class="dropdown-item">Service image</a></li>                                  
-	                          </ul>
-	                      </li>
-	                      <li class="dropdown-submenu">
-	                          <a tabindex="-1" href="#" class="dropdown-item">Shop</a>
-	                          <ul class="dropdown-menu">
-	                              <li><a tabindex="-1" href="shop-products.html" class="dropdown-item">Products</a></li>
-	                              <li><a tabindex="-1" href="shop-product-detail.html" class="dropdown-item">Product detail</a></li>
-	                              <li><a tabindex="-1" href="shop-cart.html" class="dropdown-item">Cart</a></li> 
-	                              <li><a tabindex="-1" href="shop-checkout.html" class="dropdown-item">Checkout</a></li> 
-	                          </ul>
-	                      </li>
-	                      <li class="">
-	                          <a href="page-pricing.html" class="dropdown-item">Pricing Tables</a>
-	                      </li>
-	                      <li class="">
-	                          <a href="page-faqs.html" class="dropdown-item">Faqs</a>
-	                      </li>
-	                      <li class="">
-	                          <a href="page-404.html" class="dropdown-item">404</a>
-	                      </li>
-	                      <li class="">
-	                          <a href="page-login.html" class="dropdown-item">Login</a>
-	                      </li>
-	                      <li class="">
-	                          <a href="page-register.html" class="dropdown-item">register</a>
-	                      </li>
-	                      <li class="">
-	                          <a href="page-coming-soon.html" class="dropdown-item">Coming Soon</a>
-	                      </li>
-	                  </ul>
-	              </li>
-	              <li class="nav-item dropdown">
-	                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Portfolio</a>
-	                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-	                      <li><a href="folio-2col.html" class="dropdown-item">2 Columns</a></li>
-	                      <li><a href="folio-3col.html" class="dropdown-item">3 Columns</a></li>
-	                      <li><a href="folio-4col.html" class="dropdown-item">4 Columns</a></li>
-	                      <li><a href="folio-5col.html" class="dropdown-item">5 Columns</a></li>
-	                      <li><a href="folio-masonry-mosaic.html" class="dropdown-item">Masonry Mosaic</a></li>
-	                      <li><a href="folio-detail.html" class="dropdown-item">Detail Page</a></li>
-	                  </ul>
-	              </li>
-	              <li class="nav-item dropdown">
-	                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Blog</a>
-	                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-	                      <li><a href="blog-contained.html" class="dropdown-item">Blog Contained</a></li>
-	                      <li><a href="blog-sidebar.html" class="dropdown-item">Blog Sidebar</a></li>
-	                      <li><a href="blog-masonry.html" class="dropdown-item">Blog Masonry</a></li>
-	                      <li><a href="blog-single.html" class="dropdown-item">Blog Detail</a></li>
-	                  </ul>
-	              </li>
-	              <li class="nav-item dropdown dropdown-mega">
-	                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Elements</a>
-	                  <div class="dropdown-menu dropdown-mega-menu" role="menu" aria-labelledby="dropdownMenu">
-	                      <div class="container">
-	                          <div class="row">
-	                              <div class="col-lg-3">
-	                                  <a class="dropdown-item" href="element-buttons.html">Buttons</a>
-	                                  <a class="dropdown-item" href="element-typo.html">Typography</a>
-	                                  <a class="dropdown-item" href="element-tabs.html">Tabs</a>
-	                                  <a class="dropdown-item" href="element-accordions.html">Accordions </a>    
-	                                  <a class="dropdown-item" href="element-tables.html">Tables </a>
-	                                  <a class="dropdown-item" href="element-tables-data.html">Tables data </a>
-	                                  
-
-	                              </div>
-	                              <div class="col-lg-3">
-	                                  <a class="dropdown-item" href="element-cta.html">Call to actions</a>
-	                                  <a class="dropdown-item" href="element-cta-background.html">Call to actions backgrounds </a>
-	                                  <a class="dropdown-item" href="element-testimonials.html">Testimonials</a>
-	                                  <a class="dropdown-item" href="element-testimonials-2.html">Testimonials 2 </a>
-	                                  <a class="dropdown-item" href="element-cards.html">Card Blocks</a>
-	                                  <a class="dropdown-item" href="element-icon-cards.html">Icon cards</a>                                        
-	                                  <a class="dropdown-item" href="element-icon-cards-2.html">Icon cards 2 </a>
-	                                  <a class="dropdown-item" href="element-cards-news.html">News cards </a>
-	                              </div>
-	                              <div class="col-lg-3">
-	                                  <a class="dropdown-item" href="element-grids.html">Grids</a>                                 
-	                                  <a class="dropdown-item" href="element-modals-alerts.html">Modals & Alerts</a>
-	                                  <a class="dropdown-item" href="element-feature-image.html">Feature image  </a>
-	                                  <a class="dropdown-item" href="element-feature-image-split.html">Feature imagesplit  </a> 
-	                                  <a class="dropdown-item" href="element-feature-nav.html">Feature Nav  </a>
-	                              </div>
-	                              <div class="col-lg-3">
-	                                  <a class="dropdown-item" href="header-standard.html">Header Standard</a>
-	                                  <a class="dropdown-item" href="header-transparent.html">Header Transparent</a>
-	                                  <a class="dropdown-item" href="header-transparent-sticky.html">Header Transparent Sticky</a>
-	                                  <a class="dropdown-item" href="header-startup.html">Header Startup  </a>
-	                                  <a class="dropdown-item" href="header-fullscreen.html">Header fullscreen  </a>
-	                                  <a class="dropdown-item" href="header-login.html">Header login  </a>
-	                                  
-	                                  <a class="dropdown-item" href="footer-sticky.html">Footer Sticky</a>
-	                                  <a class="dropdown-item" href="footer-alt.html">Footer Alt </a>
-	                              </div>
-	                          </div>
-	                      </div>
-	                  </div>
-	              </li>
-	              <li class="nav-item dropdown">
-	                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Contact</a>
-	                  <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu">
-	                      <li><a href="contact-default.html" class="dropdown-item">Contact Default</a></li>
-	                      <li><a href="contact-advanced.html" class="dropdown-item">Contact Advanced</a></li>
-	                  </ul>
-	              </li>
-	              <li class="nav-item"><a target="_blank" href="https://wrapbootstrap.com/theme/versa-minimal-startups-bootstrap4-WB0M13NT7/?ref=wb_rakesh" class=" btn btn-primary btn-lg">Buy Now</a></li>
-	          </ul>
-	      </div>
 	</nav>	
 	<%= yield %>
+  <!-- footer -->
+
   <footer class="footer">
       <div class="container">
           <div class="row">
@@ -223,10 +139,11 @@
                       <li class="list-inline-item"><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
                       <li class="list-inline-item"><a class="gplus" href="#"><i class="fa fa-google-plus"></i></a></li>
                   </ul>
-                  <span class="font400">&copy; Copyright 2018. B's Homemade LLC</span>
+                  <span class="font400">&copy; B's Homemade LLC 2018</span>
               </div><!--/.column-->
           </div><!--/.row-->
       </div><!--/.container-->
   </footer>
 
 </body>
+</html>

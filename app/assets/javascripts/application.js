@@ -15,12 +15,13 @@
 //= require turbolinks
 //= require bundle/bundle
 //= require versa.custom
-//= require dzsparallaxer
-//= require scroller
-//= require plugin
-//= require jquery.cubeportfolio.min
+//= require plugins/dzsparallaxer/dzsparallaxer
+//= require plugins/dzsparallaxer/scroller
+//= require plugins/dzsparallaxer/advancedscroller/plugin
+//= require plugins/cubeportfolio/js/jquery.cubeportfolio.min
 //= require cube-portfolio-home
 //= require google-map
+
 
 
 
