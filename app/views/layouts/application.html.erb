@@ -17,8 +17,8 @@
 	      
 	      <!-- logo icon header -->
 	      <a class="navbar-brand" href="index.html">
-	       <img src="<%= image_path('logo-light.png')%>" alt="" class="logo-visible-desktop logo-default">
-	       <img src="<%= image_path('logo.png')%>" alt="" class="logo-hidden-desktop logo-scroll">
+	       <img src="<%= image_path('logowhite.png')%>" alt="" class="logo-visible-desktop logo-default">
+	       <img src="<%= image_path('logodark.png')%>" alt="" class="logo-hidden-desktop logo-scroll">
 	      </a>
 
 	      <!-- navbar toggle -->
@@ -61,32 +61,21 @@
 		                  	<%= link_to "About Us", about_path, class: 'nav-link', 'data-turbolinks' => false %> 
 		                  </a>
 		                </li>		
-
-	              <li class="nav-item">
-	              	<a target="_blank" href="https://wrapbootstrap.com/theme/versa-minimal-startups-bootstrap4-WB0M13NT7/?ref=wb_rakesh" class=" btn btn-primary btn-lg">Buy Now</a>
-	              </li>
 	          </ul>
 	      </div>
 	      
 
 
-	      	      <!-- right nav bar includes menu-->
+	      	      <!-- right nav bar social icons-->
 	      <div class="navbar-right-col">
-	          <ul class="list-inline">
-
-	              <li class="list-inline-item">
-	                  <a href="shop-cart.html"><i class="fa fa-shopping-basket"></i> <span class="badge badge-primary">2</span></a>
-	              </li>
-	              <li class="list-inline-item dropdown dropdown-search">
-	                  <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-search"></i></a>
-	                  <div class="dropdown-menu search-dropdown-menu dropdown-menu-left">
-	                      <form role="form">
-	                          <input type="text" class="form-control" placeholder="Search...">
-	                          <button type="submit" class="btn-nav-search"><i class="fa fa-search"></i></button>
-	                      </form>
-	                  </div>
-	              </li>
-	          </ul>
+	      	<div class="container">
+	      		<div class="row">
+			        <ul class="social list-inline mb30">
+			            <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook-f" style="color: white"></i></a></li>
+			            <li class="list-inline-item"><a class="instagram" href="#" style="color: white"><i class="fa fa-instagram"></i></a></li>
+			        </ul>
+			      </div>
+			    </div>  
 	      </div>
 	</nav>	
 	<%= yield %>
@@ -134,11 +123,10 @@
                           </div>
                       </form>
                   </div>
-                  <ul class="social list-inline mb30">
-                      <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook-f"></i></a></li>
-                      <li class="list-inline-item"><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li class="list-inline-item"><a class="gplus" href="#"><i class="fa fa-google-plus"></i></a></li>
-                  </ul>
+						        <ul class="social list-inline mb30">
+						            <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook-f" style="color: white"></i></a></li>
+						            <li class="list-inline-item"><a class="instagram" href="#" style="color: white"><i class="fa fa-instagram"></i></a></li>
+						        </ul>
                   <span class="font400">&copy; B's Homemade LLC 2018</span>
               </div><!--/.column-->
           </div><!--/.row-->

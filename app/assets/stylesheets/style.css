@@ -78,6 +78,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .social .twitter {
   background-color: #63cdf1; }
 
+.social .instagram {
+  background-color: #cd486b; }
+
 .social .facebook {
   background: #507cbe; }
 
@@ -590,9 +593,9 @@ Header styles
 .nav-link {
   display: block;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 550;
   text-transform: uppercase;
-  border-top: 2px solid transparent; }
+  border-top: 0px solid transparent; }
 
 .navbar-light .navbar-nav .nav-link {
   color: #666; }
@@ -704,14 +707,15 @@ Header styles
   .navbar-brand {
     padding-top: 0px; }
   .navbar.navbar-transparent .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.7); }
+    color: rgba(255, 255, 255, 1.00);
+    font-size: 17px }
     .navbar.navbar-transparent .navbar-nav .nav-link:hover {
       color: #fff; }
   .navbar.navbar-transparent .active a.nav-link {
     color: #fff; }
   .navbar.navbar-transparent .navbar-brand img {
     position: absolute;
-    top: 1.7rem; }
+    top: .05rem; }
   .navbar.navbar-transparent .logo-hidden-desktop {
     opacity: 0;
     visibility: hidden; }
