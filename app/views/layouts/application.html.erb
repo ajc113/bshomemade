@@ -14,12 +14,21 @@
 	<!-- nabar -->
 	<nav class="navbar navbar-expand-lg navbar-light navbar-transparent navbar-sticky">
 
-	      
+	      <%= link_to root_path do %>
 	      <!-- logo icon header -->
-	      <a class="navbar-brand" href="index.html">
-	       <img src="<%= image_path('logowhite.png')%>" alt="" class="logo-visible-desktop logo-default">
-	       <img src="<%= image_path('logodark.png')%>" alt="" class="logo-hidden-desktop logo-scroll">
-	      </a>
+	      <a class="navbar-brand"> 
+	      	<img src="<%= image_path('logowhite.png')%>" alt="" class="logo-visible-desktop logo-default">
+		      <img src="<%= image_path('logodark.png')%>" alt="" class="logo-hidden-desktop logo-scroll">
+				</a>
+
+	      <% end %>
+
+        <%#= link_to image_tag('logowhite.png',  class: 'logo-visible-desktop logo-default'),  root_path %>
+
+        <%#= link_to image_tag('logodark.png', class: 'logo-hidden-desktop logo-scroll'),  root_path %>
+
+
+	      
 
 	      <!-- navbar toggle -->
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +47,7 @@
 		                </li>
 	                 	<li class="nav-item">
 		                  <a>
-		                  	<%= link_to "Info", bees_path,class: 'nav-link','data-turbolinks' => false %> 
+		                  	<%= link_to "Info", "/#visit_us",class: 'nav-link','data-turbolinks' => false %> 
 		                  </a>
 		                </li>
 		                <li class="nav-item">
@@ -71,8 +80,8 @@
 	      	<div class="container">
 	      		<div class="row">
 			        <ul class="social list-inline mb30">
-			            <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook-f" style="color: white"></i></a></li>
-			            <li class="list-inline-item"><a class="instagram" href="#" style="color: white"><i class="fa fa-instagram"></i></a></li>
+			            <li class="list-inline-item"><a class="facebook" href="https://www.facebook.com/Bs-Homemade-Ice-Cream-144977852873757" target="_blank"><i class="fa fa-facebook-f" style="color: white"></i></a></li>
+			            <li class="list-inline-item"><a class="instagram" href="https://www.instagram.com/bshomemadeicecream" style="color: white" target="_blank"><i class="fa fa-instagram"></i></a></li>
 			        </ul>
 			      </div>
 			    </div>  
@@ -124,8 +133,8 @@
                       </form>
                   </div>
 						        <ul class="social list-inline mb30">
-						            <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook-f" style="color: white"></i></a></li>
-						            <li class="list-inline-item"><a class="instagram" href="#" style="color: white"><i class="fa fa-instagram"></i></a></li>
+						            <li class="list-inline-item"><a class="facebook" href="https://www.facebook.com/Bs-Homemade-Ice-Cream-144977852873757" target="_blank"><i class="fa fa-facebook-f" style="color: white"></i></a></li>
+						            <li class="list-inline-item"><a class="instagram" href="https://www.instagram.com/bshomemadeicecream" style="color: white" target="_blank"><i class="fa fa-instagram"></i></a></li>
 						        </ul>
                   <span class="font400">&copy; B's Homemade LLC 2018</span>
               </div><!--/.column-->
