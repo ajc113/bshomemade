@@ -69,7 +69,9 @@
                         </div>
                     </div>
                 </div>
-                <a href='#' class='btn btn-light btn-xl'>Hire Us</a>
+                <a>
+                  <%= link_to "Contact Us", "/#visit_us",class: 'btn btn-light btn-xl','data-turbolinks' => false %> 
+                </a>
             </div>
             <div class='col-lg-6 pt50-md'>
                 <img src="<%= image_path('icmaker.jpg')%>" alt='' class='img-fluid'>
@@ -80,6 +82,7 @@
 <!-- end homemade ice cream panel end-->
 
 <!-- whats new panel start -->
+<a id="whats_new"></a>
 <div class="container pt90 pb90">
     <div class='row'>
         <div class='col-md-12'>
@@ -99,7 +102,9 @@
                         <p class='lead mb20'>
                         Banana ice cream, banana chunks cooked in brown sugar, butter, cinnamon and dark rum!
                         </p>
-                        <a href='#' class='btn btn-light btn-xl'>See all our flavors</a>
+                        <a>
+                          <%= link_to "See all our flavors", flavors_path, class: 'btn btn-light btn-xl', 'data-turbolinks' => false %>
+                        </a>
                     </div>
                 </div>
             </div><!--feature col-->
@@ -109,8 +114,9 @@
 <!-- whats new panel end-->
 
 
-<a id="visit_us"></a>
+
 <!-- where we are located panel start -->
+<a id="visit_us"></a>
 <div class="bg-dark pt90 pb90">
     <div class="container">
         <div class="row">
@@ -141,12 +147,12 @@
             <div class="media mb20">
                 <i class="icon-round-40 bg-light float-left mr-3 fa fa-envelope"></i>
                 <p class="media-body pt5">
-                    <a href="#" class="btn btn-underline text-white">bshomemade@gmail.com</a></p>
+                    <a href="mailto:bshomemade@gmail.com" class="btn btn-underline text-white">bshomemade@gmail.com</a></p>
             </div>
             <div class="media mb20">
                 <i class="icon-round-40 float-left mr-3 bg-light fa fa-phone"></i>
                 <p class="media-body pt5">
-                    <a href="#" class="btn btn-underline text-white">888-234-3949</a></p>
+                    <a href="tel:+18882343949" class="btn btn-underline text-white">888-234-3949</a></p>
             </div>
         </div>
         <!-- google maps -->
