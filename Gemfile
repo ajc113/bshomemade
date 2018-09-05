@@ -27,7 +27,9 @@ gem "figaro"
 
 gem 'font-awesome-sass', '~> 5.2.0'
 
-  
+ gem 'activeadmin'
+ gem 'flattened_active_admin'
+ gem 'devise' 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

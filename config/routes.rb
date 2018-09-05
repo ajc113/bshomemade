@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :models
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root to: 'bees#index'
 
 
