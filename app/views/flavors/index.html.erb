@@ -29,88 +29,145 @@
     </a>
   </div>
 </section>
-        <div class="container pt90 pb50" id="about">
-            <div class="row">
-                <div class="col-md-8 mr-auto ml-auto text-center mb60">
-                    <h3 class="h1"> Check out our homemade ice cream flavors.  Made daily on location</h3>
-                </div>
-            </div>
+
+<div class="container pt50 pb10" id="about">
+    <div class="row">
+        <div class="col-md-8 mr-auto ml-auto text-center mb20">
+            <h3 class="h1"> Check out our homemade ice cream flavors.  Made daily on location</h3>
         </div>
-        <div class="bg-faded pt90 pb90" id="portfolio">
-            <div class="container">
-                <div class="center-title text-center mb60">
-                    <h4>Recent Projects</h4>
-                </div>
-                <div id="js-grid-agency" class="cbp cbp-l-grid-agency">
-                    <div class="cbp-item graphic">
-                        <a href="#" target="_blank">
-                            <div class="cbp-caption">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="<%= image_path('box/img-1.jpg')%>" data-cbp-src="<%= image_path('box/img-1.jpg')%>" alt="" width="380" height="250">
-                                </div>
-                            </div>
-                            <div class="cbp-l-grid-agency-title">Dashboard</div>
-                            <div class="cbp-l-grid-agency-desc">Web Design / Graphic</div>
-                        </a>
-                    </div>
-                    <div class="cbp-item web-design logos">
-                        <a href="#" target="_blank">
-                            <div class="cbp-caption">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="<%= image_path('box/img-2.jpg')%>" data-cbp-src="<%= image_path('box/img-2.jpg')%>" alt="" width="380" height="250">
-                                </div>
-                            </div>
-                            <div class="cbp-l-grid-agency-title">World Clock</div>
-                            <div class="cbp-l-grid-agency-desc">Logo / Web Design</div>
-                        </a>
-                    </div>
-                    <div class="cbp-item graphic logos">
-                        <a href="#" target="_blank">
-                            <div class="cbp-caption">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="<%= image_path('box/img-3.jpg')%>" data-cbp-src="<%= image_path('box/img-3.jpg')%>" alt="" width="380" height="250">
-                                </div>
-                            </div>
-                            <div class="cbp-l-grid-agency-title">To-Do Dashboard</div>
-                            <div class="cbp-l-grid-agency-desc">Graphic / Logo</div>
-                        </a>
-                    </div>
-                    <div class="cbp-item web-design graphic">
-                        <a href="#" target="_blank">
-                            <div class="cbp-caption">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="<%= image_path('box/img-4.jpg')%>" data-cbp-src="<%= image_path('box/img-4.jpg')%>" alt="" width="380" height="250">
-                                </div>
-                            </div>
-                            <div class="cbp-l-grid-agency-title">Events and More</div>
-                            <div class="cbp-l-grid-agency-desc">Web Design / Graphic</div>
-                        </a>
-                    </div>
-                    <div class="cbp-item identity web-design">
-                        <a href="#" target="_blank">
-                            <div class="cbp-caption">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="<%= image_path('box/img-5.jpg')%>" data-cbp-src="<%= image_path('box/img-5.jpg')%>" alt="" width="380" height="250">
-                                </div>
-                            </div>
-                            <div class="cbp-l-grid-agency-title">WhereTO App</div>
-                            <div class="cbp-l-grid-agency-desc">Web Design / Identity</div>
-                        </a>
-                    </div>
-                    <div class="cbp-item identity web-design">
-                        <a href="#" target="_blank">
-                            <div class="cbp-caption">
-                                <div class="cbp-caption-defaultWrap">
-                                    <img src="<%= image_path('box/img-6.jpg')%>" data-cbp-src="<%= image_path('box/img-6.jpg')%>" alt="" width="380" height="250">
-                                </div>
-                            </div>
-                            <div class="cbp-l-grid-agency-title">Ski * Buddy</div>
-                            <div class="cbp-l-grid-agency-desc">Identity / Web Design</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>    
+    </div>
+</div>
+        <!-- products page -->
+<div class="container pt50 pb50">
+    <div class="row">
+        <div class="col-md-6 mb20">
+            <em>Showing 12 from 340 items</em>
+        </div>
+         <div class="col-md-3 ml-auto mb20 text-right">
+             <select class="form-control form-control-sm">
+                 <option>Newest Items</option>
+                 <option>Trending Items</option>
+                 <option>Best Rated Items</option>
+                 <option>Discounts Items</option>
+             </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('flavors/banana.jpeg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    Ice Cream Title
+                </h5>
+                <p class="lead text-muted">Description Copy</p>
+            </a>
+        </div>
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('flavors/cake_batter.jpeg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    Ice Cream Title
+                </h5>
+                <p class="lead text-muted">Description Copy</p>
+            </a>
+        </div>
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('flavors/chocolate_flake.jpeg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    Ice Cream Title
+                </h5>
+                <p class="lead text-muted">Description Copy</p>
+            </a>
+        </div>
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    Watch fasttrack
+                </h5>
+                <p class="lead text-muted">$49.00</p>
+            </a>
+        </div>
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    <span class="float-right badge badge-primary">-30%</span>
+                    Smart watch fasttrack
+                </h5>
+                <p class="lead text-muted">$99.00</p>
+            </a>
+        </div>
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    <span class="float-right badge badge-danger">-10%</span>
+                   Ray bon sunglass
+                </h5>
+                <p class="lead text-muted">$149.00</p>
+            </a>
+        </div>
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    <span class="float-right badge badge-success">-5%</span>
+                   Rain jacket woodland
+                </h5>
+                <p class="lead text-muted">$29.00</p>
+            </a>
+        </div>
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    Laptop Chair
+                </h5>
+                <p class="lead text-muted">$09.00</p>
+            </a>
+        </div>
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    Titon smart hand watch
+                </h5>
+                <p class="lead text-muted">$49.00</p>
+            </a>
+        </div>
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    <span class="float-right badge badge-warning">Free Shipping</span>
+                   Casual shirt
+                </h5>
+                <p class="lead text-muted">$19.00</p>
+            </a>
+        </div>
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    Shopping bag
+                </h5>
+                <p class="lead text-muted">$05.00</p>
+            </a>
+        </div>
+        <div class="col-md-4 mb40">
+            <a class="shop-item-card" href="shop-product-detail.html">
+                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
+                <h5 class="font600 h6">
+                    <span class="float-right badge badge-primary">-5%</span>
+                    Chair almanto
+                </h5>
+                <p class="lead text-muted">$12.00</p>
+            </a>
+        </div>
+    </div>
+</div>  
 
 <!-- flavors scaffold -->
 <!-- <div>
