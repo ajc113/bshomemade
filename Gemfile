@@ -30,6 +30,8 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'activeadmin'
  gem 'flattened_active_admin'
  gem 'devise' 
+ gem 'carrierwave', '~> 1.0'
+ gem "mini_magick"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
