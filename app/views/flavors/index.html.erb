@@ -41,160 +41,30 @@
 <div class="container pt50 pb50">
     <div class="row">
         <div class="col-md-6 mb20">
-            <em>Showing 12 from 340 items</em>
+            <em>Showing all 25 Flavors</em>
         </div>
          <div class="col-md-3 ml-auto mb20 text-right">
              <select class="form-control form-control-sm">
-                 <option>Newest Items</option>
-                 <option>Trending Items</option>
-                 <option>Best Rated Items</option>
-                 <option>Discounts Items</option>
+                 <option>Seasonal Items</option>
+                 <option>Year Round Items</option>
              </select>
         </div>
     </div>
+  <!-- start of flavors -->   
     <div class="row">
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('flavors/banana.jpeg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    Ice Cream Title
-                </h5>
-                <p class="lead text-muted">Description Copy</p>
-            </a>
-        </div>
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('flavors/cake_batter.jpeg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    Ice Cream Title
-                </h5>
-                <p class="lead text-muted">Description Copy</p>
-            </a>
-        </div>
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('flavors/chocolate_flake.jpeg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    Ice Cream Title
-                </h5>
-                <p class="lead text-muted">Description Copy</p>
-            </a>
-        </div>
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    Watch fasttrack
-                </h5>
-                <p class="lead text-muted">$49.00</p>
-            </a>
-        </div>
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    <span class="float-right badge badge-primary">-30%</span>
-                    Smart watch fasttrack
-                </h5>
-                <p class="lead text-muted">$99.00</p>
-            </a>
-        </div>
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    <span class="float-right badge badge-danger">-10%</span>
-                   Ray bon sunglass
-                </h5>
-                <p class="lead text-muted">$149.00</p>
-            </a>
-        </div>
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    <span class="float-right badge badge-success">-5%</span>
-                   Rain jacket woodland
-                </h5>
-                <p class="lead text-muted">$29.00</p>
-            </a>
-        </div>
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    Laptop Chair
-                </h5>
-                <p class="lead text-muted">$09.00</p>
-            </a>
-        </div>
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    Titon smart hand watch
-                </h5>
-                <p class="lead text-muted">$49.00</p>
-            </a>
-        </div>
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    <span class="float-right badge badge-warning">Free Shipping</span>
-                   Casual shirt
-                </h5>
-                <p class="lead text-muted">$19.00</p>
-            </a>
-        </div>
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    Shopping bag
-                </h5>
-                <p class="lead text-muted">$05.00</p>
-            </a>
-        </div>
-        <div class="col-md-4 mb40">
-            <a class="shop-item-card" href="shop-product-detail.html">
-                <img src="<%= image_path('shop/1.jpg')%>" alt="" class="img-fluid mb20">
-                <h5 class="font600 h6">
-                    <span class="float-right badge badge-primary">-5%</span>
-                    Chair almanto
-                </h5>
-                <p class="lead text-muted">$12.00</p>
-            </a>
-        </div>
+      <% @flavors.each do |flavor| %>
+          <div class="col-md-4 mb40">
+              <a class="shop-item-card" href="shop-product-detail.html">
+                  <img src="<%= flavor.image %>" alt="" class="img-fluid mb20">
+                  <h5 class="font600 h6">
+                    <%= flavor.name %>
+                  </h5>
+                  <p class="lead text-muted"><%= flavor.description %></p>
+              </a>
+          </div>
+      <% end %>
     </div>
 </div>  
 
-<!-- flavors scaffold -->
-<!-- <div>
-  <h1>Listing Flavors</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
 
-    <tbody>
-      <% @flavors.each do |flavor| %>
-        <tr>
-          <td><%= flavor.name %></td>
-          <td><%= flavor.description %></td>
-          <td><%= link_to 'Show', flavor %></td>
-          <td><%= link_to 'Edit', edit_flavor_path(flavor) %></td>
-          <td><%= link_to 'Destroy', flavor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>  
-  <br>
-  <%= link_to 'New Flavor', new_flavor_path %>
-</div> -->
-<!-- flavors scaffold end   -->
 
