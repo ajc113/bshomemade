@@ -83,24 +83,24 @@
 
 <!-- whats new panel start -->
 <a id="whats_new"></a>
-<div class="container pt90 pb90">
+<div class="container pt50 pb50">
     <div class='row'>
         <div class='col-md-12'>
             <div class='feature-col mb90'>
                 <div class='row align-items-center'>
                     <div class='col-lg-6'>
-                        <img src="<%= image_path('spoon.jpg')%>" alt='' class='img-fluid'>
+                        <img src="assets/flavors/<%= @flavors.images %>" alt='' class='img-fluid'>                        
                     </div>
                     <div class='col-lg-5 ml-auto pt50-md'>
-                        <h3 class="mb20">What's new at B's Homemade</h3>
+                        <h2 class="mb20">What's new at B's Homemade</h2>
+                   <!--      <h2 class='mb20'>
+                        Flavor of the week<br>
+                        </h2> -->
+                        <p class='lead mb20 text-danger' tyle="font-weight: bold;">
+                        <%= @flavors.names %>
+                        </hp>
                         <p class='lead mb20'>
-                        Flavor of the week
-                        </p>
-                        <p class='lead mb20'>
-                        Yellowstone coffee ripoff
-                        </p>
-                        <p class='lead mb20'>
-                        Banana ice cream, banana chunks cooked in brown sugar, butter, cinnamon and dark rum!
+                        <%= @flavors.descriptions %>
                         </p>
                         <a>
                           <%= link_to "See all our flavors", flavors_path, class: 'btn btn-light btn-xl', 'data-turbolinks' => false %>

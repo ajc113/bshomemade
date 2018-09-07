@@ -4,7 +4,8 @@ class BeesController < ApplicationController
   # GET /bees
   # GET /bees.json
   def index
-    @bees = Bee.all
+  @bees = Bee.all
+  @flavors = Flavor.where(flavorofweek:["Yes"])
   end
 
   def homepage
