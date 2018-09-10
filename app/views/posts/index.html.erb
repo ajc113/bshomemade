@@ -29,8 +29,8 @@
                         <div class="col-12 col-md-7">
                             <div class="card-body">
                                 <h4 class="card-title font400"><%= link_to post.title, post %></h4>
-                                <p class="card-text"><%= post.description %></p>
-                                <a class="font600 btn btn-underline" href="blog-single.html"><%= link_to "READ MORE", post_path(post) %><i class="fa fa-angle-right"></i></a>
+                                <p class="card-text"><%= post.description.truncate(500).html_safe %></p>
+                                <a class="font600 btn btn-underline" href="blog-single.html"><%= link_to "READ MORE", post_path(post) %>  <i class="fa fa-angle-right"></i></a>
                             </div>
                             <div class="card-bottom">
                                 <ul class="list-inline">

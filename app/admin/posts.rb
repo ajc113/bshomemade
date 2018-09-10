@@ -4,13 +4,13 @@ ActiveAdmin.register Post do
 #
 permit_params :title, :description, :slug, :image, :meta_title, :meta_description, :meta_keywords
 
+
 #
 show do |t|
 	attributes_table do
 		row :title
 		row :description
 		row :created_at
-		row :slug
 		row :image
 		row :meta_title
 		row :meta_description
@@ -23,7 +23,6 @@ form :html => { :enctype => "multipart/form-data" } do |f|
 		f.input :title
 		f.input :description
 		f.input :created_at
-		f.input :slug
 		f.file_field :image
 		f.input :meta_title
 		f.input :meta_description
