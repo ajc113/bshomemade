@@ -33,6 +33,7 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'carrierwave', '~> 1.0'
  gem "mini_magick"
  gem 'friendly_id', '~> 5.2.0'
+ gem 'activeadmin_froala_editor'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
