@@ -22,7 +22,6 @@
 							<ul class="list-inline">
 									<li class="list-inline-item"><i class="fa fa-user"></i> <a href="mailto:bshomemade@gmail.com" class="btn btn-underline">Brooke Costa</a></li>
 									<li class="list-inline-item"><i class="fa fa-calendar-check-o"></i> Submitted <%= time_ago_in_words(@post.created_at) %> a go</li>
-			             <!-- <li class="list-inline-item"><i class="fa fa-tag"></i> <a href="#" class="btn btn-underline">Startups</a></li> -->
 			           </ul>
 		      </div><!--post meta end-->
          	<div class="post-thumbnail">
@@ -34,58 +33,35 @@
               </p>
               <ul class="list-inline share">
                   <li class="list-inline-item">Share it:</li>
-                  <li class="list-inline-item"><a class="btn btn-underline" href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
-                  <li class="list-inline-item"><a class="btn btn-underline" href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i> Twitter</a></li>
-                  <li class="list-inline-item"><a class="btn btn-underline" href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="Pinterest"><i class="fa fa-pinterest"></i> Pinterest</a></li>
-                  <li class="list-inline-item"><a class="btn btn-underline" href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="Linkedin"><i class="fa fa-linkedin"></i> Linkedin</a></li>
+                  <li class="list-inline-item"><a class="btn btn-underline" href="https://www.facebook.com/sharer/sharer.php?u=<%= yield :url %>" target="_blank" data-toggle="tooltip" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+                  <li class="list-inline-item"><a class="btn btn-underline" href="https://twitter.com/intent/tweet?text=“<%= yield :title %>”&url=<%= yield :url %>&via=twitter" target="_blank" data-toggle="tooltip" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i> Twitter</a></li>
+                  <li class="list-inline-item"><a class="btn btn-underline" href="http://pinterest.com/pin/create/link/?url=<%= yield :url %>&<%= yield :title %>" target="_blank"data-toggle="tooltip" title="" data-original-title="Pinterest"><i class="fa fa-pinterest"></i> Pinterest</a></li>
+                  <li class="list-inline-item"><a class="btn btn-underline" href="" target="_blank"data-toggle="tooltip" title="" data-original-title="Instagram"><i class="fa fa-instagram"></i> Instagram</a></li>
               </ul>
-			          <nav class="clearfix pt60">              
-			        		<a><%= link_to 'Back to Blog', posts_path, class: "btn btn-light" %></a>
+			        
+			        <nav class="clearfix pt60">              
+			        	<a><%= link_to 'Back to Blog', posts_path, class: "btn btn-light" %></a>
 			        	</nav>
               <p>
                  
               </p>
           </div>
 		    </div><!--post end-->
-	            <!-- pagination -->
-        <nav class="clearfix pt60">              
-        	<a class="btn btn-light float-right" href="#">Older <i class="fa fa-angle-right"></i></a>
-          <a class="btn btn-light disabled"><i class="fa fa-angle-left"></i> Newer</a>
-        </nav>
+
 	    </div>
 	        <!-- aside optional	 -->
-	    <div class="col-md-3">
-	        <div class="widget">
-	            <h3>Search blog</h3>
+	    <div class="col-md-3 pt50">
+	      <div class="widget">
+	        	<h3>Search blog</h3>
 	            <form>
-	                <input type="text" class="form-control" placeholder="Search &amp; hit enter">
+	             <%= form_tag posts_path, :method => 'get' do %>
+               <p><%= text_field_tag  :q, params[:q]  %></p>
+               <%= submit_tag 'Search', :name => nil  %>
+               <% end %>
 	            </form>
-	        </div><!--end widget-->
-	        <div class="widget">
-	            <h3>Post categories</h3>
-	            <ul class="list-unstyled">
-	                <li><a href="#" class="btn btn-underline">Web design</a></li>
-	                <li><a href="#" class="btn btn-underline">Bootstrap4</a></li>
-	                <li><a href="#" class="btn btn-underline">Angular js</a></li>
-	                <li><a href="#" class="btn btn-underline">Jquery</a></li>
-	            </ul>
-	        </div><!--end widget-->
-	        <div class="widget">
-	            <h3>About Author</h3>
-	            <p>
-	                Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.
-	            </p>
-	        </div><!--end widget-->
-	        <div class="widget">
-	            <h3>Tags</h3>
-	            <ul class="list-inline tag-list">
-	                <li><a href="#">Web design</a></li>
-	                <li><a href="#">Bootstrap4</a></li>
-	                <li><a href="#">Angular js</a></li>
-	                <li><a href="#">Jquery</a></li>
-	            </ul>
-	        </div><!--end widget-->
+	      </div>
 	    </div>
+
 	  </div>
 	</div>
 	<!-- blog content end -->

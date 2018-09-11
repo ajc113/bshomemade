@@ -6,6 +6,4 @@ paginates_per 3
   friendly_id :title, use: :slugged
 
 
-
-
 end
