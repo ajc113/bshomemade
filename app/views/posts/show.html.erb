@@ -30,7 +30,7 @@
           </div>
           <div class="post-content">
               <p>
-                 <%= @post.description %>
+                 <%= @post.description.html_safe %>
               </p>
               <ul class="list-inline share">
                   <li class="list-inline-item">Share it:</li>
@@ -90,15 +90,4 @@
 	</div>
 	<!-- blog content end -->
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
 

@@ -28,7 +28,7 @@
                         </div>
                         <div class="col-12 col-md-7">
                             <div class="card-body">
-                                <h4 class="card-title font400"><%= link_to post.title, post %></h4>
+                                <h4 class="card-title font400"><%= link_to post.title, post,  style: "color: #212121;" %></h4>
                                 <p class="card-text"><%= post.description.truncate(500).html_safe %></p>
                                 <a class="font600 btn btn-underline" href="blog-single.html"><%= link_to "READ MORE", post_path(post) %>  <i class="fa fa-angle-right"></i></a>
                             </div>
@@ -55,10 +55,16 @@
                     </div>
                 </div><!--post card-->
               <% end %>
-              <nav class="clearfix mt30">                     
-                  <a class="btn btn-light float-right" href="#">Older <i class="fa fa-angle-right"></i></a>
-                  <a class="btn btn-light disabled"><i class="fa fa-angle-left"></i> Newer</a>
-              </nav>
+                    <h3 class="h1 text-center font300">
+                   <%= link_to_prev_page @posts, "Previous Posts...", style: "color: #212121; " %>
+                  </h3>
+
+                    <h3 class="h1 text-center font300">
+                   <%= link_to_next_page @posts, "Older Posts...", style: "color: #212121; " %>
+                  </h3>
+
+
+
           </div>
       </div>
   </div>

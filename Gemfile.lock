@@ -243,6 +243,7 @@ DEPENDENCIES
   friendly_id (~> 5.2.0)
   jbuilder (~> 2.7)
   jquery-rails
+  kaminari
   mini_magick
   rails (~> 4.2, >= 4.2.6)
   rails_12factor
