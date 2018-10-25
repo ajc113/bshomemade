@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users,  :controllers => { :users => 'users' }
   devise_for :models
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -8,10 +9,12 @@ Rails.application.routes.draw do
   resources :posts
   resources :flavors
   resources :bees
-
+  resources :admin_users
 
   get 'about' => 'bees#about'
-    get 'homepage' => 'bees#homepage'
+  get 'homepage' => 'bees#homepage'
+  put 'subscribe', to: 'subscribe#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

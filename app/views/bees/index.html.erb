@@ -95,7 +95,7 @@
                         <h2 class="mb20">What's new at B's Homemade</h2>
                         <!-- <h2 class='mb20'> -->
                           <!-- Flavor of the week<br> -->
-                          <!-- </h2> --> -->
+                          <!-- </h2> -->    
                         <p class='lead mb20 text-danger' tyle="font-weight: bold;">
                         <%= @flavors.names %>
                         </hp>
@@ -162,6 +162,40 @@
           </section>
         </div> 
     </div>
+
+   <!--  <div class="section">
+        <h2>Sign up</h2>
+         -->
+
+        <%# @users.each do |f| %>
+
+          <!-- <div class="section">
+            <%#= f.label :email %><br />
+            <%#= f.email_field :email, autofocus: true %>
+          </div>
+
+          <div class="actions">
+            <%#= f.submit "Sign up" %>
+          </div>
+
+        <%# end %> -->
+
+
+
+
+
+
+    <%= form_tag(subscribe_url, method: :put, remote: true, id: 'subscribe-email-form') do %>
+      <%= text_field_tag :email, nil, placeholder: 'Add Email To Receive Specials', style:"" %>
+      <%= submit_tag "Join Newsletter", class: 'btn btn-danger btn-lg' %>
+    <% end %>
+    
+    </div>
+    <div class="subscribe-email-form error"></div>
+    <div class="subscribe-email-form success"></div>
+
+
+
   </div>
 </div>
 
