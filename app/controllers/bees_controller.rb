@@ -6,6 +6,7 @@ class BeesController < ApplicationController
   def index
   @bees = Bee.all
   @flavors = Flavor.where(flavorofweek:["Yes"])
+  @lead = Lead.new
   end
 
   def homepage

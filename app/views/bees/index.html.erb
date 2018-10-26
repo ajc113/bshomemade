@@ -179,7 +179,13 @@
           </div>
 
         <%# end %> -->
-
+   
+   <%= form_for @lead do |f| %>
+    <%= f.text_field :fname, placeholder: "First" %>
+    <%= f.text_field :lname, placeholder: "Last" %>
+    <%= f.email_field :email, placeholder: "Email" %>
+    <%= f.submit "Join Newsletter", class: 'btn btn-danger btn-lg' %>
+   <% end %>
 
 
 

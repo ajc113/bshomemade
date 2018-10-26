@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :flavors
   resources :bees
   resources :admin_users
+  resources :leads
 
   get 'about' => 'bees#about'
   get 'homepage' => 'bees#homepage'
