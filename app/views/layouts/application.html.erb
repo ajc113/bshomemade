@@ -145,14 +145,19 @@
               </div><!--/.column-->
               <!-- right column -->
               <div class="col-md-6 col-lg-3">
-                  <h4>Newsletter</h4>
+                  <h4>Connect with Us</h4>
                   <div class="mb30">
                       <form>
+                      	
                           <div class="form-group">
-                              <label for="subscribe">Subscribe today to recieve our specials</label>
-                              <input type="email" class="form-control" placeholder="Mail id" id="subscribe">
-                              <button type="submit" class="btn-newsletter"><i class="fa fa-paper-plane-o"></i></button>
+                          <%#= form_for @lead do |f| %>
+                              <label for="subscribe">Check out our social media presence</label>
+
+                              <%#= f.email_field :email, placeholder: "  Email", class: "form-control"%>
+                              <br>
+                              <%#= f.submit "Join Newsletter", class: 'btn btn-outline-secondary btn-sm' %>
                           </div>
+                          <%# end %>
                       </form>
                   </div>
 						        <ul class="social list-inline mb30">
