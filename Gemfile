@@ -36,7 +36,7 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'kaminari'
  gem 'gibbon'
  gem 'pg', '~> 0.21'
-require 'nokogiri'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
