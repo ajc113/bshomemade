@@ -3,8 +3,7 @@ ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2', '>= 4.2.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use sqlite3 as the database for Active Record 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 # Use Uglifier as compressor for JavaScript assets
@@ -36,6 +35,9 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'activeadmin_froala_editor'
  gem 'kaminari'
  gem 'gibbon'
+ gem 'pg', '~> 0.21'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
