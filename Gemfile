@@ -36,7 +36,7 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'kaminari'
  gem 'gibbon'
  gem 'pg', '~> 0.21'
-
+ gem 'rails_serve_static_assets'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
