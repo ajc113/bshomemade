@@ -75,7 +75,7 @@
             <div class='feature-col mb90'>
                 <div class='row align-items-center'>
                     <div class='col-lg-6'>
-                        <img src="assets/flavors/<%= @flavors.images %>" alt='' class='img-fluid'>                        
+                        <img src="<%= @flavor.image %>"></img>                        
                     </div>
                     <div class='col-lg-5 ml-auto pt50-md'>
                         <h2 class="mb20">What's new at B's Homemade</h2>
@@ -83,10 +83,10 @@
                           <!-- Flavor of the week<br> -->
                           <!-- </h2> -->    
                         <p class='lead mb20 text-danger' tyle="font-weight: bold;">
-                        <%= @flavors.names %>
+                        <%= @flavor.name %>
                         </hp>
                         <p class='lead mb20'>
-                        <%= @flavors.descriptions %>
+                        <%= @flavor.description %>
                         </p>
                         <a>
                           <%= link_to "See all our flavors", flavors_path, class: 'btn btn-light btn-xl', 'data-turbolinks' => false %>

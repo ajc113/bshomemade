@@ -5,7 +5,7 @@ class BeesController < ApplicationController
   # GET /bees.json
   def index
   @bees = Bee.all
-  @flavors = Flavor.where(flavorofweek:["Yes"])
+  @flavor = Flavor.where(flavorofweek:["Yes"]).last
   @lead = Lead.new
   end
 
@@ -79,4 +79,5 @@ class BeesController < ApplicationController
     def bee_params
       params.fetch(:bee, {})
     end
+
 end
