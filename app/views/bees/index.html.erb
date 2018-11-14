@@ -103,7 +103,7 @@
 
 <!-- where we are located panel start -->
 <a id="visit_us"></a>
-<div class="bg-dark pt90 pb90">
+<div class="bg-dark pt90 pb40">
     <div class="container">
         <div class="row">
             <div class="col-md-8 mr-auto ml-auto text-center">
@@ -157,48 +157,65 @@
 
       <!-- email subscribe user list -->
     <div class="row">
-      <div class="container pt50 pb1">
-        <!-- title start -->
-        <div class="col-md-12 mr-auto ml-auto ">
+      <div class="container pt50 pb1 text-center">
+          <!-- title start -->
+          <div class="col-md-12 mr-auto ml-auto ">
             <h3 class="text-white mb0 h3">
                 Sign up today to receive our specials
-            </h3>
-            <br>
-        <!-- form start -->
-        <div class="form-body">
-           <%= form_for @lead do |f| %>
-            <div class="section">
-              <label class="field prepend-icon">
-                <span class="field-icon" style="color: white;">
-                    <i class="fa fa-user"></i>
-                    <%= f.text_field :fname, placeholder: "  First", style: "background-color: white;"%>
-                    <i class="fa fa-user"></i>
-                    <%= f.text_field :lname, placeholder: "  Last", style: "background-color: white;" %>
-                    <i class="fa fa-envelope"></i>
-                    <%= f.email_field :email, placeholder: "  Email", style: "background-color: white;"%>
-                    <%= f.submit "Join Newsletter", class: 'btn btn-danger btn-lg' %>
+            </h3><br>
+          </div> <!-- title end -->
+          <!-- form start -->
+          <div class="smart-wrap">
+            <div class="smart-forms smart-container">
+              <div class="form-body">
+                 <%= form_for @lead do |f| %>
+                  <!-- section -->
+                  <div class="section">
+                    <label class="field prepend-icon">
+                      <span class="field-icon" style="color: white;">
+                        <%= f.text_field :fname, placeholder: "  First", style: "background-color: white;", class: "form-control" %> 
+                      </span>
+                    </label>
+                      <!-- <i class="fa fa-user" style="color: white;"></i> -->
+                  </div> <!-- section end -->
+                  <!-- section -->
+                  <div class="section">
+                    <label class="field prepend-icon">
+                      <span class="field-icon">                     
+                        <%= f.text_field :lname, placeholder: "  Last", style: "background-color: white;", class: "form-control" %> 
+                      </span>
+                    </label>
+                      <!-- <i class="fa fa-user" class: "form-control" style="color: white;"></i> -->
+                  </div> 
+                  <!-- section -->
+                  <div class="section">
+                    <label class="field prepend-icon">
+                      <span class="field-icon" >
+                        <%= f.email_field :email, placeholder: "  Email", style: "background-color: white;", class: "form-control" %>  
+                      </span>
+                    </label>
+                      <!-- <i class="fa fa-envelope" style="color: white;"></i> -->
+                  </div>  <!-- section end -->
+
+                  <!-- submit button -->
+                  <%= f.submit "Join Newsletter", class: 'btn btn-danger btn-lg' %>
+                  <% end %>
+                  
+                    <!-- notices   -->
+                  <!-- <div class="subscribe-email-form error"> -->
+                    <% if notice %>  
+                      <%= notice %>
                     <% end %>
-                </span>
-              </label>
-            </div>  <!-- section end -->
-            
-              <!-- notices   -->
-            <!-- <div class="subscribe-email-form error"> -->
-              <% if notice %>  
-                <%= notice %>
-              <% end %>
-            <!-- </div> -->
-            <!-- <div class="subscribe-email-form success"> -->
-              <% if alert %>
-                <%= alert %>
-              <% end %>
-            <!-- </div> notice end         -->
-        </div>  <!-- form end -->        
-
-        </div> <!-- title end -->
-
+                  <!-- </div> -->
+                  <!-- <div class="subscribe-email-form success"> -->
+                    <% if alert %>
+                      <%= alert %>
+                    <% end %>
+                  <!-- </div> notice end         -->
+              </div>         
+            </div>  
+          </div>  <!-- form end --> 
       </div>
-    
     </div> <!-- email subscribe end -->
 
   </div>
