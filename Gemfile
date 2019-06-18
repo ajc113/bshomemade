@@ -39,6 +39,8 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'rails_serve_static_assets'
  gem 'fog-aws'
 
+ gem 'sitemap_generator'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
