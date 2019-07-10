@@ -8,15 +8,15 @@ GOOGLE MAP
 
 			// Map Coordination
 
-			var latlng = new google.maps.LatLng(42.091104, -70.707021);
+			var latlng = new google.maps.LatLng(42.090860, -70.707060);
 
 			// Map Options
 			var myOptions = {
-				zoom: 16,
+				zoom: 18,
 				center: latlng,
 				mapTypeId: google.maps.MapTypeId.ROADMAP,
 				disableDefaultUI: true,
-				scrollwheel: false,
+				scrollwheel: true,
 				// Google Map Color Styles
 				styles: [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{saturation:-100},
 				{visibility:"simplified"}]},{featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},
@@ -27,7 +27,7 @@ GOOGLE MAP
 			var map = new google.maps.Map(document.getElementById('google-map'), myOptions);
 
 			// Marker Image
-			var image = "#{asset_path('marker.png')}";
+			var image = 'images/marker.png';
 			
 		  	/* ========= First Marker ========= */
 
@@ -42,12 +42,12 @@ GOOGLE MAP
 			  '</div>'+
 			  '<h4>' +
 
-			  'Bs Homemade Ice Cream'+
+			  'Bs Ice Cream'+
 
 			  '</h4>'+
 			  '<p>' +
 
-			  '44 Snow Road, Marshfield, 02050' +
+			  '57 Snow Road, Marshfield, 02050' +
 
 			  '</p>'+
 			  '</div>';
@@ -56,7 +56,7 @@ GOOGLE MAP
 			var marker = new google.maps.Marker({
 				  position: myLatlng,
 				  map: map,
-				  title: 'Bs Homemade Ice Cream',
+				  title: 'Bs Ice Cream',
 				  icon: image
 			  });
 
