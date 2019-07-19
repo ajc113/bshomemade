@@ -31,20 +31,12 @@
 	<!-- nabar -->
 	<nav class="navbar navbar-expand-lg navbar-light navbar-transparent navbar-sticky">
 
-	      <%= link_to root_path do %>
 	      <!-- logo icon header -->
-	      <a class="navbar-brand mr-auto"> 
-	      	<img src="<%= image_path('webfontdark.svg')%>" alt="" class="logo-visible-desktop logo-default" style="width: 250 px; Height: 70px;">
-		      <img src="<%= image_path('webfontdark.svg')%>" alt="" class="logo-hidden-desktop logo-scroll" style="width: 250 px; Height: 70px;">
-				</a>
 
-	      <% end %>
-
-        <%#= link_to image_tag('logowhite.png',  class: 'logo-visible-desktop logo-default'),  root_path %>
-
-        <%#= link_to image_tag('logodark.png', class: 'logo-hidden-desktop logo-scroll'),  root_path %>
-
-
+	      	<%= link_to root_path do %>
+	      	<img src="<%= image_path('webfontdark.svg')%>" alt="" class="logo-visible-desktop logo-default" style="width: 100 px; Height: 50px; text-align: left;">
+		     <img src="<%= image_path('webfontdark.svg')%>" alt="" class="logo-hidden-desktop logo-scroll" style="width: 100 px; Height: 50px; text-align: left;">
+			<% end %>
 	      
 
 	      <!-- navbar toggle -->
