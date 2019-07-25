@@ -33,27 +33,15 @@ data-responsive-optimal-height="500"
                             <div class="card-body">
                                 <h4 class="card-title font400"><%= link_to post.title, post,  style: "color: #212121;" %></h4>
                                 <p class="card-text"><%= post.description.truncate(500).html_safe %></p>
-                                <a class="font600 btn btn-underline" href="blog-single.html"><%= link_to "READ MORE", post_path(post) %>  <i class="fa fa-angle-right"></i></a>
-                            </div>
-                            <div class="card-bottom">
                                 <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <a href="#">
-                                            <i class="fa fa-reply"></i> 7
+                                      <i class="fa fa-comments"></i>
+                                        <a href="<%= post_url(post).html_safe %>#disqus_thread" style="color: #86939e">  
                                         </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="#">
-                                            <i class="fa fa-comments"></i> 14
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="#">
-                                            <i class="fa fa-share-alt"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                                </ul>                                
+
+
+                                <a class="font600 btn btn-underline" href="blog-single.html"><%= link_to "READ MORE", post_path(post) %>  <i class="fa fa-angle-right"></i></a>
+                         </div>
                         </div>
                     </div>
                 </div><!--post card-->
