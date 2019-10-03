@@ -1,0 +1,130 @@
+<div class="bg-dark pt90 pb30">
+</div>
+
+<div class='saas-app-hero bg-faded'>
+  <div class='container pt30 pb10'>
+    <div class='row align-items-center'>
+      <div class='col-md-12'>
+          <h2 class=' h1 mb20 text-center font500'>
+              Order B's Ice Cream Gifts Cards Online
+          </h2>
+          <p class='lead text-muted text-center mb40'>
+              Will mail to you via USPS witin 2 business days. If you need same day please purchase in our shop during business hours.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>   
+
+<div class='container pt30 pb30' style="align-items: center !important;">
+  <div class='row align-items-center'>  
+    <div class='col-md-4'></div>
+    <div class='col-md-4'>
+      <div id='product-component-3b5ecbdd676'>
+      </div>
+    <div class='col-md-4'></div>
+  </div>
+</div>
+
+<br>
+
+<script type="text/javascript">
+  /*<![CDATA[*/
+
+  (function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'bs-homemade-ice-cream.myshopify.com',
+      storefrontAccessToken: '8b10f80e2b9c9be7315b96f4797e42e9',
+    });
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('product', {
+        id: [1327986212911],
+        node: document.getElementById('product-component-3b5ecbdd676'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+          "product": {
+          "variantId": "all",
+          "contents": {
+          "imgWithCarousel": false,
+          "variantTitle": false,
+          "description": false,
+          "buttonWithQuantity": false,
+          "quantity": false
+          },
+          "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "calc(25% - 20px)",
+              "margin-left": "20px",
+              "margin-bottom": "50px"
+            }
+          }
+          }
+          },
+          "cart": {
+          "contents": {
+          "button": true
+          },
+          "styles": {
+          "footer": {
+            "background-color": "#ffffff"
+          }
+          }
+          },
+          "modalProduct": {
+          "contents": {
+          "img": false,
+          "imgWithCarousel": true,
+          "variantTitle": false,
+          "buttonWithQuantity": true,
+          "button": false,
+          "quantity": false
+          },
+          "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "100%",
+              "margin-left": "0px",
+              "margin-bottom": "0px"
+            }
+          }
+          }
+          },
+          "productSet": {
+          "styles": {
+          "products": {
+            "@media (min-width: 601px)": {
+              "margin-left": "-20px"
+            }
+          }
+          }
+          }
+          }
+      });
+    });
+  }
+  })();
+  /*]]>*/
+</script>

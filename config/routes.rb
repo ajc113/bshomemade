@@ -15,7 +15,11 @@ Rails.application.routes.draw do
   get 'about' => 'bees#about'
   get 'homepage' => 'bees#homepage'
   put 'subscribe', to: 'subscribe#create'
-
+  get 'event' => 'bees#event'
+  get 'cards' => 'bees#cards'
+  get 'merch' => 'bees#merch'
+  get 'cakes' => 'bees#cakes'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

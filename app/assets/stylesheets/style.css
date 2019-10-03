@@ -708,7 +708,7 @@ Header styles
     padding-top: 0px; }
   .navbar.navbar-transparent .navbar-nav .nav-link {
     color: rgba(255, 255, 255, 1.00);
-    font-size: 17px }
+    font-size: .85rem }
     .navbar.navbar-transparent .navbar-nav .nav-link:hover {
       color: #fff; }
   .navbar.navbar-transparent .active a.nav-link {

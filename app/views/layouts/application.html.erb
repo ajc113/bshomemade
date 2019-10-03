@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <title>B's Homemade Ice Cream</title>       
-   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>	  
+  	<%= stylesheet_link_tag    'application', media: 'all' %>
+  	<title>B's Ice Cream</title>       
+   	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>	  
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
 	>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
@@ -20,23 +20,22 @@
 	  gtag('config', 'UA-129290811-1');
 	</script>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-5519376602594387",
-          enable_page_level_ads: true
-     });
-</script>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({
+	          google_ad_client: "ca-pub-5519376602594387",
+	          enable_page_level_ads: true
+	     });
+	</script>
 </head>
 <body>
 	<!-- nabar -->
 	<nav class="navbar navbar-expand-lg navbar-light navbar-transparent navbar-sticky">
 
 	      <!-- logo icon header -->
-
-	      	<%= link_to root_path do %>
-	      	<img src="<%= image_path('webfontdark.svg')%>" alt="" class="logo-visible-desktop logo-default" style="width: 100 px; Height: 50px; text-align: left;">
-		     <img src="<%= image_path('webfontdark.svg')%>" alt="" class="logo-hidden-desktop logo-scroll" style="width: 100 px; Height: 50px; text-align: left;">
-			<% end %>
+	      <%= link_to root_path do %>
+	      <img src="<%= image_path('webfontdark.svg')%>" alt="" class="logo-visible-desktop logo-default" style="width: 100 px; Height: 50px; text-align: left;">
+		    <img src="<%= image_path('webfontdark.svg')%>" alt="" class="logo-hidden-desktop logo-scroll" style="width: 100 px; Height: 50px; text-align: left;">
+				<% end %>
 	      
 
 	      <!-- navbar toggle -->
@@ -51,7 +50,7 @@
 	                  <!-- homepage link -->
 	                  <li class="nav-item">
 		                  <a>
-		                  	<%= link_to "Home", bees_path, class: 'nav-link', 'data-turbolinks' => false %>
+		                  	<%= link_to "Home", bees_path, class: 'nav-link', 'data-turbolinks' => false , style:'font-size: .85rem important!;'%>
 		                  </a>
 		                </li>
 	                 	<li class="nav-item">
@@ -65,37 +64,46 @@
 		                  </a>
 		                </li>
 		                <li class="nav-item">
-		                  <a>
-		                  	<%= link_to "Whats New", "/#whats_new", class: 'nav-link', 'data-turbolinks' => false %> 
+		                	<a>
+		                  	<%= link_to "B's Updates", posts_path, class: 'nav-link', 'data-turbolinks' => false %> 
 		                  </a>
 		                </li>
 		                <li class="nav-item">
 		                	<a>
-		                  	<%= link_to "Blog", posts_path, class: 'nav-link', 'data-turbolinks' => false %> 
+		                  	<%= link_to "Gift Cards", cards_path, class: 'nav-link', 'data-turbolinks' => false %> 
 		                  </a>
-		                </li>
+		                </li>		                
 										<li class="nav-item">
 		                	<a>
-		                  	<%= link_to "About Us", about_path, class: 'nav-link', 'data-turbolinks' => false %> 
+		                  	<%= link_to "Events", event_path, class: 'nav-link', 'data-turbolinks' => false %> 
+		                  </a>
+		                </li>			                    
+										<li class="nav-item">
+		                		<a>
+		                  		<%= link_to "Merch", merch_path, class: 'nav-link', 'data-turbolinks' => false %> 
+		                  		</a>
+		                </li>	
+		                <li class="nav-item">
+		                	<a>
+		                  	<%= link_to "About", about_path, class: 'nav-link', 'data-turbolinks' => false %> 
 		                  </a>
 		                </li>		
 	          </ul>
 	      </div>
 	      
-
-
-	      	      <!-- right nav bar social icons-->
-	      <div class="navbar-right-col">
-	      	<div class="container">
-	      		<div class="row">
-			        <ul class="social list-inline mb30">
-			            <li class="list-inline-item"><a class="facebook" href="https://www.facebook.com/Bs-Homemade-Ice-Cream-144977852873757" target="_blank"><i class="fa fa-facebook-f" style="color: white"></i></a></li>
-			            <li class="list-inline-item"><a class="instagram" href="https://www.instagram.com/bshomemadeicecream" style="color: white" target="_blank"><i class="fa fa-instagram"></i></a></li>
-			        </ul>
-			      </div>
-			    </div>  
-	      </div>
+				<!-- right nav bar social icons-->
+				<div class="navbar-right-col">
+				<div class="container">
+					<div class="row">
+						<ul class="social list-inline mb30">
+						    <li class="list-inline-item"><a class="facebook" href="https://www.facebook.com/Bs-Homemade-Ice-Cream-144977852873757" target="_blank"><i class="fa fa-facebook-f" style="color: white"></i></a></li>
+						    <li class="list-inline-item"><a class="instagram" href="https://www.instagram.com/bshomemadeicecream" style="color: white" target="_blank"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>  
+				</div>
 	</nav>	
+
 	<%= yield %>
   <!-- footer -->
 

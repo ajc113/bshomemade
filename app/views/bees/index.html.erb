@@ -13,7 +13,7 @@ data-src="<%= image_path('flavors-new.jpg')%>" style="width: 100%; height: 100%;
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
-                        <h2 class="font300 text-white h1">B's Ice Cream</h2>
+                        <h2 class="font500 text-white h1">B's Ice Cream</h2>
                         <p class="lead text-white">
                            Marshfield, MA
                         </p>
@@ -66,7 +66,7 @@ data-src="<%= image_path('flavors-new.jpg')%>" style="width: 100%; height: 100%;
                 </a>
             </div>
             <div class='col-lg-6 pt50-md'>
-                <img src="<%= image_path('production-bw-smaller.jpg')%>" alt='' class='img-fluid'>
+                <img src="<%= image_path('webpic.JPG')%>" alt='' class='img-fluid'>
             </div>
         </div>
     </div><!--feature col-->
@@ -84,7 +84,7 @@ data-src="<%= image_path('flavors-new.jpg')%>" style="width: 100%; height: 100%;
                         <img src="<%= @flavor.image %>" alt='' class='img-fluid'></img>                 
                     </div>
                     <div class='col-lg-5 ml-auto pt50-md'>
-                        <h2 class="mb20">What's new at B's Homemade</h2>
+                        <h2 class="mb20">What's new at B's Ice Cream</h2>
                         <!-- <h2 class='mb20'> -->
                           <!-- Flavor of the week<br> -->
                           <!-- </h2> -->    
@@ -109,7 +109,7 @@ data-src="<%= image_path('flavors-new.jpg')%>" style="width: 100%; height: 100%;
 
 <!-- where we are located panel start -->
 <a id="visit_us"></a>
-<div class="bg-dark pt90 pb40">
+<div class="bg-dark pt40 pb40">
     <div class="container">
         <div class="row">
             <div class="col-md-8 mr-auto ml-auto text-center">
@@ -136,8 +136,9 @@ data-src="<%= image_path('flavors-new.jpg')%>" style="width: 100%; height: 100%;
             <div class="media mb20">
                 <i class="icon-round-40 float-left mr-3 bg-light fa fa-clock-o"></i>
                 <p class="media-body pt5 text-white">
-                    Sunday-Thursday: 12pm to 9pm<br>
-                    Friday-Saturday: 12pm to 10pm<br>
+                    Fall/Winter Hours<br>
+                    Monday - Sunday 12pm - 9pm<br>  
+                    Open Year Round
                 </p>
             </div>
             <div class="media mb20">
@@ -167,69 +168,7 @@ data-src="<%= image_path('flavors-new.jpg')%>" style="width: 100%; height: 100%;
 
 
 
-      <!-- email subscribe user list -->
-    <div class="row">
-      <div class="container pt50 pb1 text-center">
-          <!-- title start -->
-          <div class="col-md-12 mr-auto ml-auto ">
-            <h3 class="text-white mb0 h3">
-                Sign up today to receive our specials
-            </h3><br>
-          </div> <!-- title end -->
-          <!-- form start -->
-          <div class="smart-wrap">
-            <div class="smart-forms smart-container">
-              <div class="form-body">
-                 <%= form_for @lead do |f| %>
-                  <!-- section -->
-                  <div class="section">
-                    <label class="field prepend-icon">
-                      <span class="field-icon" style="color: white;">
-                        <%= f.text_field :fname, placeholder: "  First", style: "background-color: white;", class: "form-control" %> 
-                      </span>
-                    </label>
-                      <!-- <i class="fa fa-user" style="color: white;"></i> -->
-                  </div> <!-- section end -->
-                  <!-- section -->
-                  <div class="section">
-                    <label class="field prepend-icon">
-                      <span class="field-icon">                     
-                        <%= f.text_field :lname, placeholder: "  Last", style: "background-color: white;", class: "form-control" %> 
-                      </span>
-                    </label>
-                      <!-- <i class="fa fa-user" class: "form-control" style="color: white;"></i> -->
-                  </div> 
-                  <!-- section -->
-                  <div class="section">
-                    <label class="field prepend-icon">
-                      <span class="field-icon" >
-                        <%= f.email_field :email, placeholder: "  Email", style: "background-color: white;", class: "form-control" %>  
-                      </span>
-                    </label>
-                      <!-- <i class="fa fa-envelope" style="color: white;"></i> -->
-                  </div>  <!-- section end -->
-
-                  <!-- submit button -->
-                  <%= f.submit "Join Newsletter", class: 'btn btn-danger btn-lg' %>
-                  <% end %>
-                  
-                    <!-- notices   -->
-                  <!-- <div class="subscribe-email-form error"> -->
-                    <% if notice %>  
-                      <%= notice %>
-                    <% end %>
-                  <!-- </div> -->
-                  <!-- <div class="subscribe-email-form success"> -->
-                    <% if alert %>
-                      <%= alert %>
-                    <% end %>
-                  <!-- </div> notice end         -->
-              </div>         
-            </div>  
-          </div>  <!-- form end --> 
-      </div>
-    </div> <!-- email subscribe end -->
-
+    
   </div>
 </div>
 
