@@ -5,7 +5,11 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all.page(params[:page]).order('created_at DESC')
-    
+    set_meta_tags title: "Updates",
+              site: "B's Ice Cream",
+              reverse: true,
+              description: "Get the latest news at B's Ice Cream.  Stay up to date with new flavors, events, and promotions.",
+              keywords: "best ice cream, homemade ice cream, ice cream, ice cream near me, south shore ice cream, ice cream places near me, ice cream shop, ice cream shops near me, best ice cream near me, ice cream nearby, homemade ice cream near me, ice cream parlour, ice cream stores near me, ice cream parlour near me, creamery near me, the ice cream shop, ice cream around me, nearest ice cream shop, homemade vanilla ice cream, nearest ice cream place, good ice cream near me, closest ice cream, cream ice cream, places to get ice cream near me, ice cream company, best ice cream places near me" 
   end
 
   # GET /posts/1  

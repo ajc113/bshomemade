@@ -5,6 +5,11 @@ class FlavorsController < ApplicationController
   # GET /flavors.json
   def index
     @flavors = Flavor.all
+    set_meta_tags title: "Flavors",
+              site: "B's Ice Cream",
+              reverse: true,
+              description: "Check out our unique homemade flavors made right in our shop",
+              keywords: "best ice cream, homemade ice cream, ice cream, ice cream near me, south shore ice cream, ice cream places near me, ice cream shop, ice cream shops near me, best ice cream near me, ice cream nearby, homemade ice cream near me, ice cream parlour, ice cream stores near me, ice cream parlour near me, creamery near me, the ice cream shop, ice cream around me, nearest ice cream shop, homemade vanilla ice cream, nearest ice cream place, good ice cream near me, closest ice cream, cream ice cream, places to get ice cream near me, ice cream company, best ice cream places near me" 
   end
 
   # GET /flavors/1
