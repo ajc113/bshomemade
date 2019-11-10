@@ -61,6 +61,7 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    certifi (2018.01.18)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -82,6 +83,10 @@ GEM
     execjs (2.7.0)
     faraday (0.15.3)
       multipart-post (>= 1.2, < 3)
+    faraday-http-cache (2.0.0)
+      faraday (~> 0.8)
+    faraday_middleware (0.13.1)
+      faraday (>= 0.7.4, < 1.0)
     ffi (1.9.25)
     figaro (1.1.1)
       thor (~> 0.14)
@@ -146,6 +151,10 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    little-plugger (1.1.4)
+    logging (2.2.2)
+      little-plugger (~> 1.1)
+      multi_json (~> 1.10)
     loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -234,6 +243,12 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    square.rb (3.20191023.0)
+      certifi (~> 2018.1)
+      faraday (~> 0.15)
+      faraday-http-cache (~> 2.0)
+      faraday_middleware (~> 0.13)
+      logging (~> 2.2)
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -280,6 +295,7 @@ DEPENDENCIES
   sdoc (~> 1.0)
   sitemap_generator
   spring
+  square.rb
   turbolinks
   uglifier (~> 4.1, >= 4.1.18)
   web-console (~> 2.0)
