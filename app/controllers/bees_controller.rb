@@ -10,7 +10,7 @@ class BeesController < ApplicationController
   set_meta_tags title: "Home",
               site: "B's Ice Cream",
               reverse: true,
-              description: "B's Ice Cream serving the best homemade ice cream on the south shore",
+              description: "B's Ice Cream serving the best homemade ice cream on the south shore. Come visit our shop in Marshfield, MA for the best homemade ice cream near you.",
               keywords: "best ice cream, homemade ice cream, ice cream, ice cream near me, south shore ice cream, ice cream places near me, ice cream shop, ice cream shops near me, best ice cream near me, ice cream nearby, homemade ice cream near me, ice cream parlour, ice cream stores near me, ice cream parlour near me, creamery near me, the ice cream shop, ice cream around me, nearest ice cream shop, homemade vanilla ice cream, nearest ice cream place, good ice cream near me, closest ice cream, cream ice cream, places to get ice cream near me, ice cream company, best ice cream places near me" 
   end
 
