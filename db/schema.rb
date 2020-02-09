@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181025235816) do
+ActiveRecord::Schema.define(version: 20200209023103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20181025235816) do
     t.string   "availability"
     t.string   "flavorofweek"
     t.string   "image"
+    t.string   "instock"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

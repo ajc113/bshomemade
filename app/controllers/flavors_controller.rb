@@ -4,7 +4,8 @@ class FlavorsController < ApplicationController
   # GET /flavors
   # GET /flavors.json
   def index
-    @flavors = Flavor.all
+    @flavors = Flavor.where(instock:["Yes"]).order('name ASC')
+    @outstock = Flavor.where(instock:["No"]).order('name ASC')
     set_meta_tags title: "Flavors",
               site: "B's Ice Cream",
               reverse: true,
@@ -74,6 +75,6 @@ class FlavorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flavor_params
-      params.require(:flavor).permit(:name, :description, :availability, :flavorofweek, :image, :created_at)
+      params.require(:flavor).permit(:name, :description, :availability, :flavorofweek, :image, :created_at, :instock)
     end
 end
