@@ -50,13 +50,51 @@ data-src="<%= image_path('flavors-new.jpg')%>" style="width: 100%; height: 100%;
     <div class='feature-col'>
         <div class='row align-items-center'>
 
-            <div class='col-lg-5 mr-auto'>
-                <h2 class="mb40">Homemade Ice Cream made daily on location</h2>
+            <div class='col-lg-6 mr-auto'>
+                <h2 class="mb40">B's is delivery only until April 6th</h2>
                 <div class="tabs-default tabs-icon">
                     <!-- Nav tabs -->
 
                     <!-- Tab panes -->
                     <div class="tab-content text-left mb40">
+                        <div role="tabpanel" class="tab-pane active show fade" id="tb9">
+                            <p>
+                        We have made the difficult decision to be delivery only.  After much consideration for the safety of our staff, customers, and community we'll be closed until April 6th. We are commited to doing our part in flattening the curve. Thank you for your continued support. <br>
+                        <br>
+                        <strong>Go to our order now tab to place a delivery. </strong>
+
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <a>
+
+                  <%= link_to "Order Now", "https://bs-ice-cream.square.site",class: 'btn btn-light btn-xl','data-turbolinks' => false %>
+                </a>
+            </div>
+            <div class='col-lg-6 pt50-md'>
+                <img src="<%= image_path('delivery.jpeg')%>" alt='' class='img-fluid'>
+            </div>
+        </div>
+    </div><!--feature col-->
+</div>
+<!-- end homemade ice cream panel end-->
+
+
+<!-- Origin home panel -->
+<!-- homemade ice cream panel start -->
+<!-- <div class="container pt50 pb90">
+    <div class='feature-col'>
+        <div class='row align-items-center'>
+
+            <div class='col-lg-5 mr-auto'>
+                <h2 class="mb40">Homemade Ice Cream made daily on location</h2>
+                <div class="tabs-default tabs-icon"> -->
+                    <!-- Nav tabs -->
+
+                    <!-- Tab panes -->
+                    <!-- <div class="tab-content text-left mb40">
                         <div role="tabpanel" class="tab-pane active show fade" id="tb9">
                             <p>
                          We serve homemade ice cream, made right in our shop! We provide a selection of classic and seasonal flavors as well as dairy free options. All your favorite treats are available 7 days a week at our scoop shop.  
@@ -66,17 +104,21 @@ data-src="<%= image_path('flavors-new.jpg')%>" style="width: 100%; height: 100%;
 
                     </div>
                 </div>
-                <a>
-                  <%= link_to "Contact Us", "/#visit_us",class: 'btn btn-light btn-xl','data-turbolinks' => false %> 
-                </a>
+                <a> -->
+                  <%#= link_to "Contact Us", "/#visit_us",class: 'btn btn-light btn-xl','data-turbolinks' => false %> 
+<!--                 </a>
             </div>
-            <div class='col-lg-6 pt50-md'>
-                <img src="<%= image_path('webpic.JPG')%>" alt='' class='img-fluid'>
-            </div>
+            <div class='col-lg-6 pt50-md'> -->
+                <!-- <img src="<%#= image_path('webpic.JPG')%>" alt='' class='img-fluid'> -->
+            <!-- </div>
         </div>
-    </div><!--feature col-->
-</div>
+    </div> --><!--feature col-->
+<!-- </div> -->
 <!-- end homemade ice cream panel end-->
+
+
+
+
 
 <div class="container pt20 pb20">
   <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
