@@ -1,63 +1,195 @@
- 
+        <!-- header hero image -->
         <div class="dzsparallaxer hero-ladning-1 auto-init height-is-based-on-content "  data-options='{   direction: "reverse"}'>
-            <div class="divimage dzsparallaxer--target " style="width: 101%; height: 130%; background-image: url('<%= image_path('hero.png')%>">
+            <div class="divimage dzsparallaxer--target " style="width: 101%; height: 125%; background-image: url('<%= image_path('hero.png')%>">
             </div>
 
             <div class="container pt100 pb70">
                 <div class="row pb50">
                     <div class="col-md-8 ml-auto mr-auto wow fadeInUp" data-wow-delay=".2s">
                         <h2 class="h1 text-center font300  pt100 text-white">B's Ice Cream</h2>
-                        <p class="lead text-white text-muted text-center">Marshfield, MA</p>
+                        <p class="lead text-white text-muted text-center">Fall Hours open every day 1pm - 9 pm</p> 
+                        <div class="circle-button text-center">
+                          <a>
+                            <%= link_to "Visit Us Today", "/#visit_us", class: 'btn btn-light btn-xl btn-rounded', 'data-turbolinks' => false %>
+                          </a>
+                        </div>
                     </div>
+                   
                 </div>
             </div>
-        </div><!--parallax-->
-        <div class='container pt90 pb40'>
+        </div><!--header hero image-->
+        
+        <!-- Features container -->
+        <div class='container pt90 pb10'>
 
-            <div class='row '>
-                <div class="col-lg-4 mb50">
-                    <div class="card-image">
-                        <img src="<%= image_path('front-window.jpg')%>" alt="" class="img-fluid">
-                        <h5>Flavors</h5>
-                        <p>
-                            If you use this site regularly and would like to help keep the site on the Internet, please consider donating a small sum to help pay for the hosting and bandwidth bill.
-                        </p>
-                    </div>
-                </div>
-                 <div class="col-lg-4 mb50">
-                    <div class="card-image">
-                        <img src="<%= image_path('cones-smaller.jpg')%>" alt="" class="img-fluid">
-                        <h5>Order Now</h5>
-                        <p>
-                            If you use this site regularly and would like to help keep the site on the Internet, please consider donating a small sum to help pay for the hosting and bandwidth bill.
-                        </p>
-                    </div>
-                </div>
-                 <div class="col-lg-4 mb50">
-                    <div class="card-image">
-                        <img src="<%= @flavor.image %>" alt="" class="img-fluid">
-                        <h5>What's new at B's Ice Cream</h5>
-                        <p>
-                          <strong><%= @flavor.name %></strong>
-                        </p>
-                        <p>
-                          <%= @flavor.description %>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <div class='row'>
+              
+              <!-- flavors box -->
+              <div class="col-lg-4 mb50">
+                <a class="shop-item-card" href="<%= flavors_path %>">
+                  <div class="card-image">
+                    <img src="<%= image_path('flavors2.jpg')%>" alt="" class="img-fluid"> 
+                      <h5>Homemade Flavors</h5>
+                      <h6>
+                      We make our homemade premium ice cream right in our shop! Check out our flavors available today.
+                      </h6>
+                  </div>
+                </a>
+              </div> <!-- flavors box -->
 
+              <!-- order online box -->
+             <div class="col-lg-4 mb50">
+               <a class="shop-item-card" href="https://bs-ice-cream.square.site">
+                <div class="card-image">
+                    <img src="<%= image_path('cookiecake2.jpg')%>" alt="" class="img-fluid">
+                    <h5>Online Ordering</h5>
+                    <h6>
+                      Use our online ordering to get your ice cream cakes, pies, and takeout today.
+                    </h6>   
+                </div>
+              </a>
+            </div> <!-- end order online box -->
+
+            <!-- flavors box -->
+           <div class="col-lg-4 mb50">
+             <a class="shop-item-card" href="<%= flavor_path(@flavor) %>">
+              <div class="card-image">
+                  <img src="<%= @flavor.image %>" alt="" class="img-fluid">
+                  <h5>What's new at B's Ice Cream</h5>
+                  <h6>
+                    <strong><%= @flavor.name %></strong>
+                    <%= @flavor.description %>
+                  </h6>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div> <!-- features container -->
+
+
+          <!-- Mosaic Masonry container -->
+
+        <div class="container pt50 pb50">
+            <div class="clearfix">
+                <div class="center-title text-center mb50">
+                    <h4 class="mb0">B's Specialties</h4>
+                    <p>Your favorite ice cream creations</p>
+                </div>
+                <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
+                    <div class="cbp-item web-design graphic">
+                        <a href="<%= image_path('box/mosaic-m1.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Cakes<br>by Brooke Costa">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="<%= image_path('box/mosaic-m1.png')%>" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Cakes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item print motion">
+                        <a href="<%= image_path('box/mosaic-m2.png')%>" class="cbp-caption cbp-lightbox" data-title="Sundaes<br>by Brooke Costa">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="<%= image_path('box/mosaic-m2.png')%>" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Sundaes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item print motion">
+                        <a href="<%= image_path('box/lgv1a.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Party Packs<br>by Brooke Costa">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="<%= image_path('box/lgv1a.png')%>" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Party Packs</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item motion graphic">
+                        <a href="<%= image_path('box/lgh1.png')%>" class="cbp-caption cbp-lightbox" data-title="Cones<br>by Brooke Costa">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="<%= image_path('box/lgh1.png')%>" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Cones</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item web-design print">
+                        <a href="<%= image_path('box/mosaic.png')%>" class="cbp-caption cbp-lightbox" data-title="Flights<br>by Brooke Costa">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="<%= image_path('box/mosaic.png')%>" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Flights</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item print motion">
+                        <a href="<%= image_path('box/mosaic2.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Pies<br>by Brooke Costa">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="<%= image_path('box/mosaic2.png')%>" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Pies</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div><br>
+                <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
+                  <a class="btn btn-outline-secondary btn-xl btn-rounded" href="https://bs-ice-cream.square.site"> Order Online Now</a>
+                </div>            
+              </div>
         </div>
 
-
-
+      <div class="container pt50 pb50">
+        <div class="no-gutters bg-white split-section">
+            <img src="<%= image_path('restaurant/side1.png')%>" alt="" class="img-fluid split-img img-left-align">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 ml-auto pt40 pb40">
+                        <h2 class="font400 h1">Thank You Marshfield</h2>
+                        <p class="lead">
+                            B's received the #1 Ice Cream Shop 2020 readers choice award.  Thank you to all our customers.   
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
 <!-- Hero image panel old-->
-<section class="dzsparallaxer auto-init dzsparallaxer---window-height use-loading" 
+<!-- <section class="dzsparallaxer auto-init dzsparallaxer---window-height use-loading" 
         data-responsive-reference-width="1280" 
         data-responsive-optimal-height="500"
         style="" data-options='{  mode_scroll: "normal" }'>
           <div class="divimage dzsparallaxer--target " 
-              data-src="<%= image_path('flavors-new.jpg')%>" style="width: 100%; height: 100%; background-image: url()">
+              data-src="<%#= image_path('flavors-new.jpg')%>" style="width: 100%; height: 100%; background-image: url()">
             <div class="content-table">
                 <div class="content-middle pt80 ">
                     <div class="container">
@@ -70,24 +202,24 @@
                                 <div class="circle-button">
 
                                     <a>
-                                      <%= link_to "Visit Us Today", "/#visit_us", class: 'btn btn-light btn-xl btn-rounded', 'data-turbolinks' => false %>
+                                      <%#= link_to "Visit Us Today", "/#visit_us", class: 'btn btn-light btn-xl btn-rounded', 'data-turbolinks' => false %>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!--hero inner-->
+                </div>
             </div>
-              <!--parallax hero-->
+          
           </div>
-    <!--parallax image div-->
-        <div class="mouse-down">
+    <!parallax image div-->
+<!--         <div class="mouse-down">
           <a data-scroll href="#about">
             <i class="fa fa-angle-down fa-3x text-white">
             </i>
           </a>
         </div>
-</section>
+</section> --> 
 
 
 <!-- <div class="container pt60 pb20">
@@ -97,48 +229,48 @@
 </div> -->
 
 <!-- homemade ice cream panel start -->
-<div class="container pt50 pb90">
+<!-- <div class="container pt50 pb90">
     <div class='feature-col'>
         <div class='row align-items-top'>
 
             <div class='col-lg-6 mr-auto'>
 
-                <h2 class="mb30">Fall Hours</h2>
+                <h2 class="mb30">Fall Hours</h2> -->
                 <!-- closure headline -->
                 <!-- <h2 class="mb40">B's is temporarily closed and no longer taking delivery orders</h2> -->
-                <div class="tabs-default tabs-icon">
+                <!-- <div class="tabs-default tabs-icon"> -->
                     <!-- Nav tabs -->
 
                     <!-- Tab panes -->
-                    <div class="tab-content text-left mb40">
-                        <div role="tabpanel" class="tab-pane active show fade" id="tb9">
+                    <!-- <div class="tab-content text-left mb40"> -->
+                        <!-- <div role="tabpanel" class="tab-pane active show fade" id="tb9"> -->
                         <!-- curbside pickup text -->
-                        <p>
+                        <!-- <p>
                         We’re now open <strong>every day 1pm - 9 pm</strong>. You can come inside for scoops to go or order ahead for curbside pickup! We have a few seats on our deck for you to enjoy at a safe distance.
-                        </p>
+                        </p> -->
 
                         <!-- closure text -->
 <!--                         <p>
                             A big thank you to Marshfield and surrounding towns for supporting our ice cream shop over the last week. It’s been amazing and we loved delivering ice cream to you. We’ll be closed on 3/24 and no longer delivering until at least April 7th. While food service businesses are allowed to remain open for take out and delivery we’ve decided to just stay home. We hope to be open as soon as possible. In the meantime we’re working on new flavors as well as Spring and Summer favorites. Hope to see you all soon!
                         </p> -->
-                        </div>
-
-                        <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
+                        <!-- </div>
+ -->
+                        <!-- <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
                             <a class="btn btn-outline-secondary btn-xl btn-rounded" href="https://bs-ice-cream.square.site"> Order Online Now</a>
-                        </div>
+                        </div> -->
 
-                    </div>
+<!--                     </div>
                 </div>
                 <a>
                 </a>
-            </div>
-            <div class='col-lg-6 pt50-md'>
-                <img src="<%= image_path('yearround.png')%>" alt='' class='img-fluid'>
+            </div> -->
+            <!-- <div class='col-lg-6 pt50-md'> -->
+                <!-- <img src="<%#= image_path('yearround.png')%>" alt='' class='img-fluid'> -->
                 <!-- <img src="<%#= image_path('sprinkles-sm.jpg')%>" alt='' class='img-fluid'> -->
-            </div>
-        </div>
-    </div><!--feature col-->
-</div>
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div>feature col -->
+<!-- </div> -->
 <!-- end homemade ice cream panel end-->
 
 
@@ -180,7 +312,7 @@
 
 
 
-<div class="container pt20 pb20">
+<div class="container pt20 pb50">
   <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
     <a class="btn btn-outline-primary btn-xl btn-rounded" href="https://www.facebook.com/bshomemadeic/reviews" style="color: black" target="_blank"><i class="fa fa-facebook"></i> Please review us on Facebook</a>
   </div>
@@ -189,35 +321,35 @@
 
 
 <!-- whats new panel start -->
-<a id="whats_new"></a>
+<!-- <a id="whats_new"></a>
 <div class="container pt50 pb50">
     <div class='row'>
         <div class='col-md-12'>
             <div class='feature-col mb90'>
                 <div class='row align-items-center'>
                     <div class='col-lg-6'>
-                        <img src="<%= @flavor.image %>" alt='' class='img-fluid'></img>                 
+                        <img src="<%#= @flavor.image %>" alt='' class='img-fluid'></img>                 
                     </div>
                     <div class='col-lg-5 ml-auto pt50-md'>
-                        <h2 class="mb20">What's new at B's Ice Cream</h2>
+                        <h2 class="mb20">What's new at B's Ice Cream</h2> -->
                         <!-- <h2 class='mb20'> -->
                           <!-- Flavor of the week<br> -->
                           <!-- </h2> -->    
-                        <p class='lead mb20 text-danger' tyle="font-weight: bold;">
-                        <%= @flavor.name %>
-                        </hp>
-                        <p class='lead mb20'>
-                        <%= @flavor.description %>
-                        </p>
-                        <a>
-                          <%= link_to "See all our flavors", flavors_path, class: 'btn btn-light btn-xl', 'data-turbolinks' => false %>
-                        </a>
+                        <!-- <p class='lead mb20 text-danger' tyle="font-weight: bold;"> -->
+                        <%#= @flavor.name %>
+                        <!-- </hp> -->
+                        <!-- <p class='lead mb20'> -->
+                        <%#= @flavor.description %>
+                        <!-- </p>
+                        <a> -->
+                          <%#= link_to "See all our flavors", flavors_path, class: 'btn btn-light btn-xl', 'data-turbolinks' => false %>
+                       <!--  </a>
                     </div>
                 </div>
-            </div><!--feature col-->
+            </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- whats new panel end-->
 
 
@@ -292,5 +424,56 @@
     
   </div>
 </div>
+<script>
+            //projects
+               //cube portfolio init
+            (function ($, window, document, undefined) {
+                'use strict';
 
+                // init cubeportfolio
+                $('#js-grid-mosaic-flat').cubeportfolio({
+                    filters: '#js-filters-mosaic-flat',
+                    layoutMode: 'mosaic',
+                    sortToPreventGaps: true,
+                    mediaQueries: [{
+                            width: 1500,
+                            cols: 6
+                        }, {
+                            width: 1100,
+                            cols: 4
+                        }, {
+                            width: 800,
+                            cols: 3
+                        }, {
+                            width: 480,
+                            cols: 2,
+                            options: {
+                                caption: '',
+                                gapHorizontal: 15,
+                                gapVertical: 15
+                            }
+                        }],
+                    defaultFilter: '*',
+                    animationType: 'fadeOutTop',
+                    gapHorizontal: 0,
+                    gapVertical: 0,
+                    gridAdjustment: 'responsive',
+                    caption: 'fadeIn',
+                    displayType: 'fadeIn',
+                    displayTypeSpeed: 100,
+                    // lightbox
+                    lightboxDelegate: '.cbp-lightbox',
+                    lightboxGallery: true,
+                    lightboxTitleSrc: 'data-title',
+                    lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
+                    plugins: {
+                        loadMore: {
+                            selector: '#js-loadMore-mosaic-flat',
+                            action: 'click',
+                            loadItems: 3
+                        }
+                    }
+                });
+            })(jQuery, window, document);
+</script>
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=<%= ENV["google_map_api_key"]%>"></script>
