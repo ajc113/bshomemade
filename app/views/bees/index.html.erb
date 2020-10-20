@@ -21,9 +21,7 @@
         
         <!-- Features container -->
         <div class='container pt90 pb10'>
-
-            <div class='row'>
-              
+          <div class='row'>
               <!-- flavors box -->
               <div class="col-lg-4 mb50">
                 <a class="shop-item-card" href="<%= flavors_path %>">
@@ -52,7 +50,7 @@
 
             <!-- flavors box -->
            <div class="col-lg-4 mb50">
-             <a class="shop-item-card" href="<%= flavor_path(@flavor) %>">
+             <a class="shop-item-card" href="<%= flavors_path %>">
               <div class="card-image">
                   <img src="<%= @flavor.image %>" alt="" class="img-fluid">
                   <h5>What's new at B's Ice Cream</h5>
@@ -62,9 +60,9 @@
                   </h6>
               </div>
             </a>
+            </div>
           </div>
-        </div>
-      </div> <!-- features container -->
+        </div> <!-- features container -->
 
 
           <!-- Mosaic Masonry container -->
@@ -77,7 +75,7 @@
                 </div>
                 <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
                     <div class="cbp-item web-design graphic">
-                        <a href="<%= image_path('box/mosaic-m1.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Cakes<br>by Brooke Costa">
+                        <a href="<%= image_path('box/mosaic-m1.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Cakes">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="<%= image_path('box/mosaic-m1.png')%>" alt="">
                             </div>
@@ -91,7 +89,7 @@
                         </a>
                     </div>
                     <div class="cbp-item print motion">
-                        <a href="<%= image_path('box/mosaic-m2.png')%>" class="cbp-caption cbp-lightbox" data-title="Sundaes<br>by Brooke Costa">
+                        <a href="<%= image_path('box/mosaic-m2.png')%>" class="cbp-caption cbp-lightbox" data-title="Sundaes">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="<%= image_path('box/mosaic-m2.png')%>" alt="">
                             </div>
@@ -105,7 +103,7 @@
                         </a>
                     </div>
                     <div class="cbp-item print motion">
-                        <a href="<%= image_path('box/lgv1a.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Party Packs<br>by Brooke Costa">
+                        <a href="<%= image_path('box/lgv1a.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Party Packs">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="<%= image_path('box/lgv1a.png')%>" alt="">
                             </div>
@@ -119,7 +117,7 @@
                         </a>
                     </div>
                     <div class="cbp-item motion graphic">
-                        <a href="<%= image_path('box/lgh1.png')%>" class="cbp-caption cbp-lightbox" data-title="Cones<br>by Brooke Costa">
+                        <a href="<%= image_path('box/lgh1.png')%>" class="cbp-caption cbp-lightbox" data-title="Cones">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="<%= image_path('box/lgh1.png')%>" alt="">
                             </div>
@@ -133,7 +131,7 @@
                         </a>
                     </div>
                     <div class="cbp-item web-design print">
-                        <a href="<%= image_path('box/mosaic.png')%>" class="cbp-caption cbp-lightbox" data-title="Flights<br>by Brooke Costa">
+                        <a href="<%= image_path('box/mosaic.png')%>" class="cbp-caption cbp-lightbox" data-title="Flights">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="<%= image_path('box/mosaic.png')%>" alt="">
                             </div>
@@ -147,7 +145,7 @@
                         </a>
                     </div>
                     <div class="cbp-item print motion">
-                        <a href="<%= image_path('box/mosaic2.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Pies<br>by Brooke Costa">
+                        <a href="<%= image_path('box/mosaic2.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Pies">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="<%= image_path('box/mosaic2.png')%>" alt="">
                             </div>
@@ -183,131 +181,6 @@
             </div>
         </div>
       </div>
-<!-- Hero image panel old-->
-<!-- <section class="dzsparallaxer auto-init dzsparallaxer---window-height use-loading" 
-        data-responsive-reference-width="1280" 
-        data-responsive-optimal-height="500"
-        style="" data-options='{  mode_scroll: "normal" }'>
-          <div class="divimage dzsparallaxer--target " 
-              data-src="<%#= image_path('flavors-new.jpg')%>" style="width: 100%; height: 100%; background-image: url()">
-            <div class="content-table">
-                <div class="content-middle pt80 ">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
-                                <h2 class="font500 text-white h1">B's Ice Cream</h2>
-                                <p class="lead text-white">
-                                   Marshfield, MA
-                                </p>
-                                <div class="circle-button">
-
-                                    <a>
-                                      <%#= link_to "Visit Us Today", "/#visit_us", class: 'btn btn-light btn-xl btn-rounded', 'data-turbolinks' => false %>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          
-          </div>
-    <!parallax image div-->
-<!--         <div class="mouse-down">
-          <a data-scroll href="#about">
-            <i class="fa fa-angle-down fa-3x text-white">
-            </i>
-          </a>
-        </div>
-</section> --> 
-
-
-<!-- <div class="container pt60 pb20">
-  <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
-    <a class="btn btn-outline-secondary btn-xl btn-rounded" href="https://bs-ice-cream.square.site"> Order Pints, Quarts, and Ice Cream Pies online</a>
-  </div>
-</div> -->
-
-<!-- homemade ice cream panel start -->
-<!-- <div class="container pt50 pb90">
-    <div class='feature-col'>
-        <div class='row align-items-top'>
-
-            <div class='col-lg-6 mr-auto'>
-
-                <h2 class="mb30">Fall Hours</h2> -->
-                <!-- closure headline -->
-                <!-- <h2 class="mb40">B's is temporarily closed and no longer taking delivery orders</h2> -->
-                <!-- <div class="tabs-default tabs-icon"> -->
-                    <!-- Nav tabs -->
-
-                    <!-- Tab panes -->
-                    <!-- <div class="tab-content text-left mb40"> -->
-                        <!-- <div role="tabpanel" class="tab-pane active show fade" id="tb9"> -->
-                        <!-- curbside pickup text -->
-                        <!-- <p>
-                        We’re now open <strong>every day 1pm - 9 pm</strong>. You can come inside for scoops to go or order ahead for curbside pickup! We have a few seats on our deck for you to enjoy at a safe distance.
-                        </p> -->
-
-                        <!-- closure text -->
-<!--                         <p>
-                            A big thank you to Marshfield and surrounding towns for supporting our ice cream shop over the last week. It’s been amazing and we loved delivering ice cream to you. We’ll be closed on 3/24 and no longer delivering until at least April 7th. While food service businesses are allowed to remain open for take out and delivery we’ve decided to just stay home. We hope to be open as soon as possible. In the meantime we’re working on new flavors as well as Spring and Summer favorites. Hope to see you all soon!
-                        </p> -->
-                        <!-- </div>
- -->
-                        <!-- <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
-                            <a class="btn btn-outline-secondary btn-xl btn-rounded" href="https://bs-ice-cream.square.site"> Order Online Now</a>
-                        </div> -->
-
-<!--                     </div>
-                </div>
-                <a>
-                </a>
-            </div> -->
-            <!-- <div class='col-lg-6 pt50-md'> -->
-                <!-- <img src="<%#= image_path('yearround.png')%>" alt='' class='img-fluid'> -->
-                <!-- <img src="<%#= image_path('sprinkles-sm.jpg')%>" alt='' class='img-fluid'> -->
-            <!-- </div> -->
-        <!-- </div> -->
-    <!-- </div>feature col -->
-<!-- </div> -->
-<!-- end homemade ice cream panel end-->
-
-
-<!-- Origin home panel -->
-<!-- homemade ice cream panel start -->
-<!-- <div class="container pt50 pb90">
-    <div class='feature-col'>
-        <div class='row align-items-center'>
-
-            <div class='col-lg-5 mr-auto'>
-                <h2 class="mb40">Homemade Ice Cream made daily on location</h2>
-                <div class="tabs-default tabs-icon"> -->
-                    <!-- Nav tabs -->
-
-                    <!-- Tab panes -->
-                    <!-- <div class="tab-content text-left mb40">
-                        <div role="tabpanel" class="tab-pane active show fade" id="tb9">
-                            <p>
-                         We serve homemade ice cream, made right in our shop! We provide a selection of classic and seasonal flavors as well as dairy free options. All your favorite treats are available 7 days a week at our scoop shop.  
-
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-                <a> -->
-                  <%#= link_to "Contact Us", "/#visit_us",class: 'btn btn-light btn-xl','data-turbolinks' => false %> 
-<!--                 </a>
-            </div>
-            <div class='col-lg-6 pt50-md'> -->
-                <!-- <img src="<%#= image_path('webpic.JPG')%>" alt='' class='img-fluid'> -->
-            <!-- </div>
-        </div>
-    </div> --><!--feature col-->
-<!-- </div> -->
-<!-- end homemade ice cream panel end-->
-
 
 
 
@@ -320,43 +193,9 @@
 
 
 
-<!-- whats new panel start -->
-<!-- <a id="whats_new"></a>
-<div class="container pt50 pb50">
-    <div class='row'>
-        <div class='col-md-12'>
-            <div class='feature-col mb90'>
-                <div class='row align-items-center'>
-                    <div class='col-lg-6'>
-                        <img src="<%#= @flavor.image %>" alt='' class='img-fluid'></img>                 
-                    </div>
-                    <div class='col-lg-5 ml-auto pt50-md'>
-                        <h2 class="mb20">What's new at B's Ice Cream</h2> -->
-                        <!-- <h2 class='mb20'> -->
-                          <!-- Flavor of the week<br> -->
-                          <!-- </h2> -->    
-                        <!-- <p class='lead mb20 text-danger' tyle="font-weight: bold;"> -->
-                        <%#= @flavor.name %>
-                        <!-- </hp> -->
-                        <!-- <p class='lead mb20'> -->
-                        <%#= @flavor.description %>
-                        <!-- </p>
-                        <a> -->
-                          <%#= link_to "See all our flavors", flavors_path, class: 'btn btn-light btn-xl', 'data-turbolinks' => false %>
-                       <!--  </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- whats new panel end-->
-
-
-
-<!-- where we are located panel start -->
-<a id="visit_us"></a>
-<div class="bg-dark pt40 pb40">
+  <!-- where we are located panel start -->
+  <a id="visit_us"></a>
+  <div class="bg-dark pt40 pb40">
     <div class="container">
         <div class="row">
             <div class="col-md-8 mr-auto ml-auto text-center">
@@ -367,7 +206,7 @@
         </div>
     </div>
     <!-- contact panel -->
-  <div class="container pt90 pb5" id='contact'>
+    <div class="container pt90 pb5" id='contact'>
     <div class="row">
         <div class="col-md-4 mb40">
             <div class="media mb20">
@@ -421,9 +260,10 @@
           </section>
         </div> 
     </div>
-    
+    </div>
   </div>
-</div>
+
+
 <script>
             //projects
                //cube portfolio init

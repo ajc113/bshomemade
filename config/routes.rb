@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   resources :leads
 
   get 'about' => 'bees#about'
-  get 'homepage' => 'bees#homepage'
   put 'subscribe', to: 'subscribe#create'
   get 'event' => 'bees#event'
   get 'cards' => 'bees#cards'
