@@ -29,7 +29,7 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'activeadmin'
  gem 'flattened_active_admin'
  gem 'devise' 
- gem 'carrierwave', '~> 1.0'
+ gem 'carrierwave', '~> 1.3'
  gem "mini_magick"
  gem 'friendly_id', '~> 5.2.0'
  gem 'activeadmin_froala_editor'
