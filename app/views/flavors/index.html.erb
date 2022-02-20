@@ -80,30 +80,9 @@ data-options='{  mode_scroll: "normal" }'>
         <div class="col-md-6 mb20">
            <h3><em> Seasonal favorites will be back soon</em></h3>
         </div>
-<!--          <div class="col-md-3 ml-auto mb20 text-right">
-             <select class="form-control form-control-sm">
-                 <option>Seasonal Items</option>
-                 <option>Year Round Items</option>
-             </select>
-        </div> -->
+
     </div>
 
-    <div class="row">
-      <% @outstock.each do |flavor| %>
-          <div class="col-md-4 mb40">
-              <a class="shop-item-card">
-                  <img src="<%= flavor.image %>" alt="" class="img-fluid mb20">
-                  <h5 class="font600 h6">
-                    <%= flavor.name %>
-                      <span class="float-right badge badge-secondary">
-                        <%= flavor.availability %>
-                      </span>
-                  </h5>
-                  <p class="lead text-muted"><%= flavor.description %></p>
-              </a>
-          </div>
-      <% end %>
-    </div>
 
 </div>  
 
