@@ -1,33 +1,47 @@
         <!-- header hero image -->
         <div class="dzsparallaxer hero-ladning-1 auto-init height-is-based-on-content "  data-options='{   direction: "reverse"}'>
-            <div class="divimage dzsparallaxer--target " style="width: 101%; height: 125%; background-image: url('<%= image_path('hero.png')%>">
+            <div class="divimage dzsparallaxer--target " style="width: 101%; height: 125%; background-image: url('<%= image_path('hero2.jpg')%>">
             </div>
 
-            <div class="container pt100 pb70">
-                <div class="row pb50">
+            <div class="container pt100 pb100">
+                <div class="row pb50 pt50">
                     <div class="col-md-8 ml-auto mr-auto wow fadeInUp" data-wow-delay=".2s">
-                        <h2 class="h1 text-center font300  pt100 text-white">B's Ice Cream</h2>
-                        <p class="lead text-white text-muted text-center">Winter Hours</p> 
-                         <p class="lead text-white text-muted text-center">Wednesday - Sunday 1:00 pm - 8:30 pm </p> 
-                        <div class="circle-button text-center">
-                          <a>
-                            <%= link_to "Visit Us Today", "/#visit_us", class: 'btn btn-light btn-xl btn-rounded', 'data-turbolinks' => false %>
-                          </a>
-                        </div>
+                    <div class="container pt100 pb100"></div>
+
+                        <!-- <h2 class="h1 text-center font300  pt100 text-white">B's Ice Cream</h2> -->
+                        <!-- <p class="lead text-white text-center">Winter Hours</p>  -->
+                         <!-- <p class="lead text-white text-center">Wednesday - Sunday 1:00 pm - 8:30 pm </p>  -->
+                        <!-- <div class="circle-button text-center"> -->
+                          <!-- <a> -->
+                            <%#= link_to "Visit Us Today", "/#visit_us", class: 'btn btn-light btn-xl btn-rounded', 'data-turbolinks' => false %>
+                          <!-- </a> -->
+                        <!-- </div> -->
                     </div>
                    
                 </div>
             </div>
         </div><!--header hero image-->
+
+
+            <div class="container">
+        <div class="row">
+            <div class="col-md-8 mr-auto ml-auto text-center">
+                <h3 class="text-black mb50 h1">
+                </h3>
+                <h5>Winter Hours</h5> 
+                <p class="lead text-black text-center">Wednesday - Sunday 1:00 pm - 8:30 pm </p> 
+            </div>
+        </div>
+    </div>
         
         <!-- Features container -->
-        <div class='container pt90 pb10'>
+        <div class='container pt50 pb10'>
           <div class='row'>
               <!-- flavors box -->
               <div class="col-lg-4 mb50">
                 <a class="shop-item-card" href="<%= flavors_path %>">
                   <div class="card-image">
-                    <img src="<%= image_path('cups2.jpg')%>" alt="" class="img-fluid"> 
+                    <img src="<%= image_path('tray.jpg')%>" alt="" class="img-fluid"> 
                       <h5>Homemade Ice Cream</h5>
                       <h6>
                       We make our premium small batch ice cream right in our shop on a daily basis. Check out our classic and unique flavors that you won’t find anywhere else!
@@ -40,7 +54,7 @@
              <div class="col-lg-4 mb50">
                <a class="shop-item-card" href="https://bs-ice-cream.square.site">
                 <div class="card-image">
-                    <img src="<%= image_path('cookiecake2.jpg')%>" alt="" class="img-fluid">
+                    <img src="<%= image_path('pie.jpg')%>" alt="" class="img-fluid">
                     <h5>Online Ordering</h5>
                     <h6>
                       You can order ice cream cups, sundaes, frappes, pints and quarts for same day pickup. Our custom cakes and pies can also be ordered online.
@@ -106,21 +120,7 @@
                     <div class="cbp-item print motion">
                         <a href="<%= image_path('box/lgv1a.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Party Packs">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="<%= image_path('box/lgv1a.png')%>" alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignCenter">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Party Packs</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cbp-item motion graphic">
-                        <a href="<%= image_path('box/lgh1.png')%>" class="cbp-caption cbp-lightbox" data-title="Cones">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="<%= image_path('box/lgh1.png')%>" alt="">
+                                <img src="<%= image_path('box/cone.jpg')%>" alt="">
                             </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="cbp-l-caption-alignCenter">
@@ -131,10 +131,24 @@
                             </div>
                         </a>
                     </div>
-                    <div class="cbp-item web-design print">
-                        <a href="<%= image_path('box/mosaic.png')%>" class="cbp-caption cbp-lightbox" data-title="Flights">
+                    <div class="cbp-item motion graphic">
+                        <a href="<%= image_path('box/lgh1.png')%>" class="cbp-caption cbp-lightbox" data-title="Cones">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="<%= image_path('box/mosaic.png')%>" alt="">
+                                <img src="<%= image_path('box/partypack.jpg')%>" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Sundae Party Pack</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cbp-item web-design print">
+                        <a href="<%= image_path('box/mosaic.jpg')%>" class="cbp-caption cbp-lightbox" data-title="Flights">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="<%= image_path('box/mosaic.jpg')%>" alt="">
                             </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="cbp-l-caption-alignCenter">
@@ -146,9 +160,9 @@
                         </a>
                     </div>
                     <div class="cbp-item print motion">
-                        <a href="<%= image_path('box/mosaic2.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Pies">
+                        <a href="<%= image_path('box/mosaic2.jpg')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Pies">
                             <div class="cbp-caption-defaultWrap">
-                                <img src="<%= image_path('box/mosaic2.png')%>" alt="">
+                                <img src="<%= image_path('box/mosaic2.jpg')%>" alt="">
                             </div>
                             <div class="cbp-caption-activeWrap">
                                 <div class="cbp-l-caption-alignCenter">
@@ -160,23 +174,27 @@
                         </a>
                     </div>
                 </div><br>
+                
                 <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
                   <a class="btn btn-outline-secondary btn-xl btn-rounded" href="https://bs-ice-cream.square.site"> Order Online Now</a>
-                    <a class="btn btn-outline-secondary btn-xl btn-rounded" style="width: 187.6px;" href="https://order.online/store/BsIceCream-991041" target="_blank" >Delivery</a>
+                    <!-- <a class="btn btn-outline-secondary btn-xl btn-rounded" style="width: 187.6px;" href="https://order.online/store/BsIceCream-991041" target="_blank" >Delivery</a> -->
+                
+                    <a class="btn btn-outline-primary btn-xl btn-rounded" href="https://g.page/r/CTqGUr9lxLF3EAg/review" style="color: black" target="_blank"><i class="fa fa-google"></i> We would love your review</a>
+
                 </div> 
 
-
+                <!-- <div class="container pt20 pb50"> -->
+                  <!-- <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center"> -->
+                    
+                  <!-- </div> -->
+                <!-- </div> -->
 
                 </div>            
               </div>
         </div>
 
 
-<div class="container pt20 pb50">
-  <div class="col-md-8 col-lg-8 ml-auto mr-auto text-center">
-    <a class="btn btn-outline-primary btn-xl btn-rounded" href="https://www.facebook.com/bshomemadeic/reviews" style="color: black" target="_blank"><i class="fa fa-facebook"></i> Please review us on Facebook</a>
-  </div>
-</div>
+
 
 
 
@@ -187,9 +205,9 @@
         <div class="row">
             <div class="col-md-8 mr-auto ml-auto text-center">
                 <h3 class="text-white mb0 h1">
-                    Come Visit Us Today
+                    Visit Us Today
                 </h3>
-                <p class="media-body pt5 text-white">ALJLAKJSDFLKJASLDFJLAKSDJFLKAJSLKDJFLAKJSDFLKFJALKJDLKJAFLKJKLSD</p>
+                <p class="media-body pt5 text-white">Hi, we’re B’s Ice Cream. A locally run business launched in 2019 with the goal of creating premium homemade ice cream for the south shore. We make our ice cream in-house to create our classic flavors, as well as the unique flavors we rotate throughout the year.</p>
             </div>
         </div>
     </div>
