@@ -1,4 +1,4 @@
-class Lead < ActiveRecord::Base
+class Lead < ApplicationRecord
 validates :fname, :lname, :email, presence: true
 
 after_create :subscribe_user_to_list

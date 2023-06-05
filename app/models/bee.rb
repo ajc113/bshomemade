@@ -1,3 +1,3 @@
-class Bee < ActiveRecord::Base
+class Bee < ApplicationRecord
 
 end

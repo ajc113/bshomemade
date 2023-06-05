@@ -67,11 +67,11 @@
            <div class="col-lg-4 mb50">
              <a class="shop-item-card" href="<%= flavors_path %>">
               <div class="card-image">
-                  <img src="<%= @flavor.image %>" alt="" class="img-fluid">
+                  <img src="<%= @flavor&.image %>" alt="" class="img-fluid">
                   <h5>What's new at B's Ice Cream</h5>
                   <h6>
-                    <strong><%= @flavor.name %></strong>
-                    <%= @flavor.description %>
+                    <strong><%= @flavor&.name %></strong>
+                    <%= @flavor&.description %>
                   </h6>
               </div>
             </a>
@@ -118,7 +118,7 @@
                         </a>
                     </div>
                     <div class="cbp-item print motion">
-                        <a href="<%= image_path('box/lgv1a.png')%>" class="cbp-caption cbp-lightbox" data-title="Ice Cream Party Packs">
+                        <a href="box/lgv1a.png" class="cbp-caption cbp-lightbox" data-title="Ice Cream Party Packs">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="<%= image_path('box/cone.jpg')%>" alt="">
                             </div>
@@ -132,7 +132,7 @@
                         </a>
                     </div>
                     <div class="cbp-item motion graphic">
-                        <a href="<%= image_path('box/lgh1.png')%>" class="cbp-caption cbp-lightbox" data-title="Cones">
+                        <a href="box/lgh1.png" class="cbp-caption cbp-lightbox" data-title="Cones">
                             <div class="cbp-caption-defaultWrap">
                                 <img src="<%= image_path('box/partypack.jpg')%>" alt="">
                             </div>

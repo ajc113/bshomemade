@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
-ruby "2.5.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2', '>= 4.2.6'
+gem 'rails', '>= 5.1.4', '< 5.2'
 # Use sqlite3 as the database for Active Record 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
@@ -20,7 +19,8 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 1.0', group: :doc
+gem 'sdoc', '~> 1.0.0', group: :doc
+gem 'rdoc', '~>  6.2.0'
 
 gem "figaro"
 
@@ -44,6 +44,8 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'meta-tags'
 
  gem 'square.rb'
+
+ gem 'bootsnap', require: false
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -71,5 +73,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'listen', '~> 3.0.5'
 end
 
