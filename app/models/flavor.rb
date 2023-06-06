@@ -1,4 +1,4 @@
-class Flavor < ActiveRecord::Base
+class Flavor < ApplicationRecord
 belongs_to :bee
 mount_uploader :image, ImageUploader
 
