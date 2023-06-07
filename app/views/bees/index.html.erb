@@ -83,7 +83,7 @@
           <!-- Mosaic Masonry container -->
 
         <div class="container pt50 pb50">
-            <div class="clearfix">
+            <div data-controller="cubeportfolio" class="clearfix">
                 <div class="center-title text-center mb50">
                     <h4 class="mb0">B's Specialties</h4>
                     <p>Your favorite ice cream creations</p>
@@ -348,57 +348,4 @@
   
     </div>
 
-
-<script>
-            //projects
-               //cube portfolio init
-            (function ($, window, document, undefined) {
-                'use strict';
-
-                // init cubeportfolio
-                $('#js-grid-mosaic-flat').cubeportfolio({
-                    filters: '#js-filters-mosaic-flat',
-                    layoutMode: 'mosaic',
-                    sortToPreventGaps: true,
-                    mediaQueries: [{
-                            width: 1500,
-                            cols: 6
-                        }, {
-                            width: 1100,
-                            cols: 4
-                        }, {
-                            width: 800,
-                            cols: 3
-                        }, {
-                            width: 480,
-                            cols: 2,
-                            options: {
-                                caption: '',
-                                gapHorizontal: 15,
-                                gapVertical: 15
-                            }
-                        }],
-                    defaultFilter: '*',
-                    animationType: 'fadeOutTop',
-                    gapHorizontal: 0,
-                    gapVertical: 0,
-                    gridAdjustment: 'responsive',
-                    caption: 'fadeIn',
-                    displayType: 'fadeIn',
-                    displayTypeSpeed: 100,
-                    // lightbox
-                    lightboxDelegate: '.cbp-lightbox',
-                    lightboxGallery: true,
-                    lightboxTitleSrc: 'data-title',
-                    lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
-                    plugins: {
-                        loadMore: {
-                            selector: '#js-loadMore-mosaic-flat',
-                            action: 'click',
-                            loadItems: 3
-                        }
-                    }
-                });
-            })(jQuery, window, document);
-</script>
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=<%= ENV["google_map_api_key"]%>"></script>
