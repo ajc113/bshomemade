@@ -1,4 +1,4 @@
-class CreateBees < ActiveRecord::Migration
+class CreateBees < ActiveRecord::Migration[7.0]
   def change
     create_table :bees do |t|
 
