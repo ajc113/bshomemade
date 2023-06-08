@@ -27,6 +27,14 @@ and you are good to go.
 
 If you change the `database.yml`, please do not commit that and keep it as a local change only.
 
+## Edit credentials
+If you want to edit Rails credentials, simply proceed by running
+
+```
+EDITOR=vim rails credentials:edit
+```
+or you can use editor of your choice.
+
 Finally, try `rails c` to start the console to check if it opens up without any errors.
 
 ## Running the server
