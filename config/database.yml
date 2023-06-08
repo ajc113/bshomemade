@@ -14,14 +14,14 @@ default: &default
 development:
   <<: *default
   database: bshomemade_dev	
-  username: <%= ENV.fetch('DB_USER_NAME', nil) %>
-  password: <%= ENV.fetch('DB_PASSWORD', nil) %>
+  username: <%= ENV['DB_USER_NAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
 test:
   <<: *default
   database: bshomemade_test
-  username: <%= ENV.fetch('DB_USER_NAME', nil) %>
-  password: <%= ENV.fetch('DB_PASSWORD', nil) %>
+  username: <%= ENV['DB_USER_NAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
 # production:
 #   <<: *default

@@ -90,4 +90,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.credentials.content_path = "config/credentials/production.yml.enc"
+  config.credentials.key_path = "config/credentials/production.key"
 end

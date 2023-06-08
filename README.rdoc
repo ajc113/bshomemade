@@ -33,6 +33,12 @@ If you want to edit Rails credentials, simply proceed by running
 ```
 EDITOR=vim rails credentials:edit
 ```
+For production
+
+```
+EDITOR=vim RAILS_ENV=production rails credentials:edit
+```
+
 or you can use editor of your choice.
 
 Finally, try `rails c` to start the console to check if it opens up without any errors.

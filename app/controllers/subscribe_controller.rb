@@ -1,8 +1,8 @@
 class SubscribeController < ApplicationController
   def create
-    gibbon = Gibbon::Request.new(api_key: Rails.application.credentials.dig(:mailchimp_api_key), debug: true)
+    gibbon = Gibbon::Request.new(api_key: Rails.application.credentials.mailchimp_api_key, debug: true)
     begin
-      gibbon.lists(Rails.application.credentials.dig(:mailchimp_list_id)).members.create(body: {
+      gibbon.lists(Rails.application.credentials.mailchimp_list_id).members.create(body: {
         email_address: params[:email],
         status: "subscribed",
         merge_fields: {:FNAME => self.fname, :LNAME => self.lname}
