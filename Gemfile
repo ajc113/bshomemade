@@ -42,9 +42,10 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'square.rb'
 
  gem 'bootsnap', require: false
- gem 'sprockets-rails'
+ gem 'propshaft'
  gem 'jsbundling-rails', '~> 1.1.1'
  gem "cssbundling-rails", '~> 1.1.2'
+ gem "turbo-rails"
  gem "stimulus-rails"
  gem 'puma', '~> 5.0'
 

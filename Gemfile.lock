@@ -256,6 +256,11 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.3)
+    propshaft (0.7.0)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+      railties (>= 7.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.2)
@@ -338,6 +343,10 @@ GEM
     thor (1.2.2)
     tilt (2.2.0)
     timeout (0.3.2)
+    turbo-rails (1.4.0)
+      actionpack (>= 6.0.0)
+      activejob (>= 6.0.0)
+      railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     uglifier (4.2.0)
@@ -380,6 +389,7 @@ DEPENDENCIES
   meta-tags
   mini_magick
   pg (>= 0.18, < 2.0)
+  propshaft
   puma (~> 5.0)
   rails (= 7.0.4)
   rails_serve_static_assets
@@ -388,9 +398,9 @@ DEPENDENCIES
   sdoc (~> 1.0.0)
   sitemap_generator
   spring
-  sprockets-rails
   square.rb
   stimulus-rails
+  turbo-rails
   uglifier (~> 4.1, >= 4.1.18)
   web-console
 
