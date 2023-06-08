@@ -33,6 +33,7 @@
 /config/application.yml
 
 /public/assets
+/public/asset
 .byebug_history
 
 /node_modules

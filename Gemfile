@@ -2,9 +2,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7'
-# Use sqlite3 as the database for Active Record 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '~> 4.1', '>= 4.1.18'
 # Use CoffeeScript for .coffee assets and views
@@ -19,8 +16,6 @@ gem 'sdoc', '~> 1.0.0', group: :doc
 gem 'rdoc', '~>  6.2.0'
 
 gem "figaro"
-
-gem 'font-awesome-sass', '~> 5.2.0'
 
  gem 'activeadmin'
  gem 'flattened_active_admin'
