@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '~> 4.1', '>= 4.1.18'
 # Use CoffeeScript for .coffee assets and views
@@ -37,7 +39,7 @@ gem "figaro"
  gem 'square.rb'
 
  gem 'bootsnap', require: false
- gem 'propshaft'
+ gem 'sprockets-rails'
  gem 'jsbundling-rails', '~> 1.1.1'
  gem "cssbundling-rails", '~> 1.1.2'
  gem "turbo-rails"

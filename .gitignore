@@ -34,6 +34,7 @@
 
 /public/assets
 /public/asset
+/public/uploads
 .byebug_history
 
 /node_modules
