@@ -36,7 +36,7 @@ EDITOR=vim rails credentials:edit
 For production
 
 ```
-EDITOR=vim RAILS_ENV=production rails credentials:edit
+EDITOR=vim rails credentials:edit -e production
 ```
 
 or you can use editor of your choice.
