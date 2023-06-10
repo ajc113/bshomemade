@@ -21,7 +21,7 @@ end
 form :html => { :enctype => "multipart/form-data" } do |f|
 	f.inputs do
 		f.input :title
-		f.input :description, as: :froala_editor
+		f.input :description
 		f.input :created_at
 		f.file_field :image
 		f.input :meta_title

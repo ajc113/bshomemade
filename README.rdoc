@@ -1,28 +1,48 @@
-== README
+# Bs'Homemade
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Setting Up Your Development Environment
 
-Things you may want to cover:
+## Ruby Version & Gem Installation
 
-* Ruby version
+Please ensure that you have the Ruby version (3.1.2) indicated inside .ruby-version configured for the project's directory. 
+It's recommended that you use a version manager like rbenv, rvm for this.
 
-* System dependencies
+Make sure you have the bundler gem installed, before moving on and then run `bundle install` to conclude this step.
 
-* Configuration
+## Database Setup
 
-* Database creation
+Open up `config/database.yml` and check the database name under `development` and `test`.
 
-* Database initialization
+If your PostgreSQL is configured to use default user roles, the setup should work without any changes. You can try 
+this by running `psql` in your terminal to see if it connects without any extra params.
 
-* How to run the test suite
+In this case, simply proceed by running
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rails db:create
+rails db:schema:migrate
+```
 
-* Deployment instructions
+and you are good to go.
 
-* ...
+If you change the `database.yml`, please do not commit that and keep it as a local change only.
 
+## Edit credentials
+If you want to edit Rails credentials, simply proceed by running
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```
+EDITOR=vim rails credentials:edit
+```
+For production
+
+```
+EDITOR=vim rails credentials:edit -e production
+```
+
+or you can use editor of your choice.
+
+Finally, try `rails c` to start the console to check if it opens up without any errors.
+
+## Running the server
+
+Run the server using `bin/dev` - it runs on `http://localhost:3000`.
