@@ -10,26 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_06_134256) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_06_06_173803) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "active_admin_comments", id: :serial, force: :cascade do |t|
+  create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
-    t.integer "resource_id"
     t.string "resource_type"
-    t.integer "author_id"
+    t.bigint "resource_id"
     t.string "author_type"
+    t.bigint "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author"
     t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
     t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
+    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource"
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
   end
 
-  create_table "admin_users", id: :serial, force: :cascade do |t|
+  create_table "admin_users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -46,12 +47,12 @@ ActiveRecord::Schema.define(version: 2023_06_06_134256) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
-  create_table "bees", id: :serial, force: :cascade do |t|
+  create_table "bees", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "flavors", id: :serial, force: :cascade do |t|
+  create_table "flavors", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
@@ -62,7 +63,7 @@ ActiveRecord::Schema.define(version: 2023_06_06_134256) do
     t.string "instock"
   end
 
-  create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
+  create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
     t.string "sluggable_type", limit: 50
@@ -74,7 +75,7 @@ ActiveRecord::Schema.define(version: 2023_06_06_134256) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  create_table "leads", id: :serial, force: :cascade do |t|
+  create_table "leads", force: :cascade do |t|
     t.string "fname"
     t.string "lname"
     t.string "email"
@@ -82,7 +83,7 @@ ActiveRecord::Schema.define(version: 2023_06_06_134256) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "models", id: :serial, force: :cascade do |t|
+  create_table "models", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -99,7 +100,7 @@ ActiveRecord::Schema.define(version: 2023_06_06_134256) do
     t.index ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
   end
 
-  create_table "posts", id: :serial, force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
@@ -111,7 +112,7 @@ ActiveRecord::Schema.define(version: 2023_06_06_134256) do
     t.text "meta_keywords"
   end
 
-  create_table "users", id: :serial, force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

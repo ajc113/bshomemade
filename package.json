@@ -1,19 +1,25 @@
 {
   "name": "bshomemade",
-  "version": "1.0.0",
-  "description": "== README",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
+  "private": "true",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "@hotwired/stimulus": "^3.2.1",
+    "@hotwired/turbo-rails": "^7.3.0",
+    "@popperjs/core": "^2.11.5",
+    "@rails/ujs": "^7.0.5",
+    "bootstrap": "^5.3.0",
+    "esbuild": "0.16.6",
+    "esbuild-rails": "1.0.3",
+    "jquery": "^3.6.0",
+    "sass": "^1.54.3",
+    "stimulus": "^3.2.1"
+  },
+  "engines": {
+    "node": ">=14.21.3",
+    "yarn": "^1.22.19"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1"
+    "build": "node esbuild.config.js",
+    "build:css": "sass ./app/assets/stylesheets/application.css.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
   }
 }

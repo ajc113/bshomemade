@@ -11,17 +11,12 @@
  * file per style scope.
  * 
  */
- @import "bootstrap.min";
+ @import "bootstrap";
  @import "font-awesome.min";
+ @import "@fortawesome/fontawesome-free/css/all";
  @import "plugins/plugins";
  @import "plugins/dzsparallaxer/dzsparallaxer";
  @import "plugins/dzsparallaxer/scroller";
  @import "plugins/dzsparallaxer/advancedscroller/plugin";
  @import "plugins/cubeportfolio/css/cubeportfolio.min";
  @import "style";
- @import "font-awesome-sprockets";
- @import "font-awesome";
-
-
-	
-

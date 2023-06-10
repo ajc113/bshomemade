@@ -5,33 +5,24 @@
 #   gem 'sqlite3'
 #
 
-# username: bshomemade
-# password: password
-
 default: &default
   adapter: postgresql
+  encoding: unicode
   pool: 5
   timeout: 5000
 
 development:
   <<: *default
-  adapter: postgresql
-  # host: 127.0.0.1
   database: bshomemade_dev	
-  username: bshomemade
-  password: 
+  username: <%= ENV['DB_USER_NAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
-  test:
-  adapter: postgresql
-  # host: 127.0.0.1
+test:
+  <<: *default
   database: bshomemade_test
-  username: bshomemade
-  password: 	
+  username: <%= ENV['DB_USER_NAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
-
-
-# production:
-#   <<: *default
-#   database: db/production.sqlite3
-
-
+production:
+  <<: *default
+  url: ENV[DATABASE_URL]
