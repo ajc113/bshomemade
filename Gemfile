@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '>= 5.1.4', '< 5.2'
+gem 'rails', '~> 6.1.4'
 # Use sqlite3 as the database for Active Record 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
@@ -35,7 +35,7 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'activeadmin_froala_editor'
  gem 'kaminari'
  gem 'gibbon'
- gem 'pg', '~> 0.21'
+ gem 'pg', '>= 0.18', '< 2.0'
  gem 'rails_serve_static_assets'
  gem 'fog-aws'
 
