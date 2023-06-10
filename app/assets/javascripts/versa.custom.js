@@ -6,97 +6,109 @@ $(function () {
         e.stopPropagation();
     });
     /**testimonials**/
-    $('.owl-testimonials').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 3
+    if ($('.owl-testimonials').length) {
+        $('.owl-testimonials').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
             }
-        }
-    });
+        });
+    }
     /**testimonials full**/
-    $('.owl-testimonials-full').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
+    if ($('.owl-testimonials-full').length) {
+        $('.owl-testimonials-full').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
             }
-        }
-    });
+        });
+    }
     /**testimonials full with parallax background**/
-    $('.testimonials-light').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
+    if ($('.testimonials-light').length) {
+        $('.testimonials-light').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
             }
-        }
-    });
+        });
+    }
     /**web app saas**/
-    $('.owl-image-header').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
+    if ($('.owl-image-header').length) {
+        $('.owl-image-header').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
             }
-        }
-    });
+        });
+    }
     /**web app saas**/
-    $('.owl-clients').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        dots: false,
-        responsive: {
-            0: {
-                items: 2
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 5
+   if ($('.owl-clients').length) {
+        $('.owl-clients').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
             }
-        }
-    });
+        });
+   }
     /**image slides only**/
-    $(".cta-bg-slider").backstretch([
-        "./images/bg-5.jpg",
-        "./images/bg-6.jpg",
-        "./images/bg-4.jpg"
-    ], {duration: 4000});
+    if($(".cta-bg-slider").length) {
+        $(".cta-bg-slider").backstretch([
+            "./images/bg-5.jpg",
+            "./images/bg-6.jpg",
+            "./images/bg-4.jpg"
+        ], {duration: 4000});
+    }
     /**on hover tabs**/
     $('.nav-tabs.hover-tabs > li > a').hover(function () {
         $(this).tab('show');
@@ -113,10 +125,12 @@ $(function () {
         }
     }, 500);
     /**video modal**/
-    $('.video-popup').magnificPopup({
-        type: 'iframe'
+    if($('.video-popup').length) {
+        $('.video-popup').magnificPopup({
+            type: 'iframe'
                 // other options
-    });
+        });
+    }
     /**navbar sticky **/
     $(window).scroll(function () {
         var winTop = $(window).scrollTop();
@@ -126,15 +140,17 @@ $(function () {
             $(".navbar-sticky").removeClass("sticky-active");
         }//if-else
     });//win func.
-    $(".typed").typed({
-        strings: ["Beautifully handcrafted", "Easily customizable", "Modern tools for startups"],
-        typeSpeed: 50,
-        backSpeed: 10,
-        backDelay: 2000,
-        showCursor: false,
-        fadeOut: true,
-        loop: true
-    });
+    if($(".typed").length) {
+        $(".typed").typed({
+            strings: ["Beautifully handcrafted", "Easily customizable", "Modern tools for startups"],
+            typeSpeed: 50,
+            backSpeed: 10,
+            backDelay: 2000,
+            showCursor: false,
+            fadeOut: true,
+            loop: true
+        });
+    }
     /**animation**/
     wow = new WOW(
             {
@@ -147,8 +163,8 @@ $(function () {
     );
     wow.init();
     /**smooth scroll**/
-    smoothScroll.init({
-        selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+    scroll = new SmoothScroll('[data-scroll]', {
+        // Selector for links (must be a class, ID, data attribute, or element tag)
         speed: 1000, // Integer. How fast to complete the scroll in milliseconds
         easing: 'easeInOutCubic', // Easing pattern to use
         offset: 56, // Integer. How far to offset the scrolling anchor location in pixels
