@@ -1,8 +1,6 @@
-class Flavor < ActiveRecord::Base
-belongs_to :bee
-mount_uploader :image, ImageUploader
-
-
+class Flavor < ApplicationRecord
+  belongs_to :bee, optional: true
+  mount_uploader :image, ImageUploader
 
   def self.descriptions
     pluck(:description).flatten.join(' ')
@@ -12,7 +10,7 @@ mount_uploader :image, ImageUploader
     pluck(:name).flatten.join(' ')
   end
 
-    def self.images
+  def self.images
     pluck(:image).flatten.join(' ')
   end
 

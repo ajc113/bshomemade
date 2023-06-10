@@ -1,4 +1,4 @@
-class AddImageToPosts < ActiveRecord::Migration
+class AddImageToPosts < ActiveRecord::Migration[7.0]
   def change
     add_column :posts, :slug, :string
     add_column :posts, :image, :string

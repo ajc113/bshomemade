@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
-ruby "2.5.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2', '>= 4.2.6'
-# Use sqlite3 as the database for Active Record 
+gem 'rails', '~> 7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 # Use Uglifier as compressor for JavaScript assets
@@ -13,18 +11,13 @@ gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 1.0', group: :doc
+gem 'sdoc', '~> 1.0.0', group: :doc
+gem 'rdoc', '~>  6.2.0'
 
 gem "figaro"
-
-gem 'font-awesome-sass', '~> 5.2.0'
 
  gem 'activeadmin'
  gem 'flattened_active_admin'
@@ -35,7 +28,7 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'activeadmin_froala_editor'
  gem 'kaminari'
  gem 'gibbon'
- gem 'pg', '~> 0.21'
+ gem 'pg', '>= 0.18', '< 2.0'
  gem 'rails_serve_static_assets'
  gem 'fog-aws'
 
@@ -44,6 +37,14 @@ gem 'font-awesome-sass', '~> 5.2.0'
  gem 'meta-tags'
 
  gem 'square.rb'
+
+ gem 'bootsnap', require: false
+ gem 'sprockets-rails'
+ gem 'jsbundling-rails', '~> 1.1.1'
+ gem "cssbundling-rails", '~> 1.1.2'
+ gem "turbo-rails"
+ gem "stimulus-rails"
+ gem 'puma', '~> 5.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -67,9 +68,11 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'listen', '~> 3.0.5'
 end
 

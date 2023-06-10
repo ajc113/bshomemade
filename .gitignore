@@ -13,8 +13,37 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*
+/tmp/*
 !/log/.keep
-/tmp
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
 
 # Ignore application configuration
 /config/application.yml
+
+/public/assets
+/public/asset
+/public/uploads
+.byebug_history
+
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+/app/assets/builds/*
+
+/config/master.key
+
+/config/credentials/production.key
