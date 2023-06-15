@@ -33,6 +33,8 @@ gem "figaro"
  gem 'pg', '>= 0.18', '< 2.0'
  gem 'rails_serve_static_assets'
  gem 'fog-aws'
+ gem "aws-sdk-s3", require: false
+ gem 'image_processing', '~> 1.2'
 
  gem 'sitemap_generator'
 
