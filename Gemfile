@@ -44,8 +44,8 @@ gem "figaro"
  gem 'sprockets-rails'
  gem 'jsbundling-rails', '~> 1.1.1'
  gem "cssbundling-rails", '~> 1.1.2'
- gem "turbo-rails"
- gem "stimulus-rails"
+ gem 'turbo-rails', '~> 1.4'
+ gem 'stimulus-rails', '~> 1.2', '>= 1.2.1'
  gem 'puma', '~> 5.0'
 
 # Use ActiveModel has_secure_password

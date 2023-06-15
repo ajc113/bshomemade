@@ -53,31 +53,31 @@
 	                  <!-- homepage link -->
 	                  <li class="nav-item">
 		                  <a>
-		                  	<%= link_to "Home", bees_path, class: 'nav-link', 'data-turbo' => false , style:'font-size: .85rem important!;'%>
+		                  	<%= link_to "Home", bees_path, class: 'nav-link', style:'font-size: .85rem important!;'%>
 		                  </a>
 		                </li>
 	                 	<!-- info link -->
 	                 	<li class="nav-item">
 		                  <a>
-		                  	<%= link_to "Info", "/#visit_us",class: 'nav-link','data-turbo' => false %> 
+		                  	<%= link_to "Info", "/#visit_us",class: 'nav-link', data: { turbo_frame: '_top' } %>
 		                  </a>
 		                </li>
 		                <!-- flavors link -->
 		                <li class="nav-item">
 		                  <a>
-		                  	<%= link_to "Flavors", flavors_path, class: 'nav-link', 'data-turbo' => false %> 
+		                  	<%= link_to "Flavors", flavors_path, class: 'nav-link', data: { turbo_frame: '_top' } %>
 		                  </a>
 		                </li>
 		                <!-- order now link -->
 										<li class="nav-item">
 		                	<a>
-		                  	<%= link_to "Order Now", "https://bs-ice-cream.square.site", class: 'nav-link', 'data-turbo' => false %> 
+		                  	<%= link_to "Order Now", "https://bs-ice-cream.square.site", class: 'nav-link' %>
 		                  </a>
 		                </li>		                
 		                <!-- blog link		                 -->
 		                <li class="nav-item">
 		                	<a>
-		                  	<%= link_to "B's Updates", posts_path, class: 'nav-link', 'data-turbo' => false %> 
+		                  	<%= link_to "B's Updates", posts_path, class: 'nav-link', data: { turbo_frame: '_top' } %>
 		                  </a>
 		                </li>
 		                <!-- gift cards link -->
@@ -157,29 +157,29 @@
                   <ul class="list-unstyled">
                       <li>
                       	<a>
-		                  		<%= link_to "Info", "/#visit_us",class: 'btn btn-underline','data-turbo' => false %> 
+		                  		<%= link_to "Info", "/#visit_us",class: 'btn btn-underline', data: { turbo_frame: '_top' } %>
 		                  	</a>
 		                	</li>
 		                	<li>
                       	<a>
-		                  		<%= link_to "Flavors", flavors_path, class: 'btn btn-underline','data-turbo' => false %> 
+		                  		<%= link_to "Flavors", flavors_path, class: 'btn btn-underline', data: { turbo_frame: '_top' } %>
 		                  	</a>
 		                	</li>
 		                	<li>
                       	<a>
-		                  		<%= link_to "What's New", "/#whats_new", class: 'btn btn-underline','data-turbo' => false %> 
-		                  	</a>
-		                	</li>		                	
-		                	<li>
-                      	<a>
-		                  		<%= link_to "Blog", posts_path, class: 'btn btn-underline','data-turbo' => false %> 
+		                  		<%= link_to "What's New", "/#whats_new", class: 'btn btn-underline', data: { turbo_frame: '_top' } %>
 		                  	</a>
 		                	</li>
 		                	<li>
                       	<a>
-		                  		<%= link_to "About Us", about_path, class: 'btn btn-underline','data-turbo' => false %> 
+		                  		<%= link_to "Blog", posts_path, class: 'btn btn-underline', data: { turbo_frame: '_top' } %>
 		                  	</a>
-		                	</li>		                	
+		                	</li>
+		                	<li>
+                      	<a>
+		                  		<%= link_to "About Us", about_path, class: 'btn btn-underline', data: { turbo_frame: '_top' } %>
+		                  	</a>
+		                	</li>
                   </ul>
               </div><!--/.column-->
               <!-- right column -->
