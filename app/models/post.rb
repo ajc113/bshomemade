@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  mount_uploader :image, ImageUploader
   paginates_per 5
   ATTACHMENT_NAMES_REGEX = /\[(.*?)\]/
 
