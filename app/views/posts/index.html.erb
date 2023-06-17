@@ -29,7 +29,7 @@ data-responsive-optimal-height="500"
                         </div>
                         <div class="col-12 col-md-7">
                             <div class="card-body">
-                                <h4 class="card-title font400"><%= link_to post.title, post,  style: "color: #212121;" %></h4>
+                                <h4 class="card-title font400"><%= content_tag :span, post.title, style: "color: #212121;" %></h4>
                                 <p class="card-text"><%= post.description %></p>
                                 <ul class="list-inline">
                                     <i class="fa fa-comments"></i>
