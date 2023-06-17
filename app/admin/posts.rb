@@ -29,7 +29,7 @@ form :html => { :enctype => "multipart/form-data" } do |f|
 		f.input :meta_description
 		f.input :meta_keywords
 		f.label :description, class: "post-description-label"
-		f.rich_text_area :description, class: "post-rich-text-area"
+		f.rich_text_area :description, class: "post-rich-text-area", style: "height: 350px"
 	end
 	f.actions
 	end
