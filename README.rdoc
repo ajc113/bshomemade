@@ -27,7 +27,23 @@ and you are good to go.
 
 If you change the `database.yml`, please do not commit that and keep it as a local change only.
 
-## Edit credentials
+## Credentials
+
+We are using [Rails credentials](https://edgeguides.rubyonrails.org/security.html#custom-credentials). Fire the following command to know more:
+```ruby
+bin/rails credentials:help
+```
+
+The code need to have the following keys in place to run without errors:
+
+```
+config/master.key
+config/credentials/production.key
+```
+
+The `master.key` is used by default. The `production.key` is used for the production environment or any time the `RAILS_ENV` is set to `PRODUCTION`.
+
+### Edit credentials
 If you want to edit Rails credentials, simply proceed by running
 
 ```
