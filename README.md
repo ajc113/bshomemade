@@ -9,6 +9,10 @@ It's recommended that you use a version manager like rbenv, rvm for this.
 
 Make sure you have the bundler gem installed, before moving on and then run `bundle install` to conclude this step.
 
+## Node version & packages installation
+
+Use Node version `v16.18.1` - same as Heroku. And fire `npm i` or `yarn` based on the package manager you are using.
+
 ## Database Setup
 
 Open up `config/database.yml` and check the database name under `development` and `test`.
@@ -27,7 +31,23 @@ and you are good to go.
 
 If you change the `database.yml`, please do not commit that and keep it as a local change only.
 
-## Edit credentials
+## Credentials
+
+We are using [Rails credentials](https://edgeguides.rubyonrails.org/security.html#custom-credentials). Fire the following command to know more:
+```ruby
+bin/rails credentials:help
+```
+
+The code need to have the following keys in place to run without errors:
+
+```
+config/master.key
+config/credentials/production.key
+```
+
+The `master.key` is used by default. The `production.key` is used for the production environment or any time the `RAILS_ENV` is set to `PRODUCTION`.
+
+### Edit credentials
 If you want to edit Rails credentials, simply proceed by running
 
 ```
