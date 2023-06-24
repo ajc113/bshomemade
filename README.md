@@ -9,6 +9,10 @@ It's recommended that you use a version manager like rbenv, rvm for this.
 
 Make sure you have the bundler gem installed, before moving on and then run `bundle install` to conclude this step.
 
+## Node version & packages installation
+
+Use Node version `v16.18.1` - same as Heroku. And fire `npm i` or `yarn` based on the package manager you are using.
+
 ## Database Setup
 
 Open up `config/database.yml` and check the database name under `development` and `test`.
