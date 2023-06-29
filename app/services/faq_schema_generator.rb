@@ -1,5 +1,3 @@
-require 'json/ld'
-
 class FaqSchemaGenerator
   def generate_schema(faqs)
     schema = {
