@@ -1,5 +1,5 @@
 class FaqsController < ApplicationController
   def index
-    @faqs = Faq.all
+    @faqs = Faq.order(position: :asc)
   end
 end

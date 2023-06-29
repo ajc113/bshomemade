@@ -92,6 +92,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_29_054046) do
 
   create_table "faqs", force: :cascade do |t|
     t.text "question"
+    t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

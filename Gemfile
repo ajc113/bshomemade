@@ -49,6 +49,8 @@ gem "figaro"
  gem 'turbo-rails', '~> 1.4'
  gem 'stimulus-rails', '~> 1.2', '>= 1.2.1'
  gem 'puma', '~> 5.0'
+ gem 'acts_as_list'
+ gem 'activeadmin_reorderable'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

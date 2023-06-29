@@ -1,4 +1,20 @@
 ActiveAdmin.register Faq do
+  config.sort_order = 'position_asc'
+  config.paginate   = false
+
+  reorderable
+
+  actions :index, :show, :new, :create, :edit, :update, :destroy
+
+  # Reorderable Index Table
+  index as: :reorderable_table do
+    column :question
+    column :answer do |resource|
+      raw(resource.to_plain_text(resource.answer))
+    end
+    column :created_at
+  end
+
   permit_params :question, :answer
 
   show do |t|
