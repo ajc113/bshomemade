@@ -57,6 +57,7 @@ GEM
       ransack (>= 2.1.1, < 4)
     activeadmin_froala_editor (1.0.0)
       activeadmin (~> 2.0)
+    activeadmin_reorderable (0.2.1)
     activejob (7.0.5)
       activesupport (= 7.0.5)
       globalid (>= 0.3.6)
@@ -77,6 +78,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    acts_as_list (1.1.0)
+      activerecord (>= 4.2)
     apimatic_core (0.2.3)
       apimatic_core_interfaces (~> 0.1.0)
       certifi (~> 2018.1, >= 2018.01.18)
@@ -383,6 +386,8 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   activeadmin_froala_editor
+  activeadmin_reorderable
+  acts_as_list
   aws-sdk-s3
   bootsnap
   byebug
