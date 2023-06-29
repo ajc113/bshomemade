@@ -91,10 +91,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_29_054046) do
   end
 
   create_table "faqs", force: :cascade do |t|
+    t.text "schema"
     t.text "question"
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["id"], name: "index_faqs_on_id", unique: true
   end
 
   create_table "flavors", force: :cascade do |t|
