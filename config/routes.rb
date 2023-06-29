@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :bees
   resources :admin_users
   resources :leads
+  resources :faqs, only: %i[index]
 
   get 'about' => 'bees#about'
   put 'subscribe', to: 'subscribe#create'
