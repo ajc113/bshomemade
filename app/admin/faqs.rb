@@ -8,11 +8,13 @@ ActiveAdmin.register Faq do
 
   # Reorderable Index Table
   index as: :reorderable_table do
+    selectable_column
     column :question
     column :answer do |resource|
       raw(resource.to_plain_text(resource.answer))
     end
     column :created_at
+    actions defaults: %i[show edit destroy]
   end
 
   permit_params :question, :answer
