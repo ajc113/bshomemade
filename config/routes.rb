@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :admin_users
   resources :leads
   resources :faqs, only: %i[index]
+  resources :job_applicants, only: %i[new create]
 
   get 'about' => 'bees#about'
   put 'subscribe', to: 'subscribe#create'
