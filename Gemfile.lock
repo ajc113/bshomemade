@@ -320,6 +320,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rdoc (6.2.1)
+    recaptcha (5.14.0)
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
@@ -412,6 +413,7 @@ DEPENDENCIES
   rails (~> 7)
   rails_serve_static_assets
   rdoc (~> 6.2.0)
+  recaptcha
   sass-rails (~> 5.0, >= 5.0.7)
   sdoc (~> 1.0.0)
   sitemap_generator

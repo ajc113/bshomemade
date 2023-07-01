@@ -1,0 +1,156 @@
+<%= turbo_frame_tag 'job-applicant-form' do %>
+  <%= form_for(job_applicant) do |form| %>
+    <div class="row mt-2">
+      <div class="form-group col-sm-12 col-md-6">
+        <%= form.label :email %>
+        <%= form.email_field :email, class: "form-control", id: 'applicant_email', required: true %>
+        <span class="text-danger"><%= job_applicant.errors[:email].join(", ") %></span>
+      </div>
+
+      <div class="form-group col-sm-12 col-md-6">
+        <%= form.label :phone_number %>
+        <%= form.text_field :phone_number, class: "form-control", id: 'applicant_phone_number', required: true %>
+        <span class="text-danger"><%= job_applicant.errors[:phone_number].join(", ") %></span>
+      </div>
+    </div><hr />
+
+    <div class="row mt-2">
+      <div class="form-group col-sm-12 col-md-6">
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name, class: "form-control", id: 'applicant_first_name', required: true %>
+        <span class="text-danger"><%= job_applicant.errors[:first_name].join(", ") %></span>
+      </div>
+
+      <div class="form-group col-sm-12 col-md-6">
+        <%= form.label :last_name %>
+        <%= form.text_field :last_name, class: "form-control", id: 'applicant_last_name', required: true %>
+        <span class="text-danger"><%= job_applicant.errors[:last_name].join(", ") %></span>
+      </div>
+    </div><hr />
+
+    <div class="row mt-2">
+      <div class="form-group col-sm-12 col-md-6">
+        <%= form.label :start_at, 'If hired when are you available to start?' %>
+        <%= form.date_field :start_at, class: "form-control", id: 'applicant_start_at', required: true %>
+        <span class="text-danger"><%= job_applicant.errors[:start_at].join(", ") %></span>
+      </div>
+
+      <div class="form-group col-sm-12 col-md-6">
+        <%= form.label :hours_available, 'How many hours a week are you able to work?' %>
+        <%= form.number_field :hours_available, class: "form-control", id: 'applicant_hours_available', required: true, min: 0  %>
+        <span class="text-danger"><%= job_applicant.errors[:hours_available].join(", ") %></span>
+      </div>
+    </div><hr />
+
+    <div class="form-group mt-2">
+      <%= form.label :unavailability_reason, 'Are there any days or times you would be unable to work, please explain?' %>
+      <%= form.text_area :unavailability_reason, class: "form-control", id: 'applicant_unavailability_reason', required: true %>
+      <span class="text-danger"><%= job_applicant.errors[:unavailability_reason].join(", ") %></span>
+    </div><hr />
+
+    <div class="form-group mt-2">
+      <%= form.label :high_school_attendee_year, 'Are you attending high school? If so, what year have you completed?' %>
+      <%= form.text_field :high_school_attendee_year, class: "form-control", id: 'applicant_high_school_attendee_year', required: true %>
+      <span class="text-danger"><%= job_applicant.errors[:high_school_attendee_year].join(", ") %></span>
+    </div><hr />
+
+    <div class="form-group mt-2">
+      <%= form.label :college_attendee_year, 'Are you attending college? If so, what year have you completed?' %>
+      <%= form.text_field :college_attendee_year, class: "form-control", id: 'applicant_college_attendee_year', required: true %>
+      <span class="text-danger"><%= job_applicant.errors[:college_attendee_year].join(", ") %></span>
+    </div><hr />
+
+    <div class="form-group mt-2">
+      <%= form.label :valid_age_range_work_permit, raw('Are you 15 years or older?  We hire starting at 15 years old.<br>
+          Are you 18 years or older? If no, do your parents know you are applying for this position and are you able to obtain a work permit as needed?<br>
+          *Ice Cream maker position is an 18+ position*') %>
+      <%= form.text_area :valid_age_range_work_permit, class: "form-control", id: 'applicant_valid_age_range_work_permit', required: true %>
+      <span class="text-danger"><%= job_applicant.errors[:valid_age_range_work_permit].join(", ") %></span>
+    </div><hr />
+
+    <div class="form-group mt-2">
+      <%= form.label :job_history, 'Please briefly explain previous employment. Or relevant information to the position you are applying' %>
+      <%= form.text_area :job_history, class: "form-control", id: 'applicant_job_history', required: true %>
+      <span class="text-danger"><%= job_applicant.errors[:job_history].join(", ") %></span>
+    </div><hr />
+
+    <div class="form-group mt-2">
+      <%= form.label :fav_icecream_flavor, "What's your favorite ice cream flavor?" %>
+      <%= form.text_field :fav_icecream_flavor, class: "form-control", id: 'applicant_fav_icecream_flavor', required: true %>
+      <span class="text-danger"><%= job_applicant.errors[:fav_icecream_flavor].join(", ") %></span>
+    </div><hr />
+
+    <div class="form-group mt-2">
+      <%= form.label :referee_referrer_name, "Were you referred by a current B's Ice Cream employee? If yes, please write in your referrals name." %>
+      <%= form.text_field :referee_referrer_name, class: "form-control", id: 'applicant_referee_referrer_name', required: true %>
+      <span class="text-danger"><%= job_applicant.errors[:referee_referrer_name].join(", ") %></span>
+    </div><hr />
+
+    <div class="form-group mt-2">
+      <%= form.label :full_year_availability, 'Are you able to work throughout the year? (not just the summer)' %>
+      <div class="row ml-2">
+        <div class="form-check col-sm-12 col-md-12 mb-2">
+          <%= form.radio_button :full_year_availability, "Yes", class: "form-check-input" %>
+          <%= form.label :full_year_availability, "Yes", class: "form-check-label" %>
+        </div>
+        <div class="form-check col-sm-12 col-md-12 mb-2">
+          <%= form.radio_button :full_year_availability, "No", class: "form-check-input" %>
+          <%= form.label :full_year_availability, "No", class: "form-check-label" %>
+        </div>
+      </div>
+      <span class="text-danger"><%= job_applicant.errors[:full_year_availability].join(", ") %></span>
+    </div><hr />
+
+    <div class="form-group mt-2">
+      <%= form.label :work_location, 'Which location are you able to work?' %>
+      <div class="row ml-2">
+        <div class="form-check col-sm-12 col-md-12">
+          <%= form.radio_button :work_location, "Marshfield", class: "form-check-input" %>
+          <%= form.label :work_location, "Marshfield", class: "form-check-label" %>
+        </div>
+        <div class="form-check col-sm-12 col-md-12">
+          <%= form.radio_button :work_location, "Kingston", class: "form-check-input" %>
+          <%= form.label :work_location, "Kingston", class: "form-check-label" %>
+        </div>
+        <div class="form-check col-sm-12 col-md-12">
+          <%= form.radio_button :work_location, "Both Marshfield & Kingston", class: "form-check-input" %>
+          <%= form.label :work_location, "Both Marshfield & Kingston", class: "form-check-label" %>
+        </div>
+      </div>
+      <span class="text-danger"><%= job_applicant.errors[:work_location].join(", ") %></span>
+    </div><hr />
+
+    <div class="form-group mt-2">
+      <%= form.label :position, raw("We are only hiring Cake & Pie Decorators at this time <br> Which position are you applying for") %>
+      <div class="row ml-2">
+        <div class="form-check col-sm-12 col-md-12 mb-2">
+          <%= form.radio_button :position, "Ice Cream Server, must be 15+ previous experience not required", class: "form-check-input" %>
+          <%= form.label :position, "Ice Cream Server, must be 15+ previous experience not required", class: "form-check-label" %>
+        </div>
+        <div class="form-check col-sm-12 col-md-12 mb-2">
+          <%= form.radio_button :position, "Shift Leader,  must be 16+  1 year of previous food service experience preferred", class: "form-check-input" %>
+          <%= form.label :position, "Shift Leader,  must be 16+  1 year of previous food service experience preferred", class: "form-check-label" %>
+        </div>
+        <div class="form-check col-sm-12 col-md-12 mb-2">
+          <%= form.radio_button :position, "Cake and Pie Decorator, must be 18+ experience required, home decorating is accepted", class: "form-check-input" %>
+          <%= form.label :position, "Cake and Pie Decorator, must be 18+ experience required, home decorating is accepted", class: "form-check-label" %>
+        </div>
+        <div class="form-check col-sm-12 col-md-12 mb-2">
+          <%= form.radio_button :position, "Ice Cream Maker, must be 18+  experience preferred but not required", class: "form-check-input" %>
+          <%= form.label :position, "Ice Cream Maker, must be 18+  experience preferred but not required", class: "form-check-label" %>
+        </div>
+      </div>
+      <span class="text-danger"><%= job_applicant.errors[:position].join(", ") %></span>
+    </div><hr />
+
+    <div class="actions mt-2">
+      <%= form.submit "Submit", class: "btn btn-primary", data: { turbo_frame: '_top' } %>
+    </div>
+
+    <%= turbo_frame_tag 'recaptcha' do %>
+      <div class="mb-3 row recaptcha-form">
+        <%= recaptcha_v3 action: 'contact_form', site_key: ENV['RECAPTCHA_SITE_KEY_V3'], turbolinks: true %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

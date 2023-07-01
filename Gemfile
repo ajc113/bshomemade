@@ -51,6 +51,7 @@ gem "figaro"
  gem 'puma', '~> 5.0'
  gem 'acts_as_list'
  gem 'activeadmin_reorderable'
+ gem 'recaptcha'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
