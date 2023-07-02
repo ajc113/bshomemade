@@ -1,8 +1,8 @@
-<%= turbo_stream.update 'job-applicant-form-wrapper' do %>
-  <%= turbo_frame_tag 'action_notice', class: 'text-center text-success' do %>
-    <h5 class='text-success'> Response submitted successfully. </h5>
-  <% end %>
+<%= turbo_stream.update "flash-message" do %>
+  <%= render 'layouts/flash_messages/html_toastr' %>
+<% end %>
 
+<%= turbo_stream.update 'job-applicant-form-wrapper' do %>
   <div class="text-center">
     <h2>B's is hiring! Let's scoop some ice cream!</h2>
     <p>*****We are only hiring Cake and Pie Decorators at this time****</p>

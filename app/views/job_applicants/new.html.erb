@@ -14,10 +14,10 @@
     </div>
   </div><!--parallax-->
   <!--/.page-title-->
+  <%= turbo_frame_tag 'flash-message' %>
+
   <div class="container contact-form pt100 pb70">
     <%= turbo_frame_tag 'job-applicant-form-wrapper', class: "container contact-form pt100 pb70" do %>
-      <%= turbo_frame_tag 'action_notice', class: 'text-center' %>
-
       <div class="text-center">
         <h2>B's is hiring! Let's scoop some ice cream!</h2>
         <p>*****We are only hiring Cake and Pie Decorators at this time****</p>
