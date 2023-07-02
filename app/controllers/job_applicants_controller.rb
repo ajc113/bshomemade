@@ -4,9 +4,9 @@ class JobApplicantsController < ApplicationController
   end
 
   def create
-    @job_applicant = CreateJobApplicant.new(params).call
+    @job_applicant = CreateJobApplicant.new(params).call if verify_captcha?
 
-    if verify_captcha? && @job_applicant.valid?
+    if verify_captcha? && @job_applicant&.valid?
       redirect_to new_job_applicant_path, notice: 'Your application has been submitted successfully.'
     else
       render :handle_error, status: :unprocessable_entity

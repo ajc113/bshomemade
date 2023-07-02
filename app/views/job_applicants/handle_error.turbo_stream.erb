@@ -8,7 +8,7 @@
     </div>
   <% end %>
 <% end %>
-<% unless @job_applicant.valid? %>
+<% if @job_applicant.present? %>
   <%= turbo_stream.update 'job-applicant-form' do %>
     <%= render 'form', job_applicant: @job_applicant %>
   <% end %>
