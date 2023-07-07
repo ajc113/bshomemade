@@ -32,7 +32,7 @@ class CreateJobApplicant
 
     JobApplicantMailer.with(
       applicant_email: job_applicant.email,
-      selected_position: job_applicant.position
+      applicant_name: job_applicant.first_name
     ).notify_applicant.deliver_later
   end
 end

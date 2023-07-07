@@ -3,7 +3,7 @@
     <div class="mb-3 row recaptcha-form ml-2 mt-3"
       id='recaptchaV2'
       data-controller='recaptcha-v2'
-      data-recaptcha-v2-site-key-value="<%= ENV['RECAPTCHA_SITE_KEY_V2'] %>"
+      data-recaptcha-v2-site-key-value="<%= Rails.application.credentials.recaptcha_site_key_v2 %>"
       data-recaptcha-v2-url-value="<%= job_applicants_path %>">
     </div>
   <% end %>

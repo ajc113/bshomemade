@@ -52,6 +52,7 @@ gem "figaro"
  gem 'acts_as_list'
  gem 'activeadmin_reorderable'
  gem 'recaptcha'
+ gem 'mandrill_mailer'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

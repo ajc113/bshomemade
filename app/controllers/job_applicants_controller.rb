@@ -19,6 +19,6 @@ class JobApplicantsController < ApplicationController
     @recaptcha_result = true if params[:recaptcha_result] == 'verified'
     return @recaptcha_result if @recaptcha_result
 
-    @recaptcha_result = verify_recaptcha action: 'contact_form', minimum_score: 0.7, secret_key: ENV['RECAPTCHA_SECRET_KEY_V3']
+    @recaptcha_result = verify_recaptcha action: 'contact_form', minimum_score: 0.7, secret_key: Rails.application.credentials.recaptcha_secret_key_v3
   end
 end
