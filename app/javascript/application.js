@@ -2,6 +2,7 @@
 //import "./src/rails_ujs";
 import "@hotwired/turbo-rails";
 import "./src/jquery";
+import "./src/toastr";
 import * as bootstrap from "bootstrap";
 import "./controllers";
 import "@fortawesome/fontawesome-free/js/all";

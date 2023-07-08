@@ -25,6 +25,7 @@
 	</script>
 	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 
 	<%= display_meta_tags %>
 	<%= stylesheet_link_tag 'application', media: 'all', "data-turbo-track": "reload" %>
@@ -77,6 +78,10 @@
 					<a>
 						<%= link_to "B's Updates", posts_path, class: 'nav-link', data: { turbo_frame: '_top' } %>
 					</a>
+				</li>
+				<!-- Hiring form link -->
+				<li class="nav-item">
+					<%= link_to "B's Hiring", new_job_applicant_path, class: 'nav-link', data: { turbo_frame: '_top' } %>
 				</li>
 				<!-- FAQS link -->
 				<li class="nav-item">

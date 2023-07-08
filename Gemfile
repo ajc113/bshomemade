@@ -51,6 +51,8 @@ gem "figaro"
  gem 'puma', '~> 5.0'
  gem 'acts_as_list'
  gem 'activeadmin_reorderable'
+ gem 'recaptcha'
+ gem 'mandrill_mailer'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -66,6 +68,7 @@ gem "figaro"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'letter_opener', '~> 1.8.1'
 end
 
 group :production do

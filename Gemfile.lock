@@ -80,6 +80,8 @@ GEM
       tzinfo (~> 2.0)
     acts_as_list (1.1.0)
       activerecord (>= 4.2)
+    addressable (2.8.4)
+      public_suffix (>= 2.0.2, < 6.0)
     apimatic_core (0.2.3)
       apimatic_core_interfaces (~> 0.1.0)
       certifi (~> 2018.1, >= 2018.01.18)
@@ -222,6 +224,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jsbundling-rails (1.1.1)
       railties (>= 6.0.0)
+    json (2.6.3)
     json-pointer (0.0.1)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
@@ -235,6 +238,10 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
+    launchy (2.5.2)
+      addressable (~> 2.8)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -246,6 +253,14 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mandrill_mailer (1.8.0)
+      actionpack
+      activejob
+      activesupport
+      mandrillus (~> 2.0.0)
+    mandrillus (2.0.0)
+      excon (>= 0.16.0, < 1.0)
+      json (>= 1.7.7, < 3.0)
     marcel (1.0.2)
     meta-tags (2.18.0)
       actionpack (>= 3.2.0, < 7.1)
@@ -277,6 +292,7 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.3)
+    public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.7.1)
@@ -320,6 +336,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rdoc (6.2.1)
+    recaptcha (5.14.0)
     responders (3.1.0)
       actionpack (>= 5.2)
       railties (>= 5.2)
@@ -404,7 +421,9 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   jsbundling-rails (~> 1.1.1)
   kaminari
+  letter_opener (~> 1.8.1)
   listen (~> 3.0.5)
+  mandrill_mailer
   meta-tags
   mini_magick
   pg (>= 0.18, < 2.0)
@@ -412,6 +431,7 @@ DEPENDENCIES
   rails (~> 7)
   rails_serve_static_assets
   rdoc (~> 6.2.0)
+  recaptcha
   sass-rails (~> 5.0, >= 5.0.7)
   sdoc (~> 1.0.0)
   sitemap_generator
