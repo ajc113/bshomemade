@@ -19,5 +19,6 @@
     <p>Applicant Name: <%= params[:applicant_name] %></p>
     <p>Applicant Email: <%= params[:applicant_email] %></p>
     <p>Applicant Selected Position: <%= params[:selected_position] %></p>
+    <%= link_to "View full application", admin_job_applicant_url(JobApplicant.find_by!(email: params[:applicant_email])) %>
   </div>
 </div>

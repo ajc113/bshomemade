@@ -1,6 +1,6 @@
 class JobApplicantMailer < ApplicationMailer
   def notify_admin
-    mail(to: 'brookeshomemade@gmail.com', subject: 'New employment request')
+    mail(to: 'brookeshomemade@gmail.com', subject: 'New Job Application Received via Website')
   end
 
   def notify_applicant

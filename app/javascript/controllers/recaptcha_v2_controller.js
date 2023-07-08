@@ -4,7 +4,7 @@ import { post } from '@rails/request.js'
 export default class extends Controller {
   static values = { url: String, siteKey: String }
 
-  initialize() {
+  connect() {
     grecaptcha.render(
       "recaptchaV2",
       {
@@ -13,12 +13,12 @@ export default class extends Controller {
       }
     );
 
-    $('#job-applicant-form').addClass('d-none');
+    $('#contact-form').addClass('d-none')
   }
 
   onRecaptchaSuccess() {
     this.element.style.display = 'none';
-    $('#job-applicant-form').removeClass('d-none');
+    $('#contact-form').removeClass('d-none')
 
     post(this.urlValue, {
       body: {

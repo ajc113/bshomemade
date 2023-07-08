@@ -1,5 +1,5 @@
 <%= turbo_frame_tag 'job-applicant-form' do %>
-  <%= form_for(job_applicant) do |form| %>
+  <%= form_for(job_applicant, html: { id: 'contact-form' }) do |form| %>
     <div class="row mt-2">
       <div class="form-group col-sm-12 col-md-6">
         <%= form.label :email %>
