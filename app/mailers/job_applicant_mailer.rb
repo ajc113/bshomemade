@@ -4,6 +4,6 @@ class JobApplicantMailer < ApplicationMailer
   end
 
   def notify_applicant
-    mail(to: params[:applicant_email], subject: 'Application Submitted Successfully')
+    mail(to: params[:applicant_email], reply_to: 'brookeshomemade@gmail.com', subject: 'Application Submitted Successfully')
   end
 end
