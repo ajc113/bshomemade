@@ -1,0 +1,2 @@
+class GoogleReview < ApplicationRecord
+end

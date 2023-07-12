@@ -1,0 +1,37 @@
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <% reviews.each_with_index do |review, index| %>
+      <% active_class = index == 0 ? 'active' : '' %>
+      <div class="carousel-item <%= active_class %>">
+        <blockquote class="blockquote text-center">
+          <p class="mb-0">
+            <i class="fa fa-quote-left"></i>
+            <%= review[:text] %>
+          </p>
+          <footer class="blockquote-footer mt-2">
+            <img class="rounded-circle shadow-1-strong mb-4"
+                src=<%= review[:profile_photo_url] %> alt="avatar"
+                style="width: 150px;" />
+            <div><%= review[:author_name] %></div>
+          </footer>
+          <p class="client-review-stars">
+            <% review[:rating].times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
+            <% (5 - review[:rating]).times do %>
+              <i class="far fa-star"></i>
+            <% end %>
+          </p>
+        </blockquote>
+      </div>
+    <% end %>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
