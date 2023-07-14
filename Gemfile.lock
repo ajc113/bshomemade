@@ -201,7 +201,7 @@ GEM
       multi_json (>= 1.11.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    google_reviews (1.0.1)
+    google_reviews (1.1.2)
       i18n
     has_scope (0.8.1)
       actionpack (>= 5.2)
