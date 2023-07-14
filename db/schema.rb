@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_30_094126) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_12_155044) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -120,6 +120,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_30_094126) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "google_reviews", force: :cascade do |t|
+    t.text "text"
+    t.bigint "time"
+    t.integer "rating"
+    t.string "language"
+    t.string "author_url"
+    t.boolean "translated"
+    t.string "author_name"
+    t.string "original_language"
+    t.string "profile_photo_url"
+    t.string "relative_time_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_name"], name: "index_google_reviews_on_author_name", unique: true
   end
 
   create_table "job_applicants", force: :cascade do |t|

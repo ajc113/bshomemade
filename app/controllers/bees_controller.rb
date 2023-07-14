@@ -7,6 +7,7 @@ class BeesController < ApplicationController
   @bees = Bee.all
   @flavor = Flavor.where(flavorofweek:["Yes"]).last
   @lead = Lead.new
+  @google_reviews = GoogleReview.all
   set_meta_tags title: "Home",
               site: "B's Ice Cream",
               reverse: true,

@@ -328,6 +328,23 @@
         </div>
       </div>
 
+    <!-- Testimonials section -->
+    <% if @google_reviews.present? %>
+        <div class="container pt50 pb50">
+            <div class="container">
+            <div class="row">
+                <div class='col-md-8 mr-auto ml-auto text-center'>
+                <h3 class="text-black h2">
+                    Testimonials
+                </h3>
+                <%= render "testimonials", reviews: @google_reviews %>
+                </div>
+            </div>
+            </div>
+        </div>
+    <% end %>
+    <!-- End Testimonials section -->
+
 
 <!-- we are hiring panel -->
     <div class="container pt50 pb50">
@@ -345,7 +362,6 @@
                     </div>
                 </div>
             </div>
-  
     </div>
 
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=<%= Rails.application.credentials.google_map_api_key %>"></script>
