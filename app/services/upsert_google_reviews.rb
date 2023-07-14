@@ -15,7 +15,7 @@ class UpsertGoogleReviews
   private
 
   def import_reviews(reviews)
-    return ServiceResponse.new unless reviews
+    return ServiceResponse.new(meta: { message: "No reviews found for this location" }) unless reviews
 
     begin
       records = upsert_records(reviews)

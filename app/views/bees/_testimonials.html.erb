@@ -6,19 +6,19 @@
         <blockquote class="blockquote text-center">
           <p class="mb-0">
             <i class="fa fa-quote-left"></i>
-            <%= review[:text] %>
+            <%= review.text %>
           </p>
           <footer class="blockquote-footer mt-2">
             <img class="rounded-circle shadow-1-strong mb-4"
-                src=<%= review[:profile_photo_url] %> alt="avatar"
+                src=<%= review.profile_photo_url %> alt="avatar"
                 style="width: 150px;" />
-            <div><%= review[:author_name] %></div>
+            <div><%= review.author_name %></div>
           </footer>
           <p class="client-review-stars">
-            <% review[:rating].times do %>
+            <% review.rating.times do %>
               <i class="fas fa-star"></i>
             <% end %>
-            <% (5 - review[:rating]).times do %>
+            <% (5 - review.rating).times do %>
               <i class="far fa-star"></i>
             <% end %>
           </p>
