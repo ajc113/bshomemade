@@ -13,6 +13,8 @@ module Bshomemade
 
     config.autoload_paths << Rails.root.join('app/admin')
 
+    config.cache_store = :memory_store
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

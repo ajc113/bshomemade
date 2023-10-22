@@ -11,6 +11,14 @@ Rails.application.routes.draw do
   resources :bees
   resources :admin_users
   resources :leads
+  resources :faqs, only: %i[index]
+  resources :job_applicants, only: %i[new create]
+
+  namespace :admin do
+    resources :google_reviews do
+      post :upsert_reviews, on: :collection
+    end
+  end
 
   get 'about' => 'bees#about'
   put 'subscribe', to: 'subscribe#create'

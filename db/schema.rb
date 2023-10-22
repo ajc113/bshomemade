@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_12_120452) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_12_155044) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -90,6 +90,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_12_120452) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "faqs", force: :cascade do |t|
+    t.text "schema"
+    t.text "question"
+    t.integer "position"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["id"], name: "index_faqs_on_id", unique: true
+  end
+
   create_table "flavors", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -111,6 +120,44 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_12_120452) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "google_reviews", force: :cascade do |t|
+    t.text "text"
+    t.bigint "time"
+    t.integer "rating"
+    t.string "language"
+    t.string "author_url"
+    t.boolean "translated"
+    t.string "author_name"
+    t.string "original_language"
+    t.string "profile_photo_url"
+    t.string "relative_time_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_name"], name: "index_google_reviews_on_author_name", unique: true
+  end
+
+  create_table "job_applicants", force: :cascade do |t|
+    t.string "email", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "phone_number", null: false
+    t.string "work_location", null: false
+    t.string "position", null: false
+    t.datetime "start_at", null: false
+    t.integer "hours_available", null: false
+    t.text "unavailability_reason", null: false
+    t.string "full_year_availability"
+    t.string "high_school_attendee_year", null: false
+    t.string "college_attendee_year", null: false
+    t.text "valid_age_range_work_permit", null: false
+    t.text "job_history", null: false
+    t.string "fav_icecream_flavor", null: false
+    t.string "referee_referrer_name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_applicants_on_email", unique: true
   end
 
   create_table "leads", force: :cascade do |t|

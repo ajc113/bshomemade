@@ -88,9 +88,29 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  config.action_mailer.smtp_settings = {
+    address: "smtp.mandrillapp.com",
+    port: 587,
+    authentication: :plain,
+    user_name: Rails.application.credentials.mandrill_user_name,
+    password: Rails.application.credentials.mandrill_api_key,
+    domain: 'bhomemade.com'
+  }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.asset_host = Rails.application.credentials.host
+  config.action_mailer.default_url_options = { host: Rails.application.credentials.host }
+  config.mandrill_mailer.default_url_options = { host: Rails.application.credentials.host }
+  config.action_controller.default_url_options = { host: Rails.application.credentials.host }
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
   config.credentials.content_path = "config/credentials/production.yml.enc"
   config.credentials.key_path = "config/credentials/production.key"
+end
+
+MandrillMailer.configure do |config|
+  config.api_key = Rails.application.credentials.mandrill_api_key
+  config.deliver_later_queue_name = :default
 end

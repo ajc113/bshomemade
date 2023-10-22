@@ -1,0 +1,24 @@
+<div style="text-align: left; padding:20px 23px 20px 23px">
+  <span
+    style="
+            font-family: 'Space Grotesk', 'Lucida Sans', Tahoma, sans-serif !important;
+            text-align: justify;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 46px;
+            color: #132a37;
+            -webkit-text-size-adjust: none;
+            display: block;
+            text-align: center;
+            margin: 25px;
+          ">
+  </span>
+  <div style="margin-top: 25px;">
+    <p>New Job application with below high level information has been received.</p><br>
+    <p>Applicant Name: <%= params[:applicant_name] %></p>
+    <p>Applicant Email: <%= params[:applicant_email] %></p>
+    <p>Applicant Selected Position: <%= params[:selected_position] %></p>
+    <%= link_to "View full application", admin_job_applicant_url(JobApplicant.find_by!(email: params[:applicant_email])) %>
+  </div>
+</div>

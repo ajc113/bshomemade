@@ -63,6 +63,10 @@ or you can use editor of your choice.
 
 Finally, try `rails c` to start the console to check if it opens up without any errors.
 
-## Running the server
+## Running the code locally
 
-Run the server using `bin/dev` - it runs on `http://localhost:3000`.
+ - Delete the node_modules folder if exists.
+ - Fire yarn or npm i  to install Node packages
+ - Run bin/rails assets:clobber to remove stale assets
+ - Run bin/dev to start the server
+ - Access the site on http://localhost:3000
