@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Trailers</h1>
+
+<div id="trailers">
+  <% @trailers.each do |trailer| %>
+    <%= render trailer %>
+    <p>
+      <%= link_to "Show this trailer", trailer %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New trailer", new_trailer_path %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :trailers
   devise_for :users,  :controllers => { :users => 'users' }
   devise_for :models
   devise_for :admin_users, ActiveAdmin::Devise.config
