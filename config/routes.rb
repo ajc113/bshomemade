@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :trailers
+
   devise_for :users,  :controllers => { :users => 'users' }
   devise_for :models
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :leads
   resources :faqs, only: %i[index]
   resources :job_applicants, only: %i[new create]
+  resources :trailers
 
   namespace :admin do
     resources :google_reviews do
