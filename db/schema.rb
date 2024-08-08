@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_08_06_221617) do
+ActiveRecord::Schema[7.0].define(version: 2024_08_08_180106) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -200,6 +200,19 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_06_221617) do
   create_table "trailers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "firstname"
+    t.string "lastname"
+    t.string "email"
+    t.string "phone"
+    t.datetime "date"
+    t.string "address1"
+    t.string "address2"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.datetime "eventstart"
+    t.integer "guest"
+    t.text "detail"
   end
 
   create_table "users", force: :cascade do |t|

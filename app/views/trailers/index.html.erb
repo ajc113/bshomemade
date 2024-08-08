@@ -11,24 +11,24 @@
                 <h3 class="h1 text-center font500  pt100 text-black"></h3>
             </div>
         </div>
-    </div>
+    </div>  
   </div><!--parallax-->
   <!--/.page-title-->
   <%= turbo_frame_tag 'flash-message' %>
 
   <div class="container contact-form pt100 pb70">
-    <%= turbo_frame_tag 'job-applicant-form-wrapper', class: "container contact-form pt100 pb50" do %>
+    <%= turbo_frame_tag 'job-applicant-form-wrapper', class: "container contact-form pt50 pb50" do %>
       <div class="text-center">
         <h1>B's Ice Cream Trailer</h1>
 
         <%# Start blog format %>
-        <div class="container pt90 pb60">
+        <div class="container pt10 pb10">
             <div class="row">
                 <div class="col-md-12 mb30">
                    
                         
                         <div class="post-thumbnail">
-                            <img src='<%= image_path('Trailer_3.jpg')%>' alt="" class="img-fluid">
+                            <img src='<%= image_path('Trailer_3.jpg')%>' alt="" class="img-fluid" style="width: 70%">
                         </div>
 
                     <div class="post-full">
@@ -56,35 +56,6 @@
                         </div>
                     </div><!--post end-->
 
-                    <hr class="mb40 mt40">
-                    <div class="leave-comment">
-                        <h4 class="mb30 font600 h5">Leave a comment</h4>
-                        <form class="comment-form">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input name="author" type="text" placeholder="Name" class="form-control">
-                                    </div> 
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input name="email" type="text" placeholder="Email" class="form-control">
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <textarea placeholder="Comment" rows="5" class="form-control"></textarea>
-                            </div>
-                            <div class=" text-right">
-                                <button type="button" class="btn btn-dark btn-xl">Post Comment</button>
-                            </div>
-                        </form>
-                    </div>
-
-
-
-
-
             </div>
         </div>
         <%# End blog format %>
@@ -95,7 +66,7 @@
 
       <%= turbo_frame_tag 'recaptcha-v2' %>
 
-      <%= render 'form', job_applicant: @job_applicant %>
+      <%= render 'form', trailer: @trailer_lead %>
     <% end %>
 
 </body>
