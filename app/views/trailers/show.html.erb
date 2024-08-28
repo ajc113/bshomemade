@@ -1,10 +1,32 @@
-<p style="color: green"><%= notice %></p>
+<body>
+  <div class="dzsparallaxer auto-init height-is-based-on-content "  data-options='{   direction: "reverse"}'
+       data-responsive-reference-width="1280" data-responsive-optimal-height="500">
+    <div class="divimage dzsparallaxer--target" style="width: 100%; height: 100%; background-image: url(<%= image_path('hero2.jpg')%>)">
+    </div>
 
-<%= render @trailer %>
+    <div class="container pt100 pb70">
+        <div class="row pb50">
+            <div class="col-md-8 ml-auto mr-auto wow bounceIn" data-wow-delay=".2s">
+                <h3 class="h1 text-center font500  pt100 text-black"></h3>
+            </div>
+        </div>
+    </div>  
+  </div><!--parallax-->
 
-<div>
-  <%= link_to "Edit this trailer", edit_trailer_path(@trailer) %> |
-  <%= link_to "Back to trailers", trailers_path %>
+  <div class="container contact-form pt100 pb70">
+    <%= turbo_frame_tag 'job-applicant-form-wrapper', class: "container contact-form pt50 pb50" do %>
 
-  <%= button_to "Destroy this trailer", @trailer, method: :delete %>
+      <p style="color: green"><%= notice %></p>
+
+      <%= turbo_frame_tag 'flash-message' %>
+
+            <% end %>
+  
+
+
+  <div class="actions mt-2 text-center">
+    <%#= link_to 'Edit', edit_trailer_path, class: "btn btn-dark", data: { turbo_frame: '_top' } %> 
+    <%= link_to 'Back', trailers_path, class: "btn btn-dark", data: { turbo_frame: '_top' } %>
+  </div>
 </div>
+</body>

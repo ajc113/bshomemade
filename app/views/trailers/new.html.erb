@@ -1,9 +1,73 @@
-<h1>New trailer</h1>
+<body>
+  <!--page title-->
+  <div class="dzsparallaxer auto-init height-is-based-on-content "  data-options='{   direction: "reverse"}'
+       data-responsive-reference-width="1280" data-responsive-optimal-height="500">
+    <div class="divimage dzsparallaxer--target" style="width: 100%; height: 100%; background-image: url(<%= image_path('hero2.jpg')%>)">
+    </div>
 
-<%= render "form", trailer: @trailer %>
+    <div class="container pt100 pb70">
+        <div class="row pb50">
+            <div class="col-md-8 ml-auto mr-auto wow bounceIn" data-wow-delay=".2s">
+                <h3 class="h1 text-center font500  pt100 text-black"></h3>
+            </div>
+        </div>
+    </div>  
+  </div><!--parallax-->
+  <!--/.page-title-->
+  <%= turbo_frame_tag 'flash-message' %>
 
-<br>
+  <div class="container contact-form pt100 pb70">
+    <%= turbo_frame_tag 'job-applicant-form-wrapper', class: "container contact-form pt50 pb50" do %>
+      <div>
+        <h1 class="text-center">B's Ice Cream Trailer</h1>
 
-<div>
-  <%= link_to "Back to trailers", trailers_path %>
-</div>
+        <%# Start blog format %>
+        <div class="container pt10 pb10">
+            <div class="row">
+                <div class="col-md-12 mb30">
+                   
+                        
+                        <div class="post-thumbnail text-center">
+                            <img src='<%= image_path('Trailer_3.jpg')%>' alt="" class="img-fluid" style="width: 70%">
+                        </div>
+
+                    <div class="post-full">
+                        <div class="blog-meta">
+                            <h2>Standard post title</h2>
+
+
+                        <div class="post-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ut ratione similique temporibus tempora dicta soluta? Qui hic, voluptatem nemo quo corporis dignissimos voluptatum debitis cumque fugiat mollitia quasi quod. Repudiandae possimus quas odio nisi optio asperiores, vitae error laudantium, ratione odit ipsa obcaecati debitis deleniti minus, illo maiores placeat omnis magnam.
+                            </p>
+                            <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ut ratione similique temporibus tempora dicta soluta? Qui hic, voluptatem nemo quo corporis dignissimos voluptatum debitis cumque fugiat mollitia quasi quod.<br><em>John Doe</em></blockquote>
+                            <br>
+                            <h4>In hac habitasse platea dictumst.</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae ut ratione similique temporibus tempora dicta soluta? Qui hic, voluptatem nemo quo corporis dignissimos voluptatum debitis cumque fugiat mollitia quasi quod. Repudiandae possimus quas odio nisi optio asperiores, vitae error laudantium, ratione odit ipsa obcaecati debitis deleniti minus, illo maiores placeat omnis magnam.
+                            </p>
+                            <ul class="list-inline share">
+                                <li class="list-inline-item">Share it:</li>
+                                <li class="list-inline-item"><a class="btn btn-underline" href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="Facebook"><i class="fa fa-facebook"></i> Facebook</a></li>
+                                <li class="list-inline-item"><a class="btn btn-underline" href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="Twitter"><i class="fa fa-twitter"></i> Twitter</a></li>
+                                <li class="list-inline-item"><a class="btn btn-underline" href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="Pinterest"><i class="fa fa-pinterest"></i> Pinterest</a></li>
+                                <li class="list-inline-item"><a class="btn btn-underline" href="javascript:void(0)" data-toggle="tooltip" title="" data-original-title="Linkedin"><i class="fa fa-linkedin"></i> Linkedin</a></li>
+                            </ul>
+                        </div>
+                    </div><!--post end-->
+
+            </div>
+        </div>
+        <%# End blog format %>
+
+      </div>
+  </div>
+
+
+      <%= turbo_frame_tag 'recaptcha-v2' %>
+
+      <%= render 'form', trailer: @trailer_lead %>
+
+      <% end %>
+</br>
+</body>
