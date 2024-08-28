@@ -29,11 +29,61 @@
                 <%= f.text_field :firstname, class: "form-control", required: true, placeholder: "First Name"%>
               </div>
             </div>
-              <div class="col-sm-6">
+            <div class="col-sm-6">
+              <div class="form-group">
                 <%= f.text_field :lastname, class: "form-control", required: true, placeholder: "Last Name"%>
               </div>
             </div> 
-                 
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.text_field :email, class: "form-control", required: true, placeholder: "Email"%>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.text_field :phone, class: "form-control", required: true, placeholder: "Phone"%>
+              </div>
+            </div>                  
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.date_field :date, class: "form-control", placeholder: "Event Date", required: true %>
+              </div>
+            </div>                  
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.text_field :eventstart, class: "form-control", required: true, placeholder: "Event Start Time"%>
+              </div>
+            </div> 
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.text_field :address1, class: "form-control", required: true, placeholder: "Event Address"%>
+              </div>
+            </div> 
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.number_field :guest, class: "form-control", required: true, placeholder: "Number of guests"%>
+              </div>
+            </div> 
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= f.text_field :city, class: "form-control", required: true, placeholder: "Event City"%>
+              </div>
+            </div> 
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= f.text_field :state, class: "form-control", required: true, placeholder: "Event State"%>
+              </div>
+            </div> 
+            <div class="col-sm-4">
+              <div class="form-group">
+                <%= f.text_field :zip, class: "form-control", required: true, placeholder: "Event Zip"%>
+              </div>
+            </div> 
+
+
+
+
+
 
               <div class="form-group">
                 <%= f.text_field :detail, class: "form-control", required: true, placeholder: "Brief Event Description"%>

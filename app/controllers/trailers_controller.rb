@@ -71,7 +71,7 @@ end
   private
 
     def trailer_params
-      params.require(:trailer).permit(:firstname, :lastname, :detail)
+      params.require(:trailer).permit(:firstname, :lastname, :detail, :email, :phone, :date, :address1, :city, :state, :zip, :eventstart)
     end
 
     def verify_captcha?
