@@ -1,6 +1,6 @@
 class Trailer < ApplicationRecord
 
-validates :firstname, :lastname, :detail, :email, :phone, :date, :address1, :city, :state, :zip, :eventstart,  presence: true
+validates :firstname, :lastname, :detail, :email, :phone, :date, :address1, :city, :state, :zip, :eventstart, :guest,  presence: true
 
 
 

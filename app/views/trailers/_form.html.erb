@@ -41,17 +41,19 @@
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <%= f.text_field :phone, class: "form-control", required: true, placeholder: "Phone"%>
+                <%= f.telephone_field :phone, class: "form-control", required: true, placeholder: "Phone"%>
               </div>
             </div>                  
             <div class="col-sm-6">
               <div class="form-group">
+                 <%= f.label :date, 'Event Date' %>
                 <%= f.date_field :date, class: "form-control", placeholder: "Event Date", required: true %>
               </div>
             </div>                  
             <div class="col-sm-6">
               <div class="form-group">
-                <%= f.text_field :eventstart, class: "form-control", required: true, placeholder: "Event Start Time"%>
+                <%= f.label :eventstart, 'Start Serving Time' %>
+                <%= f.time_field :eventstart, class: "form-control", required: true, placeholder: "Event Start Time"%>
               </div>
             </div> 
             <div class="col-sm-6">
@@ -78,16 +80,12 @@
               <div class="form-group">
                 <%= f.text_field :zip, class: "form-control", required: true, placeholder: "Event Zip"%>
               </div>
-            </div> 
-
-
-
-
-
-
+            </div>
+            <div class="col-sm-12"> 
               <div class="form-group">
                 <%= f.text_field :detail, class: "form-control", required: true, placeholder: "Brief Event Description"%>
               </div>
+            </div>
 
 
               <div class="actions mt-2">
