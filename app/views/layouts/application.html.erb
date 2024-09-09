@@ -74,7 +74,12 @@
 						<%= link_to "Order Now", order_path, class: 'nav-link' %>
 					</a>
 				</li>
-				<!-- blog link		                 -->
+				<!-- Truck link		                 -->
+				<li class="nav-item">
+					<a>
+						<%= link_to "Ice Cream Truck", new_trailer_path, class: 'nav-link', data: { turbo_frame: '_top' } %>
+					</a>
+				</li>				<!-- blog link		                 -->
 				<li class="nav-item">
 					<a>
 						<%= link_to "B's Updates", posts_path, class: 'nav-link', data: { turbo_frame: '_top' } %>
