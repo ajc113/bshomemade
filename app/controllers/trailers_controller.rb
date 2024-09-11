@@ -1,7 +1,7 @@
 class TrailersController < InheritedResources::Base
 
 def index
-@trailer_leads = Flavor.all
+@trailer_leads = Trailer.all
 end
 
 def show
@@ -9,7 +9,7 @@ end
 
 
 def new
-  @trailer_lead = Trailer.new
+@trailer_lead = Trailer.new
 end
 
 def edit
@@ -21,7 +21,8 @@ def create
 
 
     respond_to do |format|
-      if @trailer_lead.save
+      if @trailer_lead.save 
+        TrailerMailer.notify_shop.deliver_now 
         format.html { redirect_to @trailer_lead, notice: 'Thank You.  Your inquiry was successfully submit.' }
         format.json { render :show, status: :created, location: @trailer_lead }
       else
