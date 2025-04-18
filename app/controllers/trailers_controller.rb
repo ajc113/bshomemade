@@ -63,3 +63,4 @@ end
 
     @recaptcha_result = verify_recaptcha action: 'contact_form', minimum_score: 0.7, secret_key: Rails.application.credentials.recaptcha_secret_key_v3
   end
+end
