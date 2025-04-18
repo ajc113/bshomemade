@@ -19,17 +19,15 @@ end
 def create
   @trailer_lead = Trailer.new(trailer_params)
 
-
-    respond_to do |format|
-      if @trailer_lead.save 
-        TrailerMailer.notify_shop.deliver_now 
-        format.html { redirect_to @trailer_lead, notice: 'Thank You.  Your inquiry was successfully submit.' }
-        format.json { render :show, status: :created, location: @trailer_lead }
-      else
-        format.html { render :new }
-        format.json { render json: @trailer_lead.errors, status: :unprocessable_entity }
-      end
-end
+  respond_to do |format|
+    if @trailer_lead.save 
+      format.html { redirect_to @trailer_lead, notice: 'Thank You. Your inquiry was successfully submitted.' }
+      format.json { render :show, status: :created, location: @trailer_lead }
+    else
+      format.html { render :new }
+      format.json { render json: @trailer_lead.errors, status: :unprocessable_entity }
+    end
+  end
 end
 
   def update
@@ -52,22 +50,6 @@ end
       format.json { head :no_content }
     end
   end
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   private
 
@@ -81,4 +63,3 @@ end
 
     @recaptcha_result = verify_recaptcha action: 'contact_form', minimum_score: 0.7, secret_key: Rails.application.credentials.recaptcha_secret_key_v3
   end
-

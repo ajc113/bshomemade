@@ -1,0 +1,25 @@
+B's Ice Cream Truck - Pricing Information
+
+Dear <%= @trailer.firstname %> <%= @trailer.lastname %>,
+
+Thank you for your interest in the B's Ice Cream truck for your event.
+
+We're pleased to provide you with our pricing information. Please find attached our current pricing guide for ice cream truck services.
+
+Your Event Details:
+Event Date: <%= @trailer.date.strftime('%B %d, %Y') if @trailer.date %>
+Event Start Time: <%= @trailer.eventstart.strftime('%I:%M %p') if @trailer.eventstart %>
+Event Address: <%= @trailer.address1 %>
+City/State/Zip: <%= @trailer.city %>, <%= @trailer.state %> <%= @trailer.zip %>
+Number of Guests: <%= @trailer.guest %>
+
+Based on your event details, we recommend our <%= @trailer.guest.to_i > 100 ? "Premium Package" : "Standard Package" %>. Please review the attached pricing guide for full details.
+
+If you have any questions or would like to proceed with booking, please reply to this email or call us at (555) 123-4567.
+
+Sincerely,
+Brooke Costa
+B's Ice Cream
+
+Visit us on Facebook: https://www.facebook.com/Bs-Homemade-Ice-Cream-144977852873757
+Visit us on Instagram: https://www.instagram.com/bshomemadeic

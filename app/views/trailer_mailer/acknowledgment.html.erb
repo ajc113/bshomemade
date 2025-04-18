@@ -13,31 +13,35 @@
             text-align: center;
             margin: 25px;
           ">
-    New Trailer Inquiry Received
+    Thank You for Your Inquiry!
   </span>
   <div style="margin-top: 25px;">
     <p>
-      <span>You have received a new trailer inquiry from <strong><%= @trailer.firstname %> <%= @trailer.lastname %></strong></span><br /><br />
+      <span>Dear <strong style="font-style: bold;"><%= @trailer.firstname %> <%= @trailer.lastname %></strong>,</span> <br /><br />
+      <span>Thank you for your interest in the B's Ice Cream truck for your event on <%= @trailer.date.strftime('%B %d, %Y') if @trailer.date %>.</span><br /><br />
+      <span>We have received your inquiry and will get back to you with further details within the next 24 hours.</span><br /><br />
       
       <div style="background-color: #f7f7f7; padding: 15px; border-radius: 5px;">
-        <h3>Inquiry Details:</h3>
-        <p><strong>Name:</strong> <%= @trailer.firstname %> <%= @trailer.lastname %></p>
-        <p><strong>Email:</strong> <%= @trailer.email %></p>
-        <p><strong>Phone:</strong> <%= @trailer.phone %></p>
+        <h3>Your Inquiry Details:</h3>
         <p><strong>Event Date:</strong> <%= @trailer.date.strftime('%B %d, %Y') if @trailer.date %></p>
         <p><strong>Event Start Time:</strong> <%= @trailer.eventstart.strftime('%I:%M %p') if @trailer.eventstart %></p>
         <p><strong>Event Address:</strong> <%= @trailer.address1 %></p>
         <p><strong>City/State/Zip:</strong> <%= @trailer.city %>, <%= @trailer.state %> <%= @trailer.zip %></p>
         <p><strong>Number of Guests:</strong> <%= @trailer.guest %></p>
-        <p><strong>Event Details:</strong> <%= @trailer.detail %></p>
       </div>
       <br />
      
-      <a href="<%= admin_trailer_url(@trailer) %>" style="display: inline-block; background-color: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 15px;">View in Admin Panel</a>
-      <br /><br />
-      
       <span>Sincerely,</span><br />
-      <span>B's Ice Cream Truck System</span><br />
+      <span>Brooke Costa</span><br />
+      <span>B's Ice Cream</span><br />
+      <span style="display: flex; margin-top: 30px;">
+        <a style="margin-right: 15px;" href="https://www.facebook.com/Bs-Homemade-Ice-Cream-144977852873757" target="_blank">
+          <%= image_tag('facebook', style: "height: 40px; width: 40px; line-height: 40px; text-align: center;") %>
+        </a>
+        <a class="instagram" href="https://www.instagram.com/bshomemadeic" style="color: white" target="_blank">
+          <%= image_tag('instagram', style: "height: 40px; width: 40px; line-height: 40px; text-align: center;") %>
+        </a>
+      </span>
     </p>
   </div>
 </div>
