@@ -5,7 +5,7 @@ class TrailerMailer < ApplicationMailer
     @trailer = trailer
     @greeting = "Hi"
 
-    mail(to: "costa.aj@gmail.com, bsicecreamtruck@gmail.com",
+    mail(to: "costa.aj@gmail.com, bsicecreamtruck@gmail.com, tannakartikey@gmail.com",
       reply_to: 'Bs Icecream Truck <bsicecreamtruck@gmail.com>',
       subject: 'Received new trailer inquiry',
     )
