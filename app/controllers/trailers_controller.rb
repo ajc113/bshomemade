@@ -1,34 +1,33 @@
 class TrailersController < InheritedResources::Base
+  include RecaptchaVerifiable
 
-def index
-@trailer_leads = Trailer.all
-end
+  def new
+    @trailer_lead = Trailer.new
+  end
 
-def show
-end
+  def edit
+  end
 
+  def create
+    @trailer_lead = Trailer.new(trailer_params)
 
-def new
-@trailer_lead = Trailer.new
-end
-
-def edit
-end
-
-
-def create
-  @trailer_lead = Trailer.new(trailer_params)
-
-  respond_to do |format|
-    if @trailer_lead.save 
-      format.html { redirect_to @trailer_lead, notice: 'Thank You. Your inquiry was successfully submitted.' }
-      format.json { render :show, status: :created, location: @trailer_lead }
-    else
-      format.html { render :new }
-      format.json { render json: @trailer_lead.errors, status: :unprocessable_entity }
+    respond_to do |format|
+      if verify_recaptcha_v3(params[:recaptcha_token], 'trailer_inquiry')
+        if @trailer_lead.save 
+          format.turbo_stream
+          format.html { redirect_to @trailer_lead, notice: 'Thank You. Your inquiry was successfully submitted.' }
+          format.json { render :show, status: :created, location: @trailer_lead }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @trailer_lead.errors, status: :unprocessable_entity }
+        end
+      else
+        flash.now[:alert] = "reCAPTCHA verification failed. Please try again."
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: { error: "reCAPTCHA verification failed" }, status: :unprocessable_entity }
+      end
     end
   end
-end
 
   def update
     respond_to do |format|
@@ -36,7 +35,7 @@ end
         format.html { redirect_to @trailer_lead, notice: 'Inquiry was successfully updated.' }
         format.json { render :show, status: :ok, location: @trailer_lead }
       else
-        format.html { render :edit }
+        format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @trailer_lead.errors, status: :unprocessable_entity }
       end
     end
@@ -56,11 +55,4 @@ end
     def trailer_params
       params.require(:trailer).permit(:firstname, :lastname, :detail, :email, :phone, :date, :address1, :city, :state, :zip, :eventstart, :guest)
     end
-
-    def verify_captcha?
-    @recaptcha_result = true if params[:recaptcha_result] == 'verified'
-    return @recaptcha_result if @recaptcha_result
-
-    @recaptcha_result = verify_recaptcha action: 'contact_form', minimum_score: 0.7, secret_key: Rails.application.credentials.recaptcha_secret_key_v3
-  end
 end

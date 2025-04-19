@@ -107,8 +107,14 @@
           <%# End blog format %>
       </div>
     </div>
-    <%= turbo_frame_tag 'recaptcha-v2' %>
-    <%= render 'form', trailer: @trailer_lead %>
+    <%= turbo_frame_tag "trailer-form" do %>
+      <div data-controller="recaptcha-v3"
+           data-recaptcha-v3-site-key-value="<%= Rails.application.credentials.recaptcha_site_key_v3 %>"
+           data-recaptcha-v3-action-value="trailer_inquiry">
+        <!-- The Stimulus controller will handle token generation -->
+        <%= render 'form', trailer: @trailer_lead %>
+      </div>
+    <% end %>
     </br>
    </div> 
 </body>

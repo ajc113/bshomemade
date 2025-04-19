@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :leads
   resources :faqs, only: %i[index]
   resources :job_applicants, only: %i[new create]
-  resources :trailers
+  resources :trailers, only: %i[new create]
 
   namespace :admin do
     resources :google_reviews do

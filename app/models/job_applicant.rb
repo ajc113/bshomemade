@@ -6,6 +6,24 @@ class JobApplicant < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :hours_available, presence: true, numericality: { in: 1..80, message: "must be in valid range" }
   validate :start_at_not_in_past
+  
+  after_create :send_email_notifications
+  
+  # Send email notifications to admin and applicant after successful creation
+  def send_email_notifications
+    # Notify admin
+    JobApplicantMailer.with(
+      applicant_email: email,
+      applicant_name: first_name,
+      selected_position: position
+    ).notify_admin.deliver_later
+    
+    # Notify applicant
+    JobApplicantMailer.with(
+      applicant_email: email,
+      applicant_name: first_name
+    ).notify_applicant.deliver_later
+  end
 
   private
 

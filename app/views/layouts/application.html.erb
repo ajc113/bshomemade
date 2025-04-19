@@ -26,7 +26,7 @@
 	</script>
 	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script src="https://www.google.com/recaptcha/api.js?render=<%= Rails.application.credentials.recaptcha_site_key_v3 %>"></script>
 
 	<%= display_meta_tags %>
 	<%= stylesheet_link_tag 'application', media: 'all', "data-turbo-track": "reload" %>

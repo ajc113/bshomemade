@@ -1,23 +1,11 @@
+<%= form_for(@trailer_lead, html: { id: "trailer-inquiry-form", data: { recaptcha_v3_target: "form" } }) do |f| %>
 
-<%= form_for(@trailer_lead) do |f| %>
-
-    <% if @trailer_lead.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@trailer_lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
-
-        <ul>
-        <% @trailer_lead.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
+    <% if flash[:notice] %>
+      <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+        <%= flash[:notice] %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     <% end %>
-
-
-
-
-
-
 
     <hr class="mb40 mt40">
     <div class="leave-comment">
@@ -87,10 +75,33 @@
               </div>
             </div>
 
+            <%= hidden_field_tag :recaptcha_token, nil, id: "recaptcha-token", data: { recaptcha_v3_target: "token" } %>
+
+            <% if flash[:alert] %>
+              <div class="col-sm-12">
+                <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+                  <%= flash[:alert] %>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              </div>
+            <% end %>
+
+            <% if @trailer_lead.errors.any? %>
+              <div class="col-sm-12">
+                <div class="alert alert-danger mb-4" role="alert">
+                  <h5><i class="bi bi-exclamation-triangle-fill"></i> Please correct the following errors:</h5>
+                  <ul class="mb-0">
+                    <% @trailer_lead.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            <% end %>
 
               <div class="actions mt-2">
 
-                  <%= f.submit "Submit", class: "btn btn-dark", data: { turbo_frame: '_top' } %>
+                  <%= f.submit "Submit", class: "btn btn-dark" %>
 
             </div>
           </div>  

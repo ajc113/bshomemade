@@ -17,7 +17,7 @@
   <%= turbo_frame_tag 'flash-message' %>
 
   <div class="container contact-form pt100 pb70">
-    <%= turbo_frame_tag 'job-applicant-form-wrapper', class: "container contact-form pt100 pb70" do %>
+    <%= turbo_frame_tag 'job-applicant-form-wrapper' do %>
       <div class="text-center">
         <h2>B's is hiring! Let's scoop some ice cream!</h2>
         <p>*****We are only hiring Cake and Pie Decorators at this time****</p>
@@ -28,9 +28,12 @@
         </p>
       </div>
 
-      <%= turbo_frame_tag 'recaptcha-v2' %>
-
-      <%= render 'form', job_applicant: @job_applicant %>
+      <div data-controller="recaptcha-v3"
+           data-recaptcha-v3-site-key-value="<%= Rails.application.credentials.recaptcha_site_key_v3 %>"
+           data-recaptcha-v3-action-value="job_application">
+        <!-- The Stimulus controller will handle token generation -->
+        <%= render 'form', job_applicant: @job_applicant %>
+      </div>
     <% end %>
   </div>
 </body>
