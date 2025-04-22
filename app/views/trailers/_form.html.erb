@@ -14,64 +14,77 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
-                <%= f.text_field :firstname, class: "form-control", required: true, placeholder: "First Name"%>
+                <%= f.text_field :firstname, class: "form-control", required: true, placeholder: "First Name", 
+                    autocomplete: "given-name", title: "Please enter a valid first name (2-50 letters)" %>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <%= f.text_field :lastname, class: "form-control", required: true, placeholder: "Last Name"%>
+                <%= f.text_field :lastname, class: "form-control", required: true, placeholder: "Last Name", 
+                    autocomplete: "family-name", title: "Please enter a valid last name (2-50 letters)" %>
               </div>
             </div> 
             <div class="col-sm-6">
               <div class="form-group">
-                <%= f.text_field :email, class: "form-control", required: true, placeholder: "Email"%>
+                <%= f.email_field :email, class: "form-control", required: true, placeholder: "Email", 
+                    autocomplete: "email", inputmode: "email" %>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group">
-                <%= f.telephone_field :phone, class: "form-control", required: true, placeholder: "Phone"%>
+                <%= f.telephone_field :phone, class: "form-control", required: true, placeholder: "Phone", 
+                    autocomplete: "tel", inputmode: "tel", pattern: "[0-9()+ -]{10,15}", 
+                    title: "Please enter a valid phone number (10-15 digits)" %>
               </div>
             </div>                  
             <div class="col-sm-6">
               <div class="form-group">
                  <%= f.label :date, 'Event Date' %>
-                <%= f.date_field :date, class: "form-control", placeholder: "Event Date", required: true %>
+                <%= f.date_field :date, class: "form-control", placeholder: "Event Date", required: true,
+                    min: Date.current.to_s, max: (Date.current + 2.years).to_s %>
               </div>
             </div>                  
             <div class="col-sm-6">
               <div class="form-group">
                 <%= f.label :eventstart, 'Start Serving Time' %>
-                <%= f.time_field :eventstart, class: "form-control", required: true, placeholder: "Event Start Time"%>
+                <%= f.time_field :eventstart, class: "form-control", required: true, placeholder: "Event Start Time" %>
               </div>
             </div> 
             <div class="col-sm-6">
               <div class="form-group">
-                <%= f.text_field :address1, class: "form-control", required: true, placeholder: "Event Address"%>
+                <%= f.text_field :address1, class: "form-control", required: true, placeholder: "Event Address",
+                    autocomplete: "address-line1" %>
               </div>
             </div> 
             <div class="col-sm-6">
               <div class="form-group">
-                <%= f.number_field :guest, class: "form-control", required: true, placeholder: "Number of guests"%>
+                <%= f.number_field :guest, class: "form-control", required: true, placeholder: "Number of guests",
+                    min: "1", max: "100000", inputmode: "numeric" %>
               </div>
             </div> 
             <div class="col-sm-4">
               <div class="form-group">
-                <%= f.text_field :city, class: "form-control", required: true, placeholder: "Event City"%>
+                <%= f.text_field :city, class: "form-control", required: true, placeholder: "Event City",
+                    autocomplete: "address-level2" %>
               </div>
             </div> 
             <div class="col-sm-4">
               <div class="form-group">
-                <%= f.text_field :state, class: "form-control", required: true, placeholder: "Event State"%>
+                <%= f.text_field :state, class: "form-control", required: true, placeholder: "Event State",
+                    autocomplete: "address-level1" %>
               </div>
             </div> 
             <div class="col-sm-4">
               <div class="form-group">
-                <%= f.text_field :zip, class: "form-control", required: true, placeholder: "Event Zip"%>
+                <%= f.text_field :zip, class: "form-control", required: true, placeholder: "Event Zip",
+                    autocomplete: "postal-code", pattern: "\\d{5}(-\\d{4})?", 
+                    title: "Please enter a valid ZIP code (e.g., 12345 or 12345-6789)", inputmode: "numeric" %>
               </div>
             </div>
             <div class="col-sm-12"> 
               <div class="form-group">
-                <%= f.text_field :detail, class: "form-control", required: true, placeholder: "Brief Event Description"%>
+                <%= f.text_area :detail, class: "form-control", required: true, placeholder: "Brief Event Description",
+                    rows: "3", maxlength: "5000" %>
               </div>
             </div>
 
