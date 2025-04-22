@@ -8,9 +8,9 @@ import "./controllers";
 import "@fortawesome/fontawesome-free/js/all";
 
 import '../assets/javascripts/versa.custom'
-// import '../assets/javascripts/plugins/dzsparallaxer/dzsparallaxer'
-// import '../assets/javascripts/plugins/dzsparallaxer/scroller'
-// import '../assets/javascripts/plugins/dzsparallaxer/advancedscroller/plugin'
+import '../assets/javascripts/plugins/dzsparallaxer/dzsparallaxer'
+import '../assets/javascripts/plugins/dzsparallaxer/scroller'
+import '../assets/javascripts/plugins/dzsparallaxer/advancedscroller/plugin'
 import '../assets/javascripts/plugins/cubeportfolio/js/jquery.cubeportfolio'
 import '../assets/javascripts/cube-portfolio-home'
 import '../assets/javascripts/jquery.backstretch.min'
